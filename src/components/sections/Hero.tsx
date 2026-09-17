@@ -11,22 +11,18 @@ const heroFacts = [
 ];
 
 /**
- * Der obere Teil des Hero (Eyebrow, Headline, Einleitung, Zitat) trägt
- * zwei Hintergrundebenen statt einer flachen Fläche:
+ * Zweite Fassung, schlanker: Die Erklärung ("HiWo-med versorgt Arztpraxen,
+ * MVZ …") stand vorher als Fließtext neben der Headline – zu viel Text auf
+ * einmal, und der freien Bildfläche rechts wurde damit auch der Platz zum
+ * Atmen genommen. Der Absatz ist jetzt kurz gefasst in die Positionierung
+ * (Sektion 02) gewandert. Der Hero trägt stattdessen nur noch Headline,
+ * Markenclaim und die Buttons – der Claim bekommt dabei deutlich mehr
+ * Gewicht als vorher, wo er nur eine kleine Bildunterschrift war.
  *
- * 1. Der Standort-Himmel mit dem Firmenschild (Lagerhausstraße), reduziert
- *    in der Deckkraft. Offener, ruhiger Untergrund mit dem echten Logo als
- *    kleinem Wiedererkennungsmoment -- weniger unruhig als ein Foto mit
- *    viel Beschriftung, und passt zum "nach vorn gerichtet"-Ton der Marke.
- * 2. Ein sehr feines, selbst gezeichnetes Kreuz-Raster (.pattern-rx) als
- *    kaum wahrnehmbare Textur darüber.
- *
- * Die Fakten-Zeile am Ende steht bewusst AUSSERHALB dieses Bereichs, auf
- * reinem Papier-Weiß: Eine Pixel-Kontrastmessung (contrast-check.mjs) hat
- * gezeigt, dass die kleinen Eyebrow-Labels dort sonst unter 4,5:1 fallen,
- * weil Foto und Muster den Hintergrund im unteren Bereich sichtbar
- * abdunkeln. Getrennt sind beide Zonen durch einen weichen Verlauf statt
- * eines harten Schnitts.
+ * Hintergrund: Himmel + Firmenschild (siehe Kontaktseite), reduzierte
+ * Deckkraft, plus ein sehr feines, selbst gezeichnetes Kreuz-Raster.
+ * Die Fakten-Zeile am Ende steht bewusst außerhalb dieser Bildebene, auf
+ * reinem Papier-Weiß (Pixel-Kontrastmessung, siehe contrast-check.mjs).
  */
 export function Hero() {
   return (
@@ -60,74 +56,56 @@ export function Hero() {
         />
 
         <div className="container-site relative">
-          <div className="grid gap-x-12 gap-y-10 lg:grid-cols-12">
-            <div className="lg:col-span-8">
-              <p className="t-eyebrow flex flex-wrap items-center gap-x-3 gap-y-1 text-muted">
-                <span className="text-ink">Medizinischer Fachhandel</span>
-                <span aria-hidden="true" className="h-[2px] w-5 bg-magenta" />
-                <span>
-                  {company.address.city} · seit {company.foundedYear}
-                </span>
-              </p>
-
-              <h1 className="t-display mt-5 lg:mt-7">
-                Alles, was der Praxisalltag braucht.
-                <br className="hidden sm:block" />{" "}
-                <span className="text-muted">
-                  Geliefert von Menschen,
-                  <br className="hidden sm:block" /> die ihn kennen.
-                </span>
-              </h1>
-            </div>
-
-            <div className="lg:col-span-4 lg:pt-4">
-              <p className="t-lead max-w-[38rem]">
-                HiWo-med versorgt Arztpraxen, MVZ, ambulante OP-Zentren, Kliniken und
-                Pflegeeinrichtungen mit medizinischen Verbrauchsartikeln und Praxiseinrichtung.
-                Über 6.000 Artikel liegen bei uns am Staffelsee im Lager – im Großraum München
-                in der Regel am Folgetag bei Ihnen.
-              </p>
-
-              <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-3">
-                <Button href="/kontakt/">
-                  Beratung anfragen
-                  <ArrowRight />
-                </Button>
-                <Button href="/leistungen/" variant="outline">
-                  Was wir leisten
-                </Button>
-              </div>
-            </div>
-          </div>
-
-          {/* Claim-Zeile: vorher Bildunterschrift, jetzt eigenständiger
-              Absatz, da das Foto in den Hintergrund gewandert ist. */}
-          <div className="mt-10 flex flex-wrap items-baseline justify-between gap-x-10 gap-y-3 border-t border-line pt-6 lg:mt-12">
-            <p className="max-w-[42rem] text-[0.9375rem] leading-relaxed text-ink">
-              <span
-                className="mr-3 inline-block h-[2px] w-9 -translate-y-[0.3em] bg-magenta align-middle"
-                aria-hidden="true"
-              />
-              <strong className="font-semibold">„{company.claim}“</strong>{" "}
-              <span className="text-muted">
-                Der Satz steht seit Jahren auf unseren Fahrzeugen – und beschreibt ziemlich
-                genau, worum es geht. Seit {yearsInBusiness} Jahren.
+          <div className="max-w-[52rem]">
+            <p className="t-eyebrow flex flex-wrap items-center gap-x-3 gap-y-1 text-muted">
+              <span className="text-ink">Medizinischer Fachhandel</span>
+              <span aria-hidden="true" className="h-[2px] w-5 bg-magenta" />
+              <span>
+                {company.address.city} · seit {company.foundedYear}
               </span>
             </p>
-            <Link
-              href="/leistungen/#logistik"
-              className="inline-flex shrink-0 items-center gap-2 py-1.5 font-semibold text-ink underline-offset-4 transition-colors hover:text-magenta-ink hover:underline"
-            >
-              Wie wir ausliefern
-              <ArrowRight className="text-magenta" />
-            </Link>
+
+            <h1 className="t-display mt-5 lg:mt-7">
+              Alles, was der Praxisalltag braucht.
+              <br className="hidden sm:block" />{" "}
+              <span className="text-muted">
+                Geliefert von Menschen,
+                <br className="hidden sm:block" /> die ihn kennen.
+              </span>
+            </h1>
+
+            {/* Der Markenclaim – steht seit Jahren auf den Fahrzeugen und
+                trägt hier bewusst mehr Gewicht als eine kleine Bildunterschrift. */}
+            <p className="t-serif mt-8 text-[clamp(1.35rem,1.05rem+1.3vw,1.9rem)] leading-[1.35] text-ink lg:mt-10">
+              „{company.claim}“
+            </p>
+            <p className="mt-3 text-[0.875rem] text-muted">
+              Der Satz steht seit {yearsInBusiness} Jahren auf unseren Fahrzeugen.
+            </p>
+
+            <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-3 lg:mt-10">
+              <Button href="/kontakt/">
+                Beratung anfragen
+                <ArrowRight />
+              </Button>
+              <Button href="/leistungen/" variant="outline">
+                Was wir leisten
+              </Button>
+              <Link
+                href="/leistungen/#logistik"
+                className="inline-flex items-center gap-2 py-2.5 font-semibold text-ink underline-offset-4 transition-colors hover:text-magenta-ink hover:underline"
+              >
+                Wie wir ausliefern
+                <ArrowRight className="text-magenta" />
+              </Link>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Fakten-Zeile: bewusst außerhalb der Bildebene, auf reinem Papier-Weiß. */}
       <div className="container-site">
-        <dl className="mt-8 grid border-t border-line sm:grid-cols-3 sm:divide-x sm:divide-line lg:mt-10">
+        <dl className="mt-10 grid border-t border-line sm:grid-cols-3 sm:divide-x sm:divide-line lg:mt-12">
           {heroFacts.map((f, i) => (
             <div
               key={f.k}

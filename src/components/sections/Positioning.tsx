@@ -31,7 +31,13 @@ export function Positioning() {
               label="Positionierung"
               title={<span id="positionierung">Kein Onlineshop. Ein Versorgungspartner.</span>}
             />
-            <p className="t-serif mt-8 text-[clamp(1.2rem,1rem+0.7vw,1.5rem)] leading-[1.5] text-ink">
+            {/* Zielgruppen kurz benannt -- stand vorher als längerer Absatz
+                im Hero, ist dort aber zu viel Text neben der Headline. */}
+            <p className="mt-5 text-[0.9375rem] leading-relaxed text-muted">
+              Für Arztpraxen, MVZ, ambulante OP-Zentren, Kliniken und Pflegeeinrichtungen –
+              im Großraum München und darüber hinaus.
+            </p>
+            <p className="t-serif mt-6 text-[clamp(1.2rem,1rem+0.7vw,1.5rem)] leading-[1.5] text-ink">
               Der größte Teil unserer Kundenbeziehungen entsteht nicht über ein
               Bestellformular, sondern über Menschen: über den Außendienst, über
               Empfehlungen und über Zusammenarbeit, die oft schon seit Jahrzehnten läuft.
