@@ -99,7 +99,7 @@ export const teamGroups: TeamGroup[] = [
         lowRes: true,
       },
       { name: "Katharina Weber", photo: "Kathi", since: 2022 },
-      { name: "Christoph Gansler", photo: "Christoph", since: 2022 },
+      { name: "Gabriele Bergmeister", photo: "Gabriele_Bergmeister", since: 2022 },
     ],
   },
   {
@@ -107,7 +107,7 @@ export const teamGroups: TeamGroup[] = [
     name: "Einkauf",
     summary:
       "Sorgt dafür, dass die über 6.000 Lagerartikel verfügbar bleiben – und dass nur Lieferanten mit eigener Qualitätssicherung zum Zug kommen.",
-    members: [{ name: "Gabriele Bergmeister", photo: "Gabriele_Bergmeister", since: 2022 }],
+    members: [{ name: "Christoph Gansler", photo: "Christoph", since: 2022 }],
   },
   {
     id: "lager",
