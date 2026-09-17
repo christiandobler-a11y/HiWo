@@ -41,7 +41,17 @@ export function Hero() {
             decoding="async"
             fetchPriority="high"
             className="h-full w-full object-cover opacity-[0.32]"
-            style={{ objectPosition: "70% 40%" }}
+            /* objectPosition "100% ..." zeigt den rechten Bildrand vollständig,
+               sonst wird das "d" in "med" abgeschnitten. Der zusätzliche
+               scale()-Zoom ist am rechten Rand verankert (transformOrigin),
+               damit das Schild dabei nicht weiter nach rechts aus dem
+               Bild wandert, sondern größer/dichter wirkt und weniger
+               Himmel sichtbar bleibt. */
+            style={{
+              objectPosition: "100% 40%",
+              transform: "scale(1.28)",
+              transformOrigin: "100% 36%",
+            }}
           />
           <div className="pattern-rx absolute inset-0 opacity-[0.05]" />
           {/* Weicher Übergang zur Fakten-Zeile, kein harter Bildschnitt. */}
