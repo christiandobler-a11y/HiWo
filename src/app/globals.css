@@ -454,3 +454,17 @@ html.js [data-reveal][data-revealed="true"] {
     transform: scale(1.03);
   }
 }
+
+/* Höhenanimation für "Mehr erfahren"-Ausklapper: die Grid-Rows-Technik
+   kommt ohne JS-Höhenmessung aus und funktioniert mit dynamischem Inhalt.
+   0fr -> 1fr animiert die eine Zeile des Grids, das innere overflow:hidden
+   verhindert, dass der Inhalt während der Animation herausragt. */
+.accordion-rows {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--duration-base) var(--ease-out-quiet);
+}
+
+.accordion-rows[data-open] {
+  grid-template-rows: 1fr;
+}

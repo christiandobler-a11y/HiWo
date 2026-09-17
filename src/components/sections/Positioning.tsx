@@ -1,24 +1,96 @@
+"use client";
+
+import { useState } from "react";
+
 import { SectionHead } from "@/components/ui/Section";
 
 /**
  * Warum HiWo-med. Bewusst drei Punkte, bewusst keine Karten:
  * eine große typografische Aussage links, drei durch Haarlinien
- * getrennte Argumente rechts.
+ * getrennte Argumente rechts. Jeder Punkt lässt sich per "Mehr erfahren"
+ * um einen zusätzlichen, konkreten Beleg aufklappen -- die Seite ist sonst
+ * reiner Fließtext, das hier ist die einzige Stelle zum Anfassen.
  */
 const reasons = [
   {
     title: "Ein Ansprechpartner statt einer Warteschleife",
     text: "Montag bis Freitag von 8 bis 17 Uhr geht jemand ans Telefon, der die Praxis kennt. Dazu ein fester Außendienstpartner mit eigenem Gebiet, der vorbeikommt – nicht nur anruft.",
+    detail:
+      "Fünf feste Gebiete, fünf feste Gesichter: Oberbayern, Oberland und Schwaben, Chiemgau und Niederbayern werden jeweils von derselben Person betreut – dazu die durchgehend besetzte Auftragsannahme im Innendienst.",
   },
   {
     title: "Ware aus dem eigenen Lager, nicht aus dem Katalog",
     text: "Über 6.000 Artikel liegen auf 1.500 m² sofort verfügbar. Was bestellt wird, ist in der Regel schon da – im Großraum München am Folgetag, ausgefahren vom eigenen Lieferdienst.",
+    detail:
+      "Oberland, Rosenheim, Traunstein, Augsburg und Schwaben: 1–3 Werktage mit dem eigenen Lieferdienst. Restliches Bundesgebiet: Bestellung bis 13 Uhr, Versand per UPS noch am selben Tag.",
   },
   {
     title: "Beratung, die über den Karton hinausgeht",
     text: "Hygiene, Wundversorgung, Notfallmanagement, Trinkwasserproben: Fachleute aus dem eigenen Haus schulen Ihr Team – herstellerneutral und bei Ihnen vor Ort.",
+    detail:
+      "Im Team stecken eigene Qualifikationen dahinter, keine externen Referenten: staatlich geprüfte Desinfektorin, ausgebildeter Hygieneberater und mehrere Kolleginnen und Kollegen mit Zusatzqualifizierung zum Medizinprodukteberater.",
   },
 ];
+
+function PlusToggleIcon({ open }: { open: boolean }) {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      width="14"
+      height="14"
+      fill="none"
+      aria-hidden="true"
+      className="shrink-0 transition-transform duration-[220ms] ease-[cubic-bezier(.22,.61,.36,1)]"
+      style={{ transform: open ? "rotate(45deg)" : "none" }}
+    >
+      <path d="M8 2v12M2 8h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" />
+    </svg>
+  );
+}
+
+function ReasonItem({
+  reason,
+  index,
+}: {
+  reason: (typeof reasons)[number];
+  index: number;
+}) {
+  const [open, setOpen] = useState(false);
+  const detailId = `positionierung-detail-${index}`;
+
+  return (
+    <li
+      className="grid grid-cols-[2.5rem_1fr] gap-x-2 border-t border-line py-7 last:border-b sm:grid-cols-[3.5rem_1fr] sm:gap-x-4"
+      data-reveal
+      style={{ "--reveal-delay": `${index * 80}ms` } as React.CSSProperties}
+    >
+      <span className="t-index pt-1.5 text-magenta-ink" aria-hidden="true">
+        {String(index + 1).padStart(2, "0")}
+      </span>
+      <div>
+        <h3 className="t-h3">{reason.title}</h3>
+        <p className="mt-2.5 leading-relaxed text-muted">{reason.text}</p>
+
+        <button
+          type="button"
+          onClick={() => setOpen((o) => !o)}
+          aria-expanded={open}
+          aria-controls={detailId}
+          className="mt-3.5 inline-flex items-center gap-1.5 text-[0.8125rem] font-semibold text-magenta-ink transition-colors hover:text-magenta-deep"
+        >
+          {open ? "Weniger anzeigen" : "Mehr erfahren"}
+          <PlusToggleIcon open={open} />
+        </button>
+
+        <div className="accordion-rows" data-open={open || undefined}>
+          <div id={detailId} className="overflow-hidden" aria-hidden={!open}>
+            <p className="pt-3 leading-relaxed text-muted">{reason.detail}</p>
+          </div>
+        </div>
+      </div>
+    </li>
+  );
+}
 
 export function Positioning() {
   return (
@@ -50,20 +122,7 @@ export function Positioning() {
 
           <ol className="lg:col-span-6 lg:col-start-7">
             {reasons.map((r, i) => (
-              <li
-                key={r.title}
-                className="grid grid-cols-[2.5rem_1fr] gap-x-2 border-t border-line py-7 last:border-b sm:grid-cols-[3.5rem_1fr] sm:gap-x-4"
-                data-reveal
-                style={{ "--reveal-delay": `${i * 80}ms` } as React.CSSProperties}
-              >
-                <span className="t-index pt-1.5 text-magenta-ink" aria-hidden="true">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <div>
-                  <h3 className="t-h3">{r.title}</h3>
-                  <p className="mt-2.5 leading-relaxed text-muted">{r.text}</p>
-                </div>
-              </li>
+              <ReasonItem key={r.title} reason={r} index={i} />
             ))}
           </ol>
         </div>
