@@ -1,0 +1,436 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   HiWo-med — Designsystem
+   Farbwelt, Typografie, Raster und Bewegung sind hier zentral definiert.
+   Marke: Magenta #E5097F und Pflaume #8E1A52 stammen exakt aus dem
+   bestehenden HiWo-med-Logo. Alles Übrige ist neu aufgebaut.
+   ========================================================================== */
+
+@theme {
+  /* -- Flächen --------------------------------------------------------- */
+  --color-paper: #f8f6f3; /* warmes Off-White, Grundfläche */
+  --color-paper-raised: #ffffff; /* erhöhte Flächen, Formulare */
+  --color-paper-tint: #efebe5; /* getönte Bänder, Sektionswechsel */
+
+  /* -- Schrift --------------------------------------------------------- */
+  --color-ink: #15181e; /* Überschriften */
+  --color-ink-body: #333944; /* Fließtext */
+  --color-muted: #5e6572; /* Sekundärtext, 4.9:1 auf paper */
+
+  /* -- Linien ---------------------------------------------------------- */
+  --color-line: #e2ddd5;
+  --color-line-strong: #cfc8bd;
+
+  /* -- Marke ----------------------------------------------------------- */
+  --color-magenta: #e5097f; /* Markenmagenta aus dem Logo: Linien, Marken, Flächen */
+  /* Gefüllte Buttons tragen weiße Schrift. #e5097f erreicht darauf nur
+     4,49:1 und verfehlt WCAG AA um Haaresbreite – deshalb ist der Ton für
+     Flächen mit Text minimal abgedunkelt (5,1:1). Optisch identisch. */
+  --color-magenta-cta: #d50877;
+  --color-magenta-deep: #b00662; /* Hover / gedrückt */
+  --color-magenta-ink: #a8085c; /* Magenta als Text auf hellem Grund */
+  --color-plum: #8e1a52; /* zweite Markenfarbe aus dem Logo */
+
+  /* -- Dunkle Sektionen ------------------------------------------------ */
+  --color-night: #14161b;
+  --color-night-raised: #1d2029;
+  --color-night-ink: #edeae5;
+  --color-night-muted: #a4a9b3;
+  --color-magenta-glow: #ff63ae; /* Magenta-Text auf dunklem Grund */
+
+  /* -- Radien: bewusst klein, keine "Bubbles" -------------------------- */
+  --radius-xs: 2px;
+  --radius-sm: 3px;
+  --radius-md: 4px;
+
+  /* -- Bewegung -------------------------------------------------------- */
+  --ease-out-quiet: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --duration-quick: 160ms;
+  --duration-base: 280ms;
+  --duration-reveal: 520ms;
+}
+
+/* ==========================================================================
+   Basis
+   ========================================================================== */
+
+:root {
+  --container: 1280px;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+  --section-y: clamp(4.5rem, 3rem + 5vw, 8.5rem);
+  --rule: 2px;
+  color-scheme: light;
+}
+
+* {
+  border-color: var(--color-line);
+}
+
+/* Rasterspalten dürfen schmaler werden als ihr längster Inhalt.
+   Ohne diese Regel sprengen lange deutsche Komposita das Layout. */
+[class*="grid-cols-"] > * {
+  min-width: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink-body);
+  font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  font-synthesis-weight: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--color-ink);
+  font-weight: 600;
+  letter-spacing: -0.022em;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* Deutsche Komposita: erst trennen, im Notfall umbrechen. */
+p,
+li,
+dd,
+figcaption,
+blockquote {
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+/* `anywhere` statt `break-word`: nur so schrumpft auch die intrinsische
+   Mindestbreite mit – sonst sprengt ein Wort wie „Trinkwasserprobenentnahme“
+   auf schmalen Geräten die Spalte. */
+h1,
+h2,
+h3,
+h4,
+dt,
+th,
+td,
+a,
+span {
+  overflow-wrap: anywhere;
+}
+
+/* Auf schmalen Geräten dürfen auch Überschriften getrennt werden.
+   Ab Tablet bleibt die Schlagzeile ungetrennt – das ist die bessere Optik. */
+@media (max-width: 767px) {
+  h1,
+  h2,
+  h3,
+  h4 {
+    hyphens: auto;
+  }
+}
+
+::selection {
+  background: var(--color-magenta);
+  color: #fff;
+}
+
+/* Sichtbarer, markanter Fokus — überall gleich. */
+:focus-visible {
+  outline: 2px solid var(--color-magenta);
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+
+.dark-section :focus-visible {
+  outline-color: var(--color-magenta-glow);
+}
+
+/* ==========================================================================
+   Raster
+   ========================================================================== */
+
+.container-site {
+  width: 100%;
+  max-width: calc(var(--container) + 2 * var(--gutter));
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.container-prose {
+  width: 100%;
+  max-width: calc(58rem + 2 * var(--gutter));
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section-y {
+  padding-block: var(--section-y);
+}
+
+/* ==========================================================================
+   Typografische Skala
+   ========================================================================== */
+
+.t-display {
+  font-size: clamp(2.5rem, 1.1rem + 4.7vw, 4.9rem);
+  line-height: 1.02;
+  letter-spacing: -0.032em;
+  font-weight: 600;
+}
+
+.t-h1 {
+  font-size: clamp(2.05rem, 1.15rem + 3.1vw, 3.5rem);
+  line-height: 1.06;
+  letter-spacing: -0.028em;
+  font-weight: 600;
+}
+
+.t-h2 {
+  font-size: clamp(1.65rem, 1.1rem + 2vw, 2.65rem);
+  line-height: 1.1;
+  letter-spacing: -0.024em;
+  font-weight: 600;
+}
+
+.t-h3 {
+  font-size: clamp(1.2rem, 1.04rem + 0.6vw, 1.5rem);
+  line-height: 1.24;
+  letter-spacing: -0.016em;
+  font-weight: 600;
+}
+
+.t-lead {
+  font-size: clamp(1.1rem, 1rem + 0.5vw, 1.375rem);
+  line-height: 1.55;
+  letter-spacing: -0.012em;
+  color: var(--color-ink-body);
+}
+
+.t-serif {
+  font-family: var(--font-source-serif), Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+}
+
+/* Kleines Label über Überschriften — wiederkehrendes Element. */
+.t-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+/* Kennzahlen: groß, leicht, typografisch — keine Karten. */
+.t-figure {
+  font-size: clamp(2.75rem, 1.4rem + 4.4vw, 4.75rem);
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  font-weight: 300;
+  font-variant-numeric: tabular-nums lining-nums;
+  color: var(--color-ink);
+}
+
+.t-figure-sm {
+  font-size: clamp(2rem, 1.3rem + 2.2vw, 3rem);
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  font-weight: 300;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+/* Laufende Sektionsnummer (01 / 02 …) — grafisches Wiedererkennungsmerkmal. */
+.t-index {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ==========================================================================
+   Wiederkehrende grafische Elemente
+   ========================================================================== */
+
+/* Magenta-Hairline über Labels. */
+.rule-brand {
+  display: block;
+  width: 2.75rem;
+  height: var(--rule);
+  background: var(--color-magenta);
+}
+
+/* Fließtext in Inhaltsseiten. */
+.prose-hiwo > * + * {
+  margin-top: 1.15em;
+}
+
+.prose-hiwo h3 {
+  margin-top: 2.25em;
+}
+
+.prose-hiwo strong {
+  color: var(--color-ink);
+  font-weight: 600;
+}
+
+.prose-hiwo a {
+  color: var(--color-magenta-ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+.prose-hiwo a:hover {
+  color: var(--color-magenta-deep);
+}
+
+/* Aufzählung mit Magenta-Strich statt Punkt. */
+.list-tick {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.list-tick > li {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.list-tick > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 0.75rem;
+  height: 2px;
+  background: var(--color-magenta);
+}
+
+.dark-section .list-tick > li::before {
+  background: var(--color-magenta-glow);
+}
+
+/* ==========================================================================
+   Dunkle Sektionen
+   ========================================================================== */
+
+.dark-section {
+  background-color: var(--color-night);
+  color: var(--color-night-muted);
+}
+
+.dark-section h1,
+.dark-section h2,
+.dark-section h3,
+.dark-section h4,
+.dark-section .t-figure,
+.dark-section .t-figure-sm {
+  color: var(--color-night-ink);
+}
+
+.dark-section * {
+  border-color: rgb(255 255 255 / 0.14);
+}
+
+/* ==========================================================================
+   Bewegung — kurz, ruhig, optional
+   Ohne JavaScript und bei "reduce motion" ist alles sofort sichtbar.
+   ========================================================================== */
+
+[data-reveal] {
+  opacity: 1;
+}
+
+html.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity var(--duration-reveal) var(--ease-out-quiet),
+    transform var(--duration-reveal) var(--ease-out-quiet);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+html.js [data-reveal][data-revealed="true"] {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  html.js [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==========================================================================
+   Hilfsklassen
+   ========================================================================== */
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  z-index: 100;
+  transform: translateY(-160%);
+  background: var(--color-ink);
+  color: #fff;
+  padding: 0.7rem 1.1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: transform var(--duration-quick) var(--ease-out-quiet);
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+/* Bildrahmen: 1px Hairline statt Schatten, minimaler Radius. */
+.figure-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-xs);
+  background: var(--color-paper-tint);
+}
+
+.figure-frame > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Sanfter Zoom beim Hover auf verlinkten Bildern. */
+.figure-zoom > img {
+  transition: transform 600ms var(--ease-out-quiet);
+}
+
+@media (hover: hover) {
+  .group\/card:hover .figure-zoom > img {
+    transform: scale(1.03);
+  }
+}
