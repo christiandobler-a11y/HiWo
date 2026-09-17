@@ -14,9 +14,10 @@ const heroFacts = [
  * Der obere Teil des Hero (Eyebrow, Headline, Einleitung, Zitat) trägt
  * zwei Hintergrundebenen statt einer flachen Fläche:
  *
- * 1. Das Lieferdienst-Foto, stark reduziert in der Deckkraft. Es liefert
- *    von der ersten Pixelzeile an ein Gefühl für das Unternehmen, ohne mit
- *    dem Text zu konkurrieren.
+ * 1. Der Standort-Himmel mit dem Firmenschild (Lagerhausstraße), reduziert
+ *    in der Deckkraft. Offener, ruhiger Untergrund mit dem echten Logo als
+ *    kleinem Wiedererkennungsmoment -- weniger unruhig als ein Foto mit
+ *    viel Beschriftung, und passt zum "nach vorn gerichtet"-Ton der Marke.
  * 2. Ein sehr feines, selbst gezeichnetes Kreuz-Raster (.pattern-rx) als
  *    kaum wahrnehmbare Textur darüber.
  *
@@ -34,8 +35,8 @@ export function Hero() {
         {/* Hintergrundebenen – rein dekorativ, daher aria-hidden und ohne Alt-Text. */}
         <div className="absolute inset-0 -z-10" aria-hidden="true">
           <img
-            src="/img/lieferdienst-sprinter-1280.webp"
-            srcSet="/img/lieferdienst-sprinter-1280.webp 1280w, /img/lieferdienst-sprinter-960.webp 960w, /img/lieferdienst-sprinter-640.webp 640w"
+            src="/img/himmel-schild-1280.webp"
+            srcSet="/img/himmel-schild-1280.webp 1280w, /img/himmel-schild-960.webp 960w, /img/himmel-schild-640.webp 640w"
             sizes="100vw"
             width={1280}
             height={514}
@@ -43,8 +44,8 @@ export function Hero() {
             loading="eager"
             decoding="async"
             fetchPriority="high"
-            className="h-full w-full object-cover opacity-[0.2]"
-            style={{ objectPosition: "68% 42%" }}
+            className="h-full w-full object-cover opacity-[0.32]"
+            style={{ objectPosition: "70% 40%" }}
           />
           <div className="pattern-rx absolute inset-0 opacity-[0.05]" />
           {/* Weicher Übergang zur Fakten-Zeile, kein harter Bildschnitt. */}
