@@ -12,7 +12,7 @@ const channels = [
     label: "Anrufen",
     value: company.phone.display,
     href: company.phone.href,
-    note: `${company.hours.days}, ${company.hours.time}`,
+    note: company.hours.compact,
   },
   {
     label: "Schreiben",

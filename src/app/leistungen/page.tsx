@@ -225,9 +225,7 @@ export default function LeistungenPage() {
                 lead="Zwischen dem Anruf in Uffing und dem Termin in Ihrer Praxis liegt kein Dienstleisterwechsel. Beide Seiten arbeiten mit denselben Daten und kennen dieselben Kunden."
               />
               <ul className="list-tick mt-8 text-muted">
-                <li>
-                  Montag bis Freitag durchgehend von {company.hours.time} persönlich erreichbar
-                </li>
+                <li>{company.hours.compact} persönlich erreichbar</li>
                 <li>Feste Gebiete im Außendienst – dieselbe Ansprechperson über Jahre</li>
                 <li>Individuelle Versorgungslösungen statt Standardpakete</li>
                 <li>Jährliche Kundenbefragung zu Umfang und Qualität unserer Leistungen</li>

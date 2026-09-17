@@ -81,9 +81,13 @@ export function SiteFooter() {
           <div className="lg:col-span-4">
             <h2 className="t-eyebrow text-night-ink">Erreichbarkeit</h2>
             <p className="mt-5 leading-relaxed">
-              <span className="font-semibold text-night-ink">{company.hours.days}</span>
+              <span className="font-semibold text-night-ink">{company.hours.weekdays}</span>
               <br />
-              {company.hours.time} — {company.hours.note}.
+              {company.hours.weekdaysTime}
+              <br />
+              <span className="font-semibold text-night-ink">{company.hours.friday}</span>
+              <br />
+              {company.hours.fridayTime} — {company.hours.note}.
             </p>
 
             <a

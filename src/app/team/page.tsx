@@ -68,7 +68,7 @@ export default function TeamPage() {
         meta={[
           { k: "Standort", v: `Alle an einem Ort: ${company.address.city}` },
           { k: "Längste Zugehörigkeit", v: `seit ${earliestYear}` },
-          { k: "Erreichbarkeit", v: `${company.hours.days}, ${company.hours.time}` },
+          { k: "Erreichbarkeit", v: company.hours.compact },
         ]}
       />
 

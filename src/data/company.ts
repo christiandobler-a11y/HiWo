@@ -28,9 +28,13 @@ export const company = {
     training: "schulungen@hiwomed.de",
   },
   hours: {
-    days: "Montag bis Freitag",
-    time: "08:00 – 17:00 Uhr",
+    weekdays: "Montag bis Donnerstag",
+    weekdaysTime: "08:00 – 17:00 Uhr",
+    friday: "Freitag",
+    fridayTime: "08:00 – 15:00 Uhr",
     note: "durchgehend persönlich erreichbar",
+    /** Kompakte Fassung für Fakten-Zeilen und Fließtext. */
+    compact: "Montag bis Donnerstag 08:00 – 17:00 Uhr, Freitag bis 15:00 Uhr",
   },
   register: {
     court: "Amtsgericht München",

@@ -6,7 +6,7 @@ import { company, yearsInBusiness } from "@/data/company";
 /** Drei harte Fakten direkt unter dem Einstieg – ohne Karten, nur Haarlinien. */
 const heroFacts = [
   { k: "Gegründet", v: `${company.foundedYear} · familiengeführt in zweiter Generation` },
-  { k: "Erreichbar", v: `${company.hours.days}, ${company.hours.time}` },
+  { k: "Erreichbar", v: company.hours.compact },
   { k: "Lager", v: "1.500 m² · über 6.000 Artikel sofort verfügbar" },
 ];
 
@@ -28,8 +28,13 @@ export function Hero() {
   return (
     <section className="overflow-hidden pb-[clamp(3.5rem,2rem+4vw,6rem)]">
       <div className="relative pt-[clamp(2.25rem,1.5rem+3vw,6rem)]">
-        {/* Hintergrundebenen – rein dekorativ, daher aria-hidden und ohne Alt-Text. */}
-        <div className="absolute inset-0 -z-10" aria-hidden="true">
+        {/* Hintergrundebenen – rein dekorativ, daher aria-hidden und ohne Alt-Text.
+            overflow-hidden ist hier nötig: Der zusätzliche scale()-Zoom auf dem
+            Bild lässt es sonst optisch über diese Box hinausragen (Transforms
+            werden nicht ins Layout gerechnet) – ungefiltert und ohne den
+            Verlauf darunter, das sah wie ein harter Schnitt unter den Buttons
+            aus. */}
+        <div className="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
           <img
             src="/img/himmel-schild-1280.webp"
             srcSet="/img/himmel-schild-1280.webp 1280w, /img/himmel-schild-960.webp 960w, /img/himmel-schild-640.webp 640w"

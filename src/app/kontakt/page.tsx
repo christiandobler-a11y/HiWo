@@ -25,11 +25,11 @@ export default function KontaktPage() {
       <PageHeader
         label="Kontakt"
         title={<>Ein Anruf reicht.</>}
-        lead="Zwischen 8 und 17 Uhr geht bei uns jemand ans Telefon, der direkt weiterhelfen kann – ohne Auswahlmenü und ohne Rückrufversprechen."
+        lead="Montag bis Donnerstag zwischen 8 und 17 Uhr, freitags bis 15 Uhr geht bei uns jemand ans Telefon, der direkt weiterhelfen kann – ohne Auswahlmenü und ohne Rückrufversprechen."
         meta={[
           { k: "Telefon", v: company.phone.display },
           { k: "E-Mail", v: company.email.general },
-          { k: "Erreichbar", v: `${company.hours.days}, ${company.hours.time}` },
+          { k: "Erreichbar", v: company.hours.compact },
         ]}
       />
 
@@ -88,9 +88,13 @@ export default function KontaktPage() {
                     Zeiten
                   </dt>
                   <dd className="text-[1.0625rem] text-ink">
-                    {company.hours.days}
+                    {company.hours.weekdays}
                     <span className="block text-[0.9375rem] text-muted">
-                      {company.hours.time} – {company.hours.note}
+                      {company.hours.weekdaysTime}
+                    </span>
+                    <span className="mt-2 block">{company.hours.friday}</span>
+                    <span className="block text-[0.9375rem] text-muted">
+                      {company.hours.fridayTime} – {company.hours.note}
                     </span>
                   </dd>
                 </div>

@@ -206,7 +206,7 @@ export function SiteHeader() {
               {company.phone.display}
             </a>
             <p className="text-[0.8125rem] text-muted">
-              {company.hours.days}, {company.hours.time} – {company.hours.note}.
+              {company.hours.compact} – {company.hours.note}.
             </p>
           </div>
         </nav>
