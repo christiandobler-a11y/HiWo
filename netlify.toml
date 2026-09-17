@@ -24,8 +24,15 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+## Wichtig: nur auf die Bilddateien beschränken (".webp"), nicht auf "/team/*"
+## allgemein – sonst trifft die Regel auch die Team-SEITE ("/team/") und ihre
+## Navigations-Payload ("/team/index.txt", wird bei Klicks auf "Team" im Menü
+## nachgeladen). Beide würden dann fälschlich ein Jahr lang unveränderlich im
+## Browser-Cache hängen bleiben – nach jedem Redeploy zeigt der Browser dann
+## eine alte Seite, deren referenzierte JS/CSS-Dateien (neue Hash-Namen bei
+## jedem Build) nicht mehr existieren: Seite lädt nur noch Text, keine Bilder.
 [[headers]]
-  for = "/team/*"
+  for = "/team/*.webp"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
