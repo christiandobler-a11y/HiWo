@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
 /**
@@ -11,14 +12,30 @@ import { useEffect } from "react";
  * - `prefers-reduced-motion: reduce` schaltet jede Bewegung ab.
  * - Ein einziger IntersectionObserver für die ganze Seite, Elemente werden
  *   nach dem Einblenden abgemeldet. Kein Scroll-Listener, kein Parallax.
+ *
+ * Läuft an `pathname` gebunden neu: Der App-Router hält dieses Layout bei
+ * einer client-seitigen Navigation am Leben, ohne die Komponente neu zu
+ * mounten. Ohne diese Abhängigkeit würde der Observer nur einmal beim
+ * allerersten Laden über die vorhandenen `[data-reveal]`-Elemente laufen –
+ * alle Elemente einer per Link nachgeladenen Seite blieben dann dauerhaft
+ * bei opacity:0 hängen (unsichtbar, aber weiterhin im Layout vorhanden).
  */
 export function MotionRuntime() {
+  const pathname = usePathname();
+
+  // Die "js"-Klasse einmal für die Lebensdauer der Seite setzen – nicht an
+  // `pathname` gebunden, damit sie bei einer Navigation nicht kurz entfernt
+  // und wieder gesetzt wird (das würde alle data-reveal-Elemente für einen
+  // Frame auf opacity:1 zurückspringen lassen).
   useEffect(() => {
-    const root = document.documentElement;
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!reduced) document.documentElement.classList.add("js");
+  }, []);
+
+  useEffect(() => {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     if (reduced) return;
-    root.classList.add("js");
 
     const revealObserver = new IntersectionObserver(
       (entries) => {
@@ -64,9 +81,8 @@ export function MotionRuntime() {
     return () => {
       revealObserver.disconnect();
       countObserver.disconnect();
-      root.classList.remove("js");
     };
-  }, []);
+  }, [pathname]);
 
   return null;
 }
