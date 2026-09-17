@@ -68,7 +68,7 @@ export function Assortment() {
               data-reveal
             >
               <Figure
-                name="katalog-cover"
+                name="katalog-cover-v2"
                 widths={[560, 380]}
                 ratio={0.707}
                 alt="Titelseite des HiWo-med Gesamtkatalogs 2025/26 mit dem Schriftzug „Medizintechnik von A–Z, seit 1989“."
