@@ -7,3 +7,6 @@ next-env.d.ts
 
 # Lokale Review-Ausgaben
 /out
+
+# Build-Artefakt, nicht Teil des Quellcodes
+*.zip
