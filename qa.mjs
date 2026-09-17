@@ -64,7 +64,13 @@ for (const path of PAGES) {
   // --- Alt-Texte -----------------------------------------------------------
   const badAlt = await page.evaluate(() =>
     [...document.images]
-      .filter((i) => i.getAttribute("alt") === null || i.alt.trim() === "")
+      .filter((i) => {
+        if (i.getAttribute("alt") === null) return true;
+        // alt="" ist das korrekte Muster für rein dekorative Bilder --
+        // aber nur, wenn sie tatsächlich vor Screenreadern versteckt sind.
+        if (i.alt.trim() === "") return !i.closest('[aria-hidden="true"]');
+        return false;
+      })
       .map((i) => i.currentSrc || i.src),
   );
   for (const src of badAlt) note(path, "alt", `Bild ohne Alt-Text: ${src}`);

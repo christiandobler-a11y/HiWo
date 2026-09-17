@@ -270,6 +270,26 @@ span {
   background: var(--color-magenta);
 }
 
+/*
+ * Medizinisches Hintergrundmuster: ein feines Raster aus Kreuzen — dem
+ * medizinischen Kreuz, nicht mehr und nicht weniger. Kein Icon-Set, kein
+ * Stock-Symbol, sondern eine eigene, reduzierte Linienzeichnung, die als
+ * kaum wahrnehmbare Textur getragen wird (siehe Einsatz in Hero.tsx).
+ * Deckkraft wird über die Klasse am Element gesteuert, nicht hier fest
+ * verdrahtet, damit sie sich je nach Untergrund anpassen lässt.
+ */
+.pattern-rx {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2264%22%20height%3D%2264%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cpath%20d%3D%22M32%2022v20M22%2032h20%22%20stroke%3D%22%231A1D24%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22square%22/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 64px 64px;
+}
+
+.pattern-rx-invert {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2264%22%20height%3D%2264%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cpath%20d%3D%22M32%2022v20M22%2032h20%22%20stroke%3D%22%23EDEAE5%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22square%22/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 64px 64px;
+}
+
 /* Fließtext in Inhaltsseiten. */
 .prose-hiwo > * + * {
   margin-top: 1.15em;
