@@ -11,17 +11,19 @@ export function SiteFooter() {
         <div className="grid gap-x-10 gap-y-12 lg:grid-cols-12">
           {/* Marke + Anschrift */}
           <div className="lg:col-span-5">
-            {/* Das Original-Logo bleibt unverändert und steht deshalb auf
-                einer hellen Fläche – so stimmen Farben und Kontraste. */}
-            <div className="inline-flex bg-paper px-5 py-4">
-              <img
-                src="/brand/logo-hiwomed-280.png"
-                width={280}
-                height={204}
-                alt="HiWo-med Medizintechnik"
-                className="h-12 w-auto"
-              />
-            </div>
+            {/* Eigene Dark-Variante: die dunklen Sekundärfarben des Logos
+                (Fließtext, "$med") sind hier auf night-muted/magenta-glow
+                umgefärbt, damit es direkt auf dem dunklen Footer lesbar
+                ist -- keine weiße Box mehr nötig, die auf Dunkel unruhig
+                wirkte. */}
+            <img
+              src="/brand/logo-hiwomed-dark-280.png"
+              srcSet="/brand/logo-hiwomed-dark-280.png 280w, /brand/logo-hiwomed-dark-560.png 560w"
+              width={280}
+              height={204}
+              alt="HiWo-med Medizintechnik"
+              className="h-12 w-auto"
+            />
 
             <address className="mt-8 not-italic leading-relaxed text-night-muted">
               <span className="block font-semibold text-night-ink">{company.legalName}</span>

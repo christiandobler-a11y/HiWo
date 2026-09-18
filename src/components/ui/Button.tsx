@@ -65,6 +65,23 @@ export function Button({
   );
 }
 
+/** Plus, das sich beim Öffnen eines Ausklappers zu einem Kreuz dreht. */
+export function PlusToggleIcon({ open, className = "" }: { open: boolean; className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      width="14"
+      height="14"
+      fill="none"
+      aria-hidden="true"
+      className={`shrink-0 transition-transform duration-[220ms] ease-[cubic-bezier(.22,.61,.36,1)] ${className}`}
+      style={{ transform: open ? "rotate(45deg)" : "none" }}
+    >
+      <path d="M8 2v12M2 8h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" />
+    </svg>
+  );
+}
+
 /** Schlanker Pfeil für Links – ersetzt Icon-Bibliotheken. */
 export function ArrowRight({ className = "" }: { className?: string }) {
   return (

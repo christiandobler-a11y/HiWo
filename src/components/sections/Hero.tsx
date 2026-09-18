@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { ArrowRight, Button } from "@/components/ui/Button";
-import { company, yearsInBusiness } from "@/data/company";
+import { company } from "@/data/company";
 
 /** Drei harte Fakten direkt unter dem Einstieg – ohne Karten, nur Haarlinien. */
 const heroFacts = [
@@ -36,8 +36,8 @@ export function Hero() {
             aus. */}
         <div className="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
           <img
-            src="/img/himmel-schild-1280.webp"
-            srcSet="/img/himmel-schild-1280.webp 1280w, /img/himmel-schild-960.webp 960w, /img/himmel-schild-640.webp 640w"
+            src="/img/himmel-schild-v2-1280.webp"
+            srcSet="/img/himmel-schild-v2-1280.webp 1280w, /img/himmel-schild-v2-960.webp 960w, /img/himmel-schild-v2-640.webp 640w"
             sizes="100vw"
             width={1280}
             height={514}
@@ -95,7 +95,7 @@ export function Hero() {
               „{company.claim}“
             </p>
             <p className="mt-3 text-[0.875rem] text-muted">
-              Der Satz steht seit {yearsInBusiness} Jahren auf unseren Fahrzeugen.
+              Der Satz steht seit {company.foundedYear} auf unseren Fahrzeugen.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-3 lg:mt-10">

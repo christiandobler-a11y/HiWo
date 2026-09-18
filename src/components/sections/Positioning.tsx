@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 
+import { PlusToggleIcon } from "@/components/ui/Button";
 import { SectionHead } from "@/components/ui/Section";
 
 /**
@@ -31,22 +32,6 @@ const reasons = [
       "Im Team stecken eigene Qualifikationen dahinter, keine externen Referenten: staatlich geprüfte Desinfektorin, ausgebildeter Hygieneberater und mehrere Kolleginnen und Kollegen mit Zusatzqualifizierung zum Medizinprodukteberater.",
   },
 ];
-
-function PlusToggleIcon({ open }: { open: boolean }) {
-  return (
-    <svg
-      viewBox="0 0 16 16"
-      width="14"
-      height="14"
-      fill="none"
-      aria-hidden="true"
-      className="shrink-0 transition-transform duration-[220ms] ease-[cubic-bezier(.22,.61,.36,1)]"
-      style={{ transform: open ? "rotate(45deg)" : "none" }}
-    >
-      <path d="M8 2v12M2 8h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" />
-    </svg>
-  );
-}
 
 function ReasonItem({
   reason,

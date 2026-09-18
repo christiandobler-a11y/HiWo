@@ -19,8 +19,7 @@ export function KeyFigures() {
             </h2>
           </div>
           <p className="max-w-[34rem] text-[0.9375rem] leading-relaxed text-muted">
-            Alle Angaben stammen aus dem laufenden Betrieb in Uffing am Staffelsee. Die
-            nächsten Schritte – mehr Fläche, mehr Kapazität – sind in Vorbereitung.
+            Alle Angaben stammen aus dem laufenden Betrieb in Uffing am Staffelsee.
           </p>
         </div>
 

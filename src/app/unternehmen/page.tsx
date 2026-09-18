@@ -6,7 +6,7 @@ import { ArrowRight, Button } from "@/components/ui/Button";
 import { Figure, FigureCaption } from "@/components/ui/Figure";
 import { SectionHead, SectionMark } from "@/components/ui/Section";
 import { Stat } from "@/components/ui/Stat";
-import { company, keyFigures, yearsInBusiness } from "@/data/company";
+import { company, keyFigures } from "@/data/company";
 import { teamHeadcount } from "@/data/team";
 
 export const metadata: Metadata = {
@@ -58,11 +58,6 @@ const timeline = [
     title: "Versorgungsbetrieb",
     text: `1.500 m² Lager, eigener Fuhrpark, ${teamHeadcount} Kolleginnen und Kollegen, eigener Schulungsbereich.`,
   },
-  {
-    year: "Ausblick",
-    title: "Mehr Kapazität",
-    text: "Größere und modernere Infrastruktur ist in Planung – das Versorgungsgebiet und die Nachfrage wachsen weiter.",
-  },
 ];
 
 export default function UnternehmenPage() {
@@ -73,7 +68,7 @@ export default function UnternehmenPage() {
         title={<>Ein Familienbetrieb, der wie ein Versorger arbeitet.</>}
         lead={`Gegründet ${company.foundedYear}, heute in zweiter Generation geführt. ${teamHeadcount} Kolleginnen und Kollegen arbeiten in Uffing am Staffelsee an einem Standort, an dem Lager, Verwaltung und Fuhrpark zusammenliegen.`}
         meta={[
-          { k: "Gegründet", v: `${company.foundedYear} · ${yearsInBusiness} Jahre` },
+          { k: "Gegründet", v: `${company.foundedYear}` },
           { k: "Geführt von", v: `${company.managingDirector}, zweite Generation` },
           { k: "Standort", v: `${company.address.city}, Oberbayern` },
         ]}
@@ -126,7 +121,7 @@ export default function UnternehmenPage() {
           <SectionHead
             label="Geschichte"
             split
-            title={<span id="geschichte">{yearsInBusiness} Jahre, zwei Generationen</span>}
+            title={<span id="geschichte">Seit {company.foundedYear}, zwei Generationen</span>}
             lead="Gewachsen ist HiWo-med nicht durch Zukäufe, sondern durch Kunden, die geblieben sind – und durch Mitarbeitende, die geblieben sind."
           />
 

@@ -51,20 +51,22 @@ export const company = {
   },
 } as const;
 
-/** Das aktuelle Jahr wird zur Build-Zeit ausgewertet – keine hartkodierte Zahl. */
-export const yearsInBusiness = new Date().getFullYear() - company.foundedYear;
-
 /**
  * Kennzahlen. Jede Zahl ist auf der bestehenden Website belegbar.
  * `source` dokumentiert, wo sie herkommt – hilfreich für das Lektorat
  * vor einem echten Relaunch.
+ *
+ * Bewusst keine aus dem Gründungsjahr berechnete Jahreszahl mehr ("X
+ * Jahre") -- das war an mehreren Stellen inkonsistent formatiert und
+ * macht die Seite ohne echten Mehrwert wartungsintensiv. Überall nur
+ * noch das feste Gründungsjahr 1989.
  */
 export const keyFigures = [
   {
     value: company.foundedYear,
     unit: "",
     label: "gegründet in Uffing am Staffelsee",
-    detail: `Familiengeführt in zweiter Generation – seit ${yearsInBusiness} Jahren.`,
+    detail: "Familiengeführt in zweiter Generation – seit 1989.",
     source: "Logo / Katalogtitel 2025/26",
     countUp: false,
     numberFormat: "plain" as const,

@@ -198,13 +198,13 @@ export default function LeistungenPage() {
 
             <figure className="lg:col-span-5" data-reveal>
               <Figure
-                name="lager-regale"
-                widths={[1280, 960, 640]}
+                name="lager-regale-v2"
+                widths={[960, 640]}
                 ratio={2.49}
                 alt="Regalgang im Lager von HiWo-med, beidseitig gefüllt mit Verbandmaterial und Kartons."
                 sizes="(min-width: 1024px) 40vw, 100vw"
                 className="aspect-[4/3] w-full lg:aspect-[1.3/1]"
-                position="40% 50%"
+                position="50% 50%"
               />
               <FigureCaption onDark>
                 Wareneingang, Qualitätskontrolle und Kommissionierung laufen an einem Standort.

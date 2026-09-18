@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import { PageHeader } from "@/components/layout/PageHeader";
 import { ContactCta } from "@/components/sections/ContactCta";
+import { TeamIntroBanner } from "@/components/sections/TeamIntroBanner";
 import { SectionMark } from "@/components/ui/Section";
 import { company } from "@/data/company";
 import {
@@ -71,6 +72,8 @@ export default function TeamPage() {
           { k: "Erreichbarkeit", v: company.hours.compact },
         ]}
       />
+
+      <TeamIntroBanner />
 
       <section className="pb-[var(--section-y)] pt-4">
         <div className="container-site">

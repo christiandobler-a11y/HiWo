@@ -1,3 +1,8 @@
+"use client";
+
+import { useState } from "react";
+
+import { PlusToggleIcon } from "@/components/ui/Button";
 import { Figure, FigureCaption } from "@/components/ui/Figure";
 import { SectionHead } from "@/components/ui/Section";
 import { deliveryRegions } from "@/data/company";
@@ -23,6 +28,8 @@ const logisticsDetails = [
 ];
 
 export function Logistics() {
+  const [locationOpen, setLocationOpen] = useState(false);
+
   return (
     <section className="dark-section section-y" aria-labelledby="logistik">
       <div className="container-site">
@@ -44,17 +51,37 @@ export function Logistics() {
         <div className="mt-14 grid gap-x-12 gap-y-12 lg:grid-cols-12">
           <figure className="lg:col-span-5" data-reveal>
             <Figure
-              name="lager-regale-quad"
-              widths={[900, 600]}
-              ratio={1}
-              alt="Blick durch einen Gang im HiWo-med-Lager: beidseitig Regale mit Kartons und Verbandmaterial bis unter die Decke."
+              name="fuhrpark-staffelsee"
+              widths={[960, 640]}
+              ratio={2.49}
+              alt="Ein HiWo-med-Transporter auf einer Landstraße am Staffelsee, im Hintergrund die Alpenkette."
               sizes="(min-width: 1024px) 40vw, 100vw"
-              className="aspect-square w-full"
+              className="aspect-[3/2] w-full"
+              position="50% 42%"
             />
             <FigureCaption onDark>
-              1.500 m² Lagerfläche in Uffing am Staffelsee. Über 6.000 Artikel sind sofort
-              verfügbar – Wareneingang und Qualitätskontrolle laufen im Haus.
+              Acht Fahrerinnen und Fahrer, ein Versorgungsgebiet: von Uffing bis in den
+              Großraum München und darüber hinaus.
             </FigureCaption>
+
+            <button
+              type="button"
+              onClick={() => setLocationOpen((o) => !o)}
+              aria-expanded={locationOpen}
+              aria-controls="logistik-standort-detail"
+              className="mt-4 inline-flex items-center gap-1.5 text-[0.8125rem] font-semibold text-night-ink transition-colors hover:text-magenta-glow"
+            >
+              {locationOpen ? "Weniger anzeigen" : "Standort & Lager"}
+              <PlusToggleIcon open={locationOpen} />
+            </button>
+            <div className="accordion-rows" data-open={locationOpen || undefined}>
+              <div id="logistik-standort-detail" className="overflow-hidden" aria-hidden={!locationOpen}>
+                <p className="pt-3 text-[0.9375rem] leading-relaxed text-night-muted">
+                  1.500 m² Lagerfläche in Uffing am Staffelsee. Über 6.000 Artikel sind sofort
+                  verfügbar – Wareneingang und Qualitätskontrolle laufen im Haus.
+                </p>
+              </div>
+            </div>
           </figure>
 
           {/* Liefergebiete als Tabelle: die Information, die Praxen wirklich

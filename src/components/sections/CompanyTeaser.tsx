@@ -1,7 +1,7 @@
 import { ArrowRight, Button } from "@/components/ui/Button";
 import { Figure, FigureCaption } from "@/components/ui/Figure";
 import { SectionHead } from "@/components/ui/Section";
-import { company, yearsInBusiness } from "@/data/company";
+import { company } from "@/data/company";
 import { longTenureCount, teamGroups, teamHeadcount } from "@/data/team";
 
 /** Eine Auswahl quer durch alle Bereiche – nicht nur die Führungsebene. */
@@ -46,11 +46,10 @@ export function CompanyTeaser() {
             </blockquote>
             <p className="mt-8 leading-relaxed text-muted">
               {company.founder} hat das Unternehmen {company.foundedYear} gegründet,{" "}
-              {company.managingDirector} führt es heute. Dazwischen liegen{" "}
-              {yearsInBusiness} Jahre, in denen aus einem Fachhandel für niedergelassene
-              Praxen ein Versorgungsbetrieb mit eigenem Lager, eigenem Fuhrpark und{" "}
-              {teamHeadcount} Kolleginnen und Kollegen geworden ist. Die Richtung bleibt: mehr
-              Kapazität, moderner aufgestellt – und weiterhin aus Uffing.
+              {company.managingDirector} führt es heute. Seither ist aus einem Fachhandel für
+              niedergelassene Praxen ein Versorgungsbetrieb mit eigenem Lager, eigenem
+              Fuhrpark und {teamHeadcount} Kolleginnen und Kollegen geworden – weiterhin aus
+              Uffing.
             </p>
             <div className="mt-8 flex flex-wrap gap-x-4 gap-y-3">
               <Button href="/unternehmen/" variant="outline">
