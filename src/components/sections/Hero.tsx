@@ -45,8 +45,11 @@ export function Hero() {
             loading="eager"
             decoding="async"
             fetchPriority="high"
-            className="h-full w-full object-cover opacity-[0.32]"
-            /* objectPosition "100% ..." zeigt den rechten Bildrand vollständig,
+            className="hero-bg-reveal h-full w-full object-cover"
+            /* Startet unsichtbar und blendet über ~2,6s sanft auf die
+               finale Deckkraft (0.32) auf -- soll beim Laden der Seite
+               "sanft erscheinen" statt sofort hart sichtbar zu sein.
+               objectPosition "100% ..." zeigt den rechten Bildrand vollständig,
                sonst wird das "d" in "med" abgeschnitten. Der zusätzliche
                scale()-Zoom ist am rechten Rand verankert (transformOrigin),
                damit das Schild dabei nicht weiter nach rechts aus dem

@@ -51,17 +51,17 @@ export function Logistics() {
         <div className="mt-14 grid gap-x-12 gap-y-12 lg:grid-cols-12">
           <figure className="lg:col-span-5" data-reveal>
             <Figure
-              name="fuhrpark-staffelsee"
+              name="lager-regale-v2"
               widths={[960, 640]}
               ratio={2.49}
-              alt="Ein HiWo-med-Transporter auf einer Landstraße am Staffelsee, im Hintergrund die Alpenkette."
+              alt="Blick durch einen Gang im HiWo-med-Lager: beidseitig Regale mit Kartons und Verbandmaterial bis unter die Decke."
               sizes="(min-width: 1024px) 40vw, 100vw"
               className="aspect-[3/2] w-full"
-              position="50% 42%"
+              position="50% 50%"
             />
             <FigureCaption onDark>
-              Acht Fahrerinnen und Fahrer, ein Versorgungsgebiet: von Uffing bis in den
-              Großraum München und darüber hinaus.
+              1.500 m² Lagerfläche in Uffing am Staffelsee. Über 6.000 Artikel sind sofort
+              verfügbar – Wareneingang und Qualitätskontrolle laufen im Haus.
             </FigureCaption>
 
             <button
@@ -71,14 +71,14 @@ export function Logistics() {
               aria-controls="logistik-standort-detail"
               className="mt-4 inline-flex items-center gap-1.5 text-[0.8125rem] font-semibold text-night-ink transition-colors hover:text-magenta-glow"
             >
-              {locationOpen ? "Weniger anzeigen" : "Standort & Lager"}
+              {locationOpen ? "Weniger anzeigen" : "Fuhrpark"}
               <PlusToggleIcon open={locationOpen} />
             </button>
             <div className="accordion-rows" data-open={locationOpen || undefined}>
               <div id="logistik-standort-detail" className="overflow-hidden" aria-hidden={!locationOpen}>
                 <p className="pt-3 text-[0.9375rem] leading-relaxed text-night-muted">
-                  1.500 m² Lagerfläche in Uffing am Staffelsee. Über 6.000 Artikel sind sofort
-                  verfügbar – Wareneingang und Qualitätskontrolle laufen im Haus.
+                  Acht Fahrerinnen und Fahrer, ein Versorgungsgebiet: von Uffing bis in den
+                  Großraum München und darüber hinaus.
                 </p>
               </div>
             </div>

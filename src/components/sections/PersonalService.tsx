@@ -1,11 +1,7 @@
-"use client";
-
-import { useState } from "react";
-
 import { ArrowRight, Button } from "@/components/ui/Button";
 import { Figure, FigureCaption } from "@/components/ui/Figure";
 import { SectionHead } from "@/components/ui/Section";
-import { fieldServiceMembers, type TeamMember } from "@/data/team";
+import { fieldServiceMembers } from "@/data/team";
 
 /**
  * Persönliche Betreuung. Hier stehen echte Gesichter mit echten Gebieten –
@@ -56,74 +52,39 @@ export function PersonalService() {
         </div>
 
         {/* Außendienst-Leiste: fünf Porträts mit Gebiet, durch Haarlinien getrennt.
-            Zum Umdrehen antippen/anklicken -- auf der Rückseite ein paar Zeilen
-            mehr Nähe, statt nur Name und Foto. */}
+            Blenden beim Scrollen mit einer sanften Drehung ein (reveal-flip)
+            statt nur hochzuschieben wie der Rest der Seite. */}
         <div className="mt-16 border-t border-line pt-8">
           <h3 className="t-eyebrow text-muted">Ihr Außendienst</h3>
-          <ul className="mt-6 grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-3 lg:grid-cols-5">
+          <ul className="mt-6 grid grid-cols-2 gap-x-5 gap-y-10 sm:grid-cols-3 lg:grid-cols-5">
             {fieldServiceMembers.map((m, i) => (
               <li
                 key={m.name}
+                className="reveal-flip [perspective:1000px]"
                 data-reveal
-                style={{ "--reveal-delay": `${i * 60}ms` } as React.CSSProperties}
+                style={{ "--reveal-delay": `${i * 90}ms` } as React.CSSProperties}
               >
-                <FieldServiceCard member={m} />
+                <div className="figure-frame aspect-[4/5] w-full bg-paper-tint">
+                  <img
+                    src={`/team/${m.photo}.webp`}
+                    width={420}
+                    height={525}
+                    alt={`Porträt von ${m.name}`}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <p className="mt-3 text-[0.9375rem] font-semibold leading-snug text-ink">
+                  {m.name}
+                </p>
+                <p className="mt-1 text-[0.8125rem] leading-snug text-muted">
+                  {m.role?.split(" · ")[0]}
+                </p>
               </li>
             ))}
           </ul>
         </div>
       </div>
     </section>
-  );
-}
-
-function FieldServiceCard({ member }: { member: TeamMember }) {
-  const [flipped, setFlipped] = useState(false);
-  const area = member.role?.split(" · ")[0];
-
-  return (
-    <button
-      type="button"
-      onClick={() => setFlipped((f) => !f)}
-      aria-pressed={flipped}
-      className="group block w-full text-left [perspective:1200px]"
-    >
-      <div
-        className="relative aspect-[4/5] w-full transition-transform duration-[550ms] [transform-style:preserve-3d]"
-        style={{
-          transform: flipped ? "rotateY(180deg)" : "none",
-          transitionTimingFunction: "cubic-bezier(.22,.61,.36,1)",
-        }}
-      >
-        {/* Vorderseite */}
-        <div className="figure-frame absolute inset-0 [backface-visibility:hidden]">
-          <img
-            src={`/team/${member.photo}.webp`}
-            width={420}
-            height={525}
-            alt={`Porträt von ${member.name}`}
-            loading="lazy"
-            decoding="async"
-          />
-        </div>
-
-        {/* Rückseite */}
-        <div
-          className="absolute inset-0 flex flex-col justify-end bg-magenta-cta p-4 text-white [backface-visibility:hidden]"
-          style={{ transform: "rotateY(180deg)" }}
-        >
-          <p className="text-[0.9375rem] font-semibold leading-snug">{member.name}</p>
-          {area ? <p className="mt-1 text-[0.8125rem] leading-snug text-white/85">{area}</p> : null}
-          {member.since ? (
-            <p className="mt-2 text-[0.8125rem] leading-snug text-white/85">
-              Seit {member.since} Ihr fester Ansprechpartner vor Ort.
-            </p>
-          ) : null}
-        </div>
-      </div>
-
-      <p className="mt-3 text-[0.9375rem] font-semibold leading-snug text-ink">{member.name}</p>
-      <p className="mt-1 text-[0.8125rem] leading-snug text-muted">{area}</p>
-    </button>
   );
 }

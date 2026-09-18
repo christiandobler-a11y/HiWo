@@ -385,6 +385,15 @@ html.js [data-reveal][data-revealed="true"] {
   transform: none;
 }
 
+/* Variante für Porträtkarten: sanftes Hereindrehen statt Hochschieben. */
+html.js [data-reveal].reveal-flip {
+  transform: rotateY(-85deg);
+}
+
+html.js [data-reveal].reveal-flip[data-revealed="true"] {
+  transform: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -449,6 +458,22 @@ html.js [data-reveal][data-revealed="true"] {
   transition: transform 600ms var(--ease-out-quiet);
 }
 
+/* Hero-Hintergrundbild: blendet beim Laden sanft auf statt sofort mit
+   voller Deckkraft dazustehen. "both" hält den Startzustand (opacity:0)
+   bis die Animation beginnt und den Endzustand (0.32) danach. */
+@keyframes hero-bg-reveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.32;
+  }
+}
+
+.hero-bg-reveal {
+  animation: hero-bg-reveal 2600ms var(--ease-out-quiet) both;
+}
+
 @media (hover: hover) {
   .group\/card:hover .figure-zoom > img {
     transform: scale(1.03);
@@ -486,10 +511,6 @@ html.js [data-reveal][data-revealed="true"] {
 
 .marquee-track {
   animation: marquee-scroll 48s linear infinite;
-}
-
-.marquee-viewport:hover .marquee-track {
-  animation-play-state: paused;
 }
 
 /* Jedes Wort blendet leicht versetzt ein -- der "Textaufbau"-Effekt für

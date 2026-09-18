@@ -28,8 +28,30 @@ export function CompanyTeaser() {
   return (
     <section className="section-y" aria-labelledby="unternehmen">
       <div className="container-site">
+        {/* Bild zuerst im Markup: Auf Schmalbildschirmen (wo "grid" ohne
+            lg:grid-cols einfach in Reihenfolge stapelt) stand hier vorher
+            erst der ganze Textblock und das Foto von Simon und Wolfgang
+            Hirschvogel kam erst danach -- beim Scrollen kaum mehr als ein
+            Sliver sichtbar. lg:col-start hält die Desktop-Anordnung
+            (Text links, Bild rechts) unabhängig von der Reihenfolge im
+            Markup bei. */}
         <div className="grid items-start gap-x-12 gap-y-12 lg:grid-cols-12">
-          <div className="lg:col-span-6">
+          <figure className="lg:col-span-5 lg:col-start-8" data-reveal>
+            <Figure
+              name="geschaeftsfuehrung"
+              widths={[1000, 700]}
+              ratio={1.6}
+              alt={`${company.managingDirector} und Firmengründer ${company.founder} im Gespräch vor einer HiWo-med-Bande.`}
+              sizes="(min-width: 1024px) 40vw, 100vw"
+              className="aspect-[1.6/1] w-full"
+            />
+            <FigureCaption>
+              {company.managingDirector}, Geschäftsführer seit 2016, mit Firmengründer{" "}
+              {company.founder}.
+            </FigureCaption>
+          </figure>
+
+          <div className="lg:col-span-6 lg:col-start-1 lg:row-start-1">
             <SectionHead
               index="08"
               label="Unternehmen"
@@ -61,21 +83,6 @@ export function CompanyTeaser() {
               </Button>
             </div>
           </div>
-
-          <figure className="lg:col-span-5 lg:col-start-8" data-reveal>
-            <Figure
-              name="geschaeftsfuehrung"
-              widths={[1000, 700]}
-              ratio={1.6}
-              alt={`${company.managingDirector} und Firmengründer ${company.founder} im Gespräch vor einer HiWo-med-Bande.`}
-              sizes="(min-width: 1024px) 40vw, 100vw"
-              className="aspect-[1.6/1] w-full"
-            />
-            <FigureCaption>
-              {company.managingDirector}, Geschäftsführer seit 2016, mit Firmengründer{" "}
-              {company.founder}.
-            </FigureCaption>
-          </figure>
         </div>
 
         {/* Porträtleiste: zeigt in einer Zeile, dass hinter der Firma
