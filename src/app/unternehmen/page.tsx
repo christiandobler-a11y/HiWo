@@ -67,11 +67,6 @@ export default function UnternehmenPage() {
         label="Unternehmen"
         title={<>Ein Familienbetrieb, der wie ein Versorger arbeitet.</>}
         lead={`Gegründet ${company.foundedYear}, heute in zweiter Generation geführt. ${teamHeadcount} Kolleginnen und Kollegen arbeiten in Uffing am Staffelsee an einem Standort, an dem Lager, Verwaltung und Fuhrpark zusammenliegen.`}
-        meta={[
-          { k: "Gegründet", v: `${company.foundedYear}` },
-          { k: "Geführt von", v: `${company.managingDirector}, zweite Generation` },
-          { k: "Standort", v: `${company.address.city}, Oberbayern` },
-        ]}
       />
 
       {/* Geschäftsführung */}

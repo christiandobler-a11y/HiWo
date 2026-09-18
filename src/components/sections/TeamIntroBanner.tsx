@@ -19,22 +19,11 @@ export function TeamIntroBanner() {
 
   return (
     <section className="overflow-hidden border-y border-line bg-paper-tint">
-      {/* Hintergrundbild nur hinter der Tagline, nicht über dem ganzen
-          Abschnitt -- sonst liegt ein sichtbarer Farbschleier über dem
-          Porträt-Streifen darunter. */}
-      <div className="relative pt-9 sm:pt-11">
-        <img
-          src="/img/stethoskop-banner-960.webp"
-          srcSet="/img/stethoskop-banner-960.webp 960w, /img/stethoskop-banner-640.webp 640w"
-          sizes="100vw"
-          alt=""
-          aria-hidden="true"
-          loading="lazy"
-          decoding="async"
-          className="absolute inset-0 h-full w-full object-cover opacity-[0.16]"
-        />
-
-        <div className="container-site relative">
+      {/* Kein Hintergrundbild mehr hier -- selbst nur hinter der Tagline
+          platziert wirkte der Fotoschleier noch wie ein unerwünschter
+          Farbverlauf. Reines bg-paper-tint stattdessen. */}
+      <div className="pt-9 sm:pt-11">
+        <div className="container-site">
           <p className="text-build t-serif text-[clamp(1.4rem,1.15rem+1.1vw,2.1rem)] leading-tight text-ink">
             {words.map((word, wi) => (
               <span key={wi} style={{ "--word-index": wi } as React.CSSProperties}>

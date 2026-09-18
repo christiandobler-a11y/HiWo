@@ -164,7 +164,7 @@ export default function ServicesPage() {
           <figure data-reveal>
             <Figure
               name="seminar-vor-ort-v2"
-              widths={[960, 640]}
+              widths={[1600, 1280, 960, 640]}
               ratio={2.49}
               alt="Schulungssituation bei HiWo-med mit Erste-Hilfe-Material auf dem Tisch, daneben der Hinweis „individuell und vor Ort“."
               sizes="(min-width: 1280px) 1280px, 100vw"
