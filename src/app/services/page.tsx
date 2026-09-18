@@ -163,12 +163,12 @@ export default function ServicesPage() {
         <div className="container-site">
           <figure data-reveal>
             <Figure
-              name="seminar-vor-ort"
-              widths={[1100, 760, 560]}
-              ratio={2.1}
-              alt="Schulungsunterlagen auf einem Tisch, daneben der Hinweis „individuell und vor Ort“."
+              name="seminar-vor-ort-v2"
+              widths={[960, 640]}
+              ratio={2.49}
+              alt="Schulungssituation bei HiWo-med mit Erste-Hilfe-Material auf dem Tisch, daneben der Hinweis „individuell und vor Ort“."
               sizes="(min-width: 1280px) 1280px, 100vw"
-              className="aspect-[16/9] w-full sm:aspect-[2.2/1] lg:aspect-[3/1]"
+              className="aspect-[16/9] w-full sm:aspect-[2.1/1] lg:aspect-[2.49/1]"
             />
             <FigureCaption>
               Hygiene-Check, Notfalltraining und Wundworkshop finden in Ihren Räumen statt – mit
