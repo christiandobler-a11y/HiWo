@@ -31,6 +31,7 @@ export function ServicesTeaser() {
                 alt="Schulungssituation bei HiWo-med mit Erste-Hilfe-Material auf dem Tisch und dem Hinweis „individuell und vor Ort“."
                 sizes="(min-width: 1024px) 40vw, 100vw"
                 className="aspect-[2.1/1] w-full"
+                position="100% 55%"
               />
               <FigureCaption>
                 Vier von fünf Angeboten finden inhouse statt – in Ihren Räumen, mit Ihrem Team

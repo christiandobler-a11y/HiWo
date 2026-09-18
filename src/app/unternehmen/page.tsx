@@ -145,7 +145,12 @@ export default function UnternehmenPage() {
           <SectionHead
             label="Anspruch"
             title={<span id="anspruch">Wie wir arbeiten</span>}
-            lead="Vier Grundsätze, die sich im Alltag überprüfen lassen – nicht vier Werte auf einer Folie."
+            lead={
+              <span className="[hyphens:none]">
+                Vier Grundsätze, die sich im Alltag überprüfen lassen – nicht vier Werte auf
+                einer Folie.
+              </span>
+            }
           />
 
           <div className="mt-14 grid gap-x-12 gap-y-10 lg:grid-cols-2">
