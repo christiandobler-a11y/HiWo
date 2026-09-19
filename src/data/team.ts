@@ -94,12 +94,12 @@ export const teamGroups: TeamGroup[] = [
       },
       {
         name: "Sarah Stahr",
-        photo: "sarah_stahr_0",
+        photo: "sarah_stahr_0-v2",
         status: "in Babypause",
         lowRes: true,
       },
       { name: "Katharina Weber", photo: "Kathi", since: 2022 },
-      { name: "Gabriele Bergmeister", photo: "Gabriele_Bergmeister", since: 2022 },
+      { name: "Gabriele Bergmeister", photo: "Gabriele_Bergmeister-v2", since: 2022 },
     ],
   },
   {
@@ -151,7 +151,7 @@ export const teamGroups: TeamGroup[] = [
     summary: "Rechnungen, Zahlen und Auswertungen – die kaufmännische Seite des Betriebs.",
     members: [
       { name: "Franz Mangold", photo: "Franz", since: 2018 },
-      { name: "Melanie Redekop", photo: "Melanie_Redekop", since: 2025 },
+      { name: "Melanie Redekop", photo: "Melanie_Redekop-v2", since: 2025 },
     ],
   },
 ];
