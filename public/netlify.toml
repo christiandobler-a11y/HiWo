@@ -1,0 +1,59 @@
+# Netlify-Konfiguration für den HiWo-med Website-Prototyp.
+#
+# Diese Datei liegt im bereits fertig gebauten "out"-Ordner (bzw. im ZIP
+# daraus) und ist für den manuellen Drop-Deploy auf netlify.com/drop bzw.
+# den Upload eines ZIPs gedacht. Es gibt hier bewusst KEINEN [build]-Block:
+# Im "out"-Ordner liegt nur die fertige statische Ausgabe, kein package.json
+# und kein Quellcode – ein Build-Befehl würde hier immer mit ENOENT
+# fehlschlagen. Nur der [[headers]]-Teil wird bei einem Drop-Deploy genutzt.
+#
+# Für einen Git-verbundenen Deploy (Repository in Netlify verbinden) gilt
+# stattdessen die netlify.toml im Projekt-Root, die den Build-Block enthält.
+
+# Vorab optimierte Assets ändern sich nur mit neuem Dateinamen und dürfen
+# deshalb dauerhaft im Cache liegen.
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+## Wichtig: nur auf die Bilddateien beschränken (".webp"), nicht auf "/team/*"
+## allgemein – sonst trifft die Regel auch die Team-SEITE ("/team/") und ihre
+## Navigations-Payload ("/team/index.txt", wird bei Klicks auf "Team" im Menü
+## nachgeladen). Beide würden dann fälschlich ein Jahr lang unveränderlich im
+## Browser-Cache hängen bleiben – nach jedem Redeploy zeigt der Browser dann
+## eine alte Seite, deren referenzierte JS/CSS-Dateien (neue Hash-Namen bei
+## jedem Build) nicht mehr existieren: Seite lädt nur noch Text, keine Bilder.
+[[headers]]
+  for = "/team/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/brand/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# HTML immer frisch ausliefern, damit Korrekturen sofort sichtbar sind.
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Grundlegende Sicherheits-Header. Der Prototyp lädt ausschließlich eigene
+# Dateien – keine externen Skripte, Schriften, Karten oder Tracker.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"
+    # Der Entwurf soll nicht in Suchergebnissen auftauchen, solange er nur
+    # zur internen Abstimmung online ist. Vor einem echten Livegang
+    # entfernen – zusammen mit robots.ts und robots.index in layout.tsx.
+    X-Robots-Tag = "noindex, nofollow"
