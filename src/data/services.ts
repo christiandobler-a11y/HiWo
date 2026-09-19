@@ -16,7 +16,7 @@ export type Trainer = {
 export const trainers: Record<string, Trainer> = {
   daniela: {
     name: "Daniela Engels",
-    photo: "Daniela1",
+    photo: "Daniela1-v2",
     qualifications: [
       "Wundexpertin ICW",
       "Medizinprodukteberaterin",
@@ -26,12 +26,12 @@ export const trainers: Record<string, Trainer> = {
   },
   andreas: {
     name: "Andreas Kirschner",
-    photo: "Andreas_K",
+    photo: "Andreas_K-v2",
     qualifications: ["Medizinprodukteberater", "Hygieneberater"],
   },
   tatjana: {
     name: "Tatjana Leserer",
-    photo: "Tatjana1",
+    photo: "Tatjana1-v2",
     qualifications: [
       "Dipl. Pflegewirtin (FH)",
       "Examinierte Gesundheits- und Krankenpflegerin",
