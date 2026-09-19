@@ -9,24 +9,22 @@ const heroFacts = [
 ];
 
 /**
- * Vierte Fassung: Foto über die volle Fläche statt einer Zweispalten-
- * Teilung (Text links, Bild rechts).
+ * Fünfte Fassung: Text direkt auf dem Foto statt in einer schwebenden
+ * Karte.
  *
- * Der Split war solide, aber am Ende zu sehr "Baustein neben Baustein" --
- * das Foto wirkte trotz Split gedeckelt statt wirklich dominant. Jetzt
- * füllt es die komplette Hero-Fläche (randabfallend in alle vier
- * Richtungen), der Text schwebt stattdessen als eigene, unten verankerte
- * Fläche darüber -- ein durchgehendes Bild-Statement statt zweier
- * nebeneinander stehender Blöcke.
+ * Die Karten-Fassung (halbtransparentes Papier-Feld über dem Bild) las
+ * sich wie ein 2016er-Baukasten-Hero -- ausgerechnet die Seite, die sonst
+ * komplett auf Haarlinien statt Karten/Schatten setzt (siehe
+ * .figure-frame, Buttons, SectionHead), bekam hier die einzige "Box" der
+ * ganzen Seite. Jetzt liegt der Text ohne Fläche direkt auf dem Foto,
+ * die Lesbarkeit übernimmt ein Verlauf (dunkel links, wo der Text steht,
+ * klar zum Bild hin nach rechts) statt eines Kastens -- der Fahrer
+ * schimmert dadurch gedämpft durch den Verlauf statt komplett verdeckt zu
+ * sein oder unangetastet danebenzustehen.
  *
- * Textlesbarkeit: keine Schriftfarben-Klimmzüge (siehe SiteHeader.tsx für
- * die Geschichte dazu) -- der Textblock bekommt einen eigenen, dezent
- * durchscheinenden Papier-Untergrund (bg-paper/90 + Blur), unabhängig
- * davon, was gerade im Foto dahinter zu sehen ist.
- *
- * Der Header liegt jetzt bei jeder Breite transparent über diesem Hero
- * (siehe SiteHeader.tsx) -- vorher nur ab lg, weil dort erst das Bild
- * neben dem Text lag; jetzt ist das Foto immer die komplette Fläche.
+ * Der Header liegt bei jeder Breite transparent über diesem Hero (siehe
+ * SiteHeader.tsx); sein eigenes helles Glas verträgt sich mit dem
+ * dunklen Verlauf hier genauso wie mit dem hellen Himmel weiter rechts.
  */
 export function Hero() {
   return (
@@ -34,7 +32,7 @@ export function Hero() {
        transparent bleibt, solange ungescrollt) -- das Foto reicht dadurch
        bis an die echte obere Kante statt darunter zu beginnen. */
     <section
-      className="relative -mt-[84px] flex min-h-[680px] items-end overflow-hidden md:-mt-[96px] md:min-h-[760px] lg:h-[88vh] lg:min-h-[780px] lg:max-h-[880px]"
+      className="relative -mt-[84px] flex min-h-[620px] items-end overflow-hidden md:-mt-[96px] md:min-h-[700px] lg:h-[82vh] lg:min-h-[740px] lg:max-h-[820px]"
       aria-label="Einstieg"
     >
       <img
@@ -51,20 +49,25 @@ export function Hero() {
         style={{ objectPosition: "50% 55%", transformOrigin: "15% 55%" }}
       />
 
-      {/* Sehr leichte Abdunkelung am unteren Rand -- rein als zusätzlicher
-          Puffer für den Übergang zur Textfläche, die selbst schon einen
-          eigenen Untergrund hat und deshalb keine starke Verdunkelung
-          braucht. */}
+      {/* Verlauf statt Karte: dunkel dort, wo der Text steht (links),
+          klar zum Bild hin -- funktioniert unabhängig davon, ob an der
+          jeweiligen Stelle gerade heller Himmel oder dunkler Wagen im
+          Foto liegt. Zusätzlich ein flacherer Verlauf von unten für die
+          Fakten-Zeile direkt darunter. */}
       <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/20 to-transparent"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/75 via-black/45 to-transparent"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/40 to-transparent"
         aria-hidden="true"
       />
 
       <div className="container-site relative w-full pb-10 pt-8 md:pb-14 lg:pb-16">
-        <div className="max-w-[42rem] bg-paper/90 p-6 backdrop-blur-md sm:p-7 lg:p-8">
-          <p className="t-eyebrow flex flex-wrap items-center gap-x-3 gap-y-1 text-muted">
-            <span className="text-ink">Medizinischer Fachhandel</span>
-            <span aria-hidden="true" className="h-[2px] w-5 bg-magenta" />
+        <div className="hero-on-photo max-w-[38rem]">
+          <p className="t-eyebrow flex flex-wrap items-center gap-x-3 gap-y-1 text-night-muted">
+            <span className="text-night-ink">Medizinischer Fachhandel</span>
+            <span aria-hidden="true" className="h-[2px] w-5 bg-magenta-glow" />
             <span>
               {company.address.city} · seit {company.foundedYear}
             </span>
@@ -73,7 +76,7 @@ export function Hero() {
           <h1 className="t-display mt-4 lg:mt-5" data-reveal>
             Alles, was der Praxisalltag braucht.
             <br className="hidden sm:block" />{" "}
-            <span className="text-muted">
+            <span className="text-night-muted">
               Geliefert von Menschen,
               <br className="hidden sm:block" /> die ihn kennen.
             </span>
@@ -81,14 +84,14 @@ export function Hero() {
 
           {/* Der Markenclaim – steht auf genau dem Fahrzeug im Foto dahinter. */}
           <p
-            className="t-serif mt-5 text-[clamp(1.2rem,1rem+1vw,1.65rem)] leading-[1.3] text-ink lg:mt-6"
+            className="t-serif mt-5 text-[clamp(1.2rem,1rem+1vw,1.65rem)] leading-[1.3] text-night-ink lg:mt-6"
             data-reveal
             style={{ "--reveal-delay": "80ms" } as React.CSSProperties}
           >
             „{company.claim}“
           </p>
           <p
-            className="mt-2 text-[0.875rem] text-muted"
+            className="mt-2 text-[0.875rem] text-night-muted"
             data-reveal
             style={{ "--reveal-delay": "140ms" } as React.CSSProperties}
           >

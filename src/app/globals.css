@@ -363,6 +363,18 @@ span {
   color: var(--color-night-ink);
 }
 
+/* Für Text direkt auf Fotos (siehe Hero.tsx): dieselben hellen Töne wie
+   .dark-section, aber ohne deren Hintergrundfarbe -- das Foto soll
+   durchscheinen, nicht von einer soliden Fläche verdeckt werden.
+   Notwendig, weil text-white & Co. (Tailwind-Utility) sonst an der
+   Regel "h1,h2,h3,h4 { color: var(--color-ink) }" weiter oben abprallen:
+   Die liegt außerhalb jedes @layer und gewinnt deshalb gegen
+   Tailwind-Utilities unabhängig von deren Spezifität. */
+.hero-on-photo h1,
+.hero-on-photo h2 {
+  color: var(--color-night-ink);
+}
+
 .dark-section * {
   border-color: rgb(255 255 255 / 0.14);
 }
