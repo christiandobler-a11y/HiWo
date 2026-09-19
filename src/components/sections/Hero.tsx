@@ -11,125 +11,122 @@ const heroFacts = [
 ];
 
 /**
- * Zweite Fassung, schlanker: Die Erklärung ("HiWo-med versorgt Arztpraxen,
- * MVZ …") stand vorher als Fließtext neben der Headline – zu viel Text auf
- * einmal, und der freien Bildfläche rechts wurde damit auch der Platz zum
- * Atmen genommen. Der Absatz ist jetzt kurz gefasst in die Positionierung
- * (Sektion 02) gewandert. Der Hero trägt stattdessen nur noch Headline,
- * Markenclaim und die Buttons – der Claim bekommt dabei deutlich mehr
- * Gewicht als vorher, wo er nur eine kleine Bildunterschrift war.
+ * Dritte Fassung: echtes Foto statt blassem Hintergrund-Wasserzeichen.
  *
- * Hintergrund: Himmel + Firmenschild (siehe Kontaktseite), reduzierte
- * Deckkraft, plus ein sehr feines, selbst gezeichnetes Kreuz-Raster.
- * Die Fakten-Zeile am Ende steht bewusst außerhalb dieser Bildebene, auf
- * reinem Papier-Weiß (Pixel-Kontrastmessung, siehe contrast-check.mjs).
+ * Die Vorgängerversion (siehe HeroClassic.tsx) zeigte nur Himmel + Schild
+ * bei 0.32 Deckkraft als Textur -- jede Unterseite hat inzwischen aber ein
+ * kräftiges, sichtbares Foto von echten Menschen, nur der Hero selbst
+ * nicht. Dasselbe Fahrzeug-Foto, das schon als Social-Share-Vorschau diente
+ * (siehe layout.tsx) und seit Kurzem den Leistungen-Auftakt bildet, trägt
+ * jetzt auch den Hero: der Fahrer winkt, der Claim auf der Fahrzeugflanke
+ * ist derselbe wie im Zitat links -- Text und Bild bestätigen sich
+ * gegenseitig, statt nur nebeneinander zu stehen.
+ *
+ * Layout: Text bleibt auf Lesebreite links (max-w im Markup), das Bild
+ * bricht rechts bis zum Viewport-Rand aus (.hero-bleed in globals.css) --
+ * auf breiten Monitoren wird das Foto dadurch dominanter statt an
+ * Aspect-Ratio gebunden zu bleiben. Für "Bild vollständig im ersten
+ * Frame" gilt hier bewusst eine andere Regel als auf den Unterseiten: Der
+ * Hero ist als randabfallendes Bannerbild gedacht, das Anschneiden ist
+ * gewollt (siehe objectPosition unten, gewählt um Fahrer + Anschrift im
+ * Bild zu halten).
  */
 export function Hero() {
   return (
-    <section className="overflow-hidden pb-[clamp(3.5rem,2rem+4vw,6rem)]">
-      <div className="relative pt-[clamp(2.25rem,1.5rem+3vw,6rem)]">
-        {/* Hintergrundebenen – rein dekorativ, daher aria-hidden und ohne Alt-Text.
-            overflow-hidden ist hier nötig: Der zusätzliche scale()-Zoom auf dem
-            Bild lässt es sonst optisch über diese Box hinausragen (Transforms
-            werden nicht ins Layout gerechnet) – ungefiltert und ohne den
-            Verlauf darunter, das sah wie ein harter Schnitt unter den Buttons
-            aus. */}
-        <div className="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
-          <img
-            src="/img/himmel-schild-v2-1280.webp"
-            srcSet="/img/himmel-schild-v2-1280.webp 1280w, /img/himmel-schild-v2-960.webp 960w, /img/himmel-schild-v2-640.webp 640w"
-            sizes="100vw"
-            width={1280}
-            height={514}
-            alt=""
-            loading="eager"
-            decoding="async"
-            fetchPriority="high"
-            className="hero-bg-reveal h-full w-full object-cover"
-            /* Startet unsichtbar und blendet über ~2,6s sanft auf die
-               finale Deckkraft (0.32) auf -- soll beim Laden der Seite
-               "sanft erscheinen" statt sofort hart sichtbar zu sein.
-               objectPosition "100% ..." zeigt den rechten Bildrand vollständig,
-               sonst wird das "d" in "med" abgeschnitten. Der zusätzliche
-               scale()-Zoom ist am rechten Rand verankert (transformOrigin),
-               damit das Schild dabei nicht weiter nach rechts aus dem
-               Bild wandert, sondern größer/dichter wirkt und weniger
-               Himmel sichtbar bleibt. */
-            style={{
-              objectPosition: "100% 40%",
-              transform: "scale(1.28)",
-              transformOrigin: "100% 36%",
-            }}
-          />
-          <div className="pattern-rx absolute inset-0 opacity-[0.05]" />
-          {/* Weicher Übergang zur Fakten-Zeile, kein harter Bildschnitt. */}
-          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-paper" />
-        </div>
-
-        {/* Sehr dezente Markenkante am linken Rand – das Motiv wiederholt sich
-            auf allen Unterseiten und ersetzt jede Art von Verlaufsfläche. */}
+    <section className="hero-bleed" aria-label="Einstieg">
+      <div className="hero-bleed-text relative flex flex-col justify-center pb-8 pt-[clamp(1.75rem,1rem+2vw,3.25rem)] lg:pb-[clamp(1.75rem,1rem+2vw,3.25rem)]">
         <div
           className="pointer-events-none absolute left-0 top-0 hidden h-[clamp(8rem,20vw,16rem)] w-[2px] bg-magenta lg:block"
           aria-hidden="true"
         />
 
-        <div className="container-site relative">
-          <div className="max-w-[52rem]">
-            <p className="t-eyebrow flex flex-wrap items-center gap-x-3 gap-y-1 text-muted">
-              <span className="text-ink">Medizinischer Fachhandel</span>
-              <span aria-hidden="true" className="h-[2px] w-5 bg-magenta" />
-              <span>
-                {company.address.city} · seit {company.foundedYear}
-              </span>
-            </p>
+        <div className="max-w-[36rem]">
+          <p className="t-eyebrow flex flex-wrap items-center gap-x-3 gap-y-1 text-muted">
+            <span className="text-ink">Medizinischer Fachhandel</span>
+            <span aria-hidden="true" className="h-[2px] w-5 bg-magenta" />
+            <span>
+              {company.address.city} · seit {company.foundedYear}
+            </span>
+          </p>
 
-            <h1 className="t-display mt-5 lg:mt-7">
-              Alles, was der Praxisalltag braucht.
-              <br className="hidden sm:block" />{" "}
-              <span className="text-muted">
-                Geliefert von Menschen,
-                <br className="hidden sm:block" /> die ihn kennen.
-              </span>
-            </h1>
+          <h1 className="t-display mt-4 lg:mt-5" data-reveal>
+            Alles, was der Praxisalltag braucht.
+            <br className="hidden sm:block" />{" "}
+            <span className="text-muted">
+              Geliefert von Menschen,
+              <br className="hidden sm:block" /> die ihn kennen.
+            </span>
+          </h1>
 
-            {/* Der Markenclaim – steht seit Jahren auf den Fahrzeugen und
-                trägt hier bewusst mehr Gewicht als eine kleine Bildunterschrift. */}
-            <p className="t-serif mt-8 text-[clamp(1.35rem,1.05rem+1.3vw,1.9rem)] leading-[1.35] text-ink lg:mt-10">
-              „{company.claim}“
-            </p>
-            <p className="mt-3 text-[0.875rem] text-muted">
-              Der Satz steht seit {company.foundedYear} auf unseren Fahrzeugen.
-            </p>
+          {/* Der Markenclaim – steht auf genau dem Fahrzeug im Foto rechts. */}
+          <p
+            className="t-serif mt-5 text-[clamp(1.2rem,1rem+1vw,1.65rem)] leading-[1.3] text-ink lg:mt-6"
+            data-reveal
+            style={{ "--reveal-delay": "80ms" } as React.CSSProperties}
+          >
+            „{company.claim}“
+          </p>
+          <p
+            className="mt-2 text-[0.875rem] text-muted"
+            data-reveal
+            style={{ "--reveal-delay": "140ms" } as React.CSSProperties}
+          >
+            Der Satz steht auf genau diesem Fahrzeug – seit {company.foundedYear}.
+          </p>
 
-            <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-3 lg:mt-10">
-              <Button href="/kontakt/">
-                Beratung anfragen
-                <ArrowRight />
-              </Button>
-              <Button href="/leistungen/" variant="outline">
-                Was wir leisten
-              </Button>
-              <Link
-                href="/leistungen/#logistik"
-                className="inline-flex items-center gap-2 py-2.5 font-semibold text-ink underline-offset-4 transition-colors hover:text-magenta-ink hover:underline"
-              >
-                Wie wir ausliefern
-                <ArrowRight className="text-magenta" />
-              </Link>
-            </div>
+          <div
+            className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-3 lg:mt-6"
+            data-reveal
+            style={{ "--reveal-delay": "200ms" } as React.CSSProperties}
+          >
+            <Button href="/kontakt/">
+              Beratung anfragen
+              <ArrowRight />
+            </Button>
+            <Button href="/leistungen/" variant="outline">
+              Was wir leisten
+            </Button>
+            <Link
+              href="/leistungen/#logistik"
+              className="inline-flex items-center gap-2 py-2.5 font-semibold text-ink underline-offset-4 transition-colors hover:text-magenta-ink hover:underline"
+            >
+              Wie wir ausliefern
+              <ArrowRight className="text-magenta" />
+            </Link>
           </div>
         </div>
       </div>
 
-      {/* Fakten-Zeile: bewusst außerhalb der Bildebene, auf reinem Papier-Weiß. */}
-      <div className="container-site">
+      {/* Fotospalte: bricht auf lg+ bis zum rechten Viewport-Rand aus (siehe
+          .hero-bleed), auf Mobil/Tablet eigene, an die Bildschirmhöhe
+          gekoppelte Höhe -- volle Farbe statt Wasserzeichen, deshalb kein
+          figure-frame-Rahmen und keine Bildunterschrift hier. */}
+      <div className="relative h-[46vh] min-h-[300px] overflow-hidden bg-paper-tint lg:h-auto lg:min-h-[440px]">
+        <img
+          src="/img/lieferdienst-sprinter-1280.webp"
+          srcSet="/img/lieferdienst-sprinter-1280.webp 1280w, /img/lieferdienst-sprinter-960.webp 960w, /img/lieferdienst-sprinter-640.webp 640w"
+          sizes="(min-width: 1024px) 62vw, 100vw"
+          width={1280}
+          height={514}
+          alt="Ein HiWo-med-Mitarbeiter winkt aus dem Fenster seines Lieferfahrzeugs, im Hintergrund der Staffelsee mit Alpenkette."
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
+          className="hero-photo-reveal absolute inset-0 h-full w-full object-cover"
+          style={{ objectPosition: "38% 48%" }}
+        />
+      </div>
+
+      {/* Fakten-Zeile: eigene Grid-Zeile unter Text- und Bildspalte, auf
+          reinem Papier-Weiß, Lesebreite über container-site. */}
+      <div className="container-site col-span-full">
         <dl className="mt-10 grid border-t border-line sm:grid-cols-3 sm:divide-x sm:divide-line lg:mt-12">
           {heroFacts.map((f, i) => (
             <div
               key={f.k}
               className="border-b border-line py-5 sm:border-b-0 sm:px-6 sm:first:pl-0 sm:last:pr-0"
               data-reveal
-              style={{ "--reveal-delay": `${i * 70}ms` } as React.CSSProperties}
+              style={{ "--reveal-delay": `${260 + i * 70}ms` } as React.CSSProperties}
             >
               <dt className="t-eyebrow text-muted">{f.k}</dt>
               <dd className="mt-2 text-[0.95rem] leading-snug text-ink">{f.v}</dd>

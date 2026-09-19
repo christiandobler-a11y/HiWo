@@ -183,9 +183,14 @@ span {
    ========================================================================== */
 
 .t-display {
-  font-size: clamp(2.5rem, 1.1rem + 4.7vw, 4.9rem);
-  line-height: 1.02;
-  letter-spacing: -0.032em;
+  /* Reduziert gegenüber der ursprünglichen Fassung (Max 4.9rem): Im neuen
+     Split-Hero (siehe Hero.tsx) ist die Textspalte schmaler als vorher
+     (Bild nimmt die andere Hälfte ein) -- bei gleicher Schriftgröße brach
+     die Zeile dadurch so oft um, dass auf gängigen Laptop-Auflösungen
+     (~1280px) Zitat und Buttons komplett unter den Fold rutschten. */
+  font-size: clamp(2.25rem, 1.2rem + 3.4vw, 3.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
   font-weight: 600;
 }
 
@@ -472,6 +477,54 @@ html.js [data-reveal].reveal-flip[data-revealed="true"] {
 
 .hero-bg-reveal {
   animation: hero-bg-reveal 2600ms var(--ease-out-quiet) both;
+}
+
+/* Neuer Hero: echtes Foto blendet voll sichtbar (statt blass) ein, mit
+   einem sehr leichten Zoom-out -- kein Wasserzeichen mehr, sondern das
+   eigentliche Bild. */
+@keyframes hero-photo-reveal {
+  from {
+    opacity: 0;
+    transform: scale(1.06);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.hero-photo-reveal {
+  animation: hero-photo-reveal 1100ms var(--ease-out-quiet) both;
+}
+
+/* Hero-Split: Textspalte auf Leseweite gedeckelt (max-w im Markup), die
+   Bildspalte nimmt den Rest bis zum Viewport-Rand ein -- auf breiten
+   Monitoren wird das Foto dadurch bewusst größer statt Leerraum
+   entstehen zu lassen. Bewusst NUR das einfache Gutter als Innenabstand,
+   keine an container-site angelehnte Center-Berechnung: Erste Fassung
+   hat Spaltenbreite UND einen auf die volle Viewport-Breite berechneten
+   padding-left kombiniert -- beides hat sich gegenseitig abgezogen und
+   dem Text auf breiten Screens praktisch keine Breite mehr gelassen
+   (Wörter sind buchstabenweise umgebrochen). */
+.hero-bleed {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+@media (min-width: 1024px) {
+  .hero-bleed {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+  }
+}
+
+.hero-bleed-text {
+  padding-inline: var(--gutter);
+}
+
+@media (min-width: 1024px) {
+  .hero-bleed-text {
+    padding-right: clamp(2rem, 4vw, 4rem);
+  }
 }
 
 @media (hover: hover) {
