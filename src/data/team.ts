@@ -36,8 +36,8 @@ export const teamGroups: TeamGroup[] = [
     summary:
       "Zwei Generationen, ein Unternehmen: der Gründer als Berater, die zweite Generation in der Verantwortung.",
     members: [
-      { name: "Simon Hirschvogel", photo: "Simon1-v2", since: 2016, role: "Geschäftsführer" },
-      { name: "Wolfgang Hirschvogel", photo: "Senior3-v2", role: "Firmengründer, Berater" },
+      { name: "Simon Hirschvogel", photo: "Simon1-v3", since: 2016, role: "Geschäftsführer" },
+      { name: "Wolfgang Hirschvogel", photo: "Senior3-v3", role: "Firmengründer, Berater" },
     ],
   },
   {
@@ -48,31 +48,31 @@ export const teamGroups: TeamGroup[] = [
     members: [
       {
         name: "Klaus Staltmeier",
-        photo: "Klaus-v2",
+        photo: "Klaus-v3",
         since: 2008,
         role: "Vertriebsleiter · Außendienst Oberbayern",
       },
       {
         name: "Michaela Bauer",
-        photo: "Michi1-v2",
+        photo: "Michi1-v3",
         since: 2011,
         role: "Außendienst Oberland und Schwaben",
       },
       {
         name: "Tatjana Leserer",
-        photo: "Tatjana1-v2",
+        photo: "Tatjana1-v3",
         since: 2015,
         role: "Außendienst Chiemgau und Niederbayern",
       },
       {
         name: "Daniela Engels",
-        photo: "Daniela1-v2",
+        photo: "Daniela1-v3",
         since: 2018,
         role: "Außendienst Oberbayern · staatlich geprüfte Desinfektorin",
       },
       {
         name: "Andreas Kirschner",
-        photo: "Andreas_K-v2",
+        photo: "Andreas_K-v3",
         since: 2021,
         role: "Außendienst Niederbayern · Hygieneberater",
       },
@@ -84,22 +84,22 @@ export const teamGroups: TeamGroup[] = [
     summary:
       "Nimmt Bestellungen entgegen, klärt Rückfragen und begleitet Aufträge bis zur Auslieferung. Montag bis Freitag durchgehend besetzt.",
     members: [
-      { name: "Andrea Poschenrieder", photo: "Andrea-v2", since: 1997 },
-      { name: "Sandra Akdogan", photo: "Sandra2-v2", since: 2002 },
+      { name: "Andrea Poschenrieder", photo: "Andrea-v3", since: 1997 },
+      { name: "Sandra Akdogan", photo: "Sandra2-v3", since: 2002 },
       {
         name: "Armin van Wickeren",
-        photo: "Armin-v2",
+        photo: "Armin-v3",
         since: 2019,
         role: "Innendienstleitung",
       },
       {
         name: "Sarah Stahr",
-        photo: "sarah_stahr_0-v3",
+        photo: "sarah_stahr_0-v4",
         status: "in Babypause",
         lowRes: true,
       },
-      { name: "Katharina Weber", photo: "Kathi-v2", since: 2022 },
-      { name: "Gabriele Bergmeister", photo: "Gabriele_Bergmeister-v3", since: 2022 },
+      { name: "Katharina Weber", photo: "Kathi-v3", since: 2022 },
+      { name: "Gabriele Bergmeister", photo: "Gabriele_Bergmeister-v4", since: 2022 },
     ],
   },
   {
@@ -107,7 +107,7 @@ export const teamGroups: TeamGroup[] = [
     name: "Einkauf",
     summary:
       "Sorgt dafür, dass die über 6.000 Lagerartikel verfügbar bleiben – und dass nur Lieferanten mit eigener Qualitätssicherung zum Zug kommen.",
-    members: [{ name: "Christoph Gansler", photo: "Christoph-v2", since: 2022 }],
+    members: [{ name: "Christoph Gansler", photo: "Christoph-v3", since: 2022 }],
   },
   {
     id: "lager",
@@ -115,13 +115,13 @@ export const teamGroups: TeamGroup[] = [
     summary:
       "Prüft jede Eingangslieferung, kommissioniert die Tagesaufträge und hält 1.500 m² Lagerfläche in Ordnung.",
     members: [
-      { name: "Wolfgang Haf", photo: "Hafi-v2", since: 2006 },
-      { name: "Ursula Pfister", photo: "Ursula-v2", since: 2020 },
-      { name: "Heiko Kiesewetter", photo: "Heiko-v2", since: 2021 },
-      { name: "Christian Dobler", photo: "Chris-v2", since: 2021 },
-      { name: "Andreas Metzenroth", photo: "Andreas_M-v2", since: 2022 },
-      { name: "Athanasios Polymeridis", photo: "Athanasios_Polymeridis-v2", since: 2024 },
-      { name: "Christine Hoiß", photo: "Tina-v2", since: 2024 },
+      { name: "Wolfgang Haf", photo: "Hafi-v3", since: 2006 },
+      { name: "Ursula Pfister", photo: "Ursula-v3", since: 2020 },
+      { name: "Heiko Kiesewetter", photo: "Heiko-v3", since: 2021 },
+      { name: "Christian Dobler", photo: "Chris-v3", since: 2021 },
+      { name: "Andreas Metzenroth", photo: "Andreas_M-v3", since: 2022 },
+      { name: "Athanasios Polymeridis", photo: "Athanasios_Polymeridis-v3", since: 2024 },
+      { name: "Christine Hoiß", photo: "Tina-v3", since: 2024 },
     ],
   },
   {
@@ -132,17 +132,17 @@ export const teamGroups: TeamGroup[] = [
     members: [
       {
         name: "Anton Wölfle",
-        photo: "Anton1-v2",
+        photo: "Anton1-v3",
         since: 1999,
         role: "Leitung Fuhrpark & Logistik",
       },
-      { name: "Nikolaus Gall", photo: "Niki-v2", since: 2002 },
-      { name: "Branko Zutic", photo: "Branko-v2", since: 2007 },
-      { name: "Andreas Fischer", photo: "Andreas_F-v2", since: 2009 },
-      { name: "Roland Steiger", photo: "Roland-v2", since: 2017 },
-      { name: "Peter Utecht", photo: "Peter-v2", since: 2021 },
-      { name: "Ziarat Khan Daharwal", photo: "Ziarat-v2", since: 2022 },
-      { name: "James Fuchs", photo: "James_Fuchs-v2", since: 2024, lowRes: true },
+      { name: "Nikolaus Gall", photo: "Niki-v3", since: 2002 },
+      { name: "Branko Zutic", photo: "Branko-v3", since: 2007 },
+      { name: "Andreas Fischer", photo: "Andreas_F-v3", since: 2009 },
+      { name: "Roland Steiger", photo: "Roland-v3", since: 2017 },
+      { name: "Peter Utecht", photo: "Peter-v3", since: 2021 },
+      { name: "Ziarat Khan Daharwal", photo: "Ziarat-v3", since: 2022 },
+      { name: "James Fuchs", photo: "James_Fuchs-v3", since: 2024, lowRes: true },
     ],
   },
   {
@@ -150,8 +150,8 @@ export const teamGroups: TeamGroup[] = [
     name: "Buchhaltung & Controlling",
     summary: "Rechnungen, Zahlen und Auswertungen – die kaufmännische Seite des Betriebs.",
     members: [
-      { name: "Franz Mangold", photo: "Franz-v2", since: 2018 },
-      { name: "Melanie Redekop", photo: "Melanie_Redekop-v3", since: 2025 },
+      { name: "Franz Mangold", photo: "Franz-v3", since: 2018 },
+      { name: "Melanie Redekop", photo: "Melanie_Redekop-v4", since: 2025 },
     ],
   },
 ];

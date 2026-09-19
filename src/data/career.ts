@@ -127,5 +127,5 @@ export const employerFacts = [
 export const applicationContact = {
   name: "Armin van Wickeren",
   role: "Innendienstleitung",
-  photo: "Armin-v2",
+  photo: "Armin-v3",
 };
