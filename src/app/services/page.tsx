@@ -163,8 +163,12 @@ export default function ServicesPage() {
               ratio={2.49}
               alt="Schulungssituation bei HiWo-med mit Erste-Hilfe-Material auf dem Tisch, daneben der Hinweis „individuell und vor Ort“."
               sizes="(min-width: 1280px) 1280px, 100vw"
-              className="aspect-[16/9] w-full sm:aspect-[2.1/1] lg:aspect-[2.49/1]"
+              /* vh-Höhe statt Breiten-Aspect-Ratio, siehe Kontaktseite --
+                 hält das Bild unabhängig von der Bildschirmbreite
+                 vollständig im ersten sichtbaren Bereich. */
+              className="h-[clamp(13rem,36vh,19rem)] w-full sm:h-[clamp(14rem,38vh,20rem)] lg:h-[clamp(16rem,40vh,23rem)]"
               position="100% 55%"
+              priority
             />
             <FigureCaption>
               Hygiene-Check, Notfalltraining und Wundworkshop finden in Ihren Räumen statt – mit

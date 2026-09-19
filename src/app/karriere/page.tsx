@@ -37,7 +37,10 @@ export default function KarrierePage() {
               ratio={2.49}
               alt="Zwei Mitarbeiter von HiWo-med vor einem Firmenfahrzeug in der oberbayerischen Landschaft."
               sizes="(min-width: 1280px) 1280px, 100vw"
-              className="aspect-[4/3] w-full sm:aspect-[16/9] lg:aspect-[2.49/1]"
+              /* vh-Höhe statt Breiten-Aspect-Ratio, siehe Kontaktseite --
+                 hält das Bild unabhängig von der Bildschirmbreite
+                 vollständig im ersten sichtbaren Bereich. */
+              className="h-[clamp(13rem,36vh,19rem)] w-full sm:h-[clamp(14rem,38vh,20rem)] lg:h-[clamp(16rem,40vh,23rem)]"
               priority
             />
             <FigureCaption>

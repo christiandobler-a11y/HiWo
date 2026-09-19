@@ -80,7 +80,11 @@ export default function UnternehmenPage() {
                 ratio={1.6}
                 alt={`${company.managingDirector} und Firmengründer ${company.founder} im Gespräch vor einer HiWo-med-Bande.`}
                 sizes="(min-width: 1024px) 58vw, 100vw"
-                className="aspect-[1.6/1] w-full"
+                /* vh-Höhe statt Breiten-Aspect-Ratio, siehe Kontaktseite --
+                   hält das Bild unabhängig von der Bildschirmbreite
+                   vollständig im ersten sichtbaren Bereich. */
+                className="h-[clamp(13rem,40vh,20rem)] w-full lg:h-[clamp(16rem,42vh,24rem)]"
+                position="50% 40%"
                 priority
               />
               <FigureCaption>

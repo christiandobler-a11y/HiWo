@@ -47,12 +47,33 @@ export default function LeistungenPage() {
           </>
         }
         lead="HiWo-med ist medizinischer Fachhandel – aber der Handel ist nur der eine Teil. Der andere ist ein Lager, ein eigener Fuhrpark und eine Mannschaft, die weiß, wie eine Praxis arbeitet."
-        meta={[
-          { k: "Sortiment", v: "Über 6.000 Artikel sofort verfügbar" },
-          { k: "Lager", v: "1.500 m² in Uffing am Staffelsee" },
-          { k: "Lieferdienst", v: "Eigene Fahrzeuge in ganz Südbayern" },
-        ]}
       />
+
+      {/* Hero-Bild: Die Seite bestand vorher nur aus Fließtext und Listen --
+          kein einziges großes Bild, bevor man tief scrollt. Genau das fehlte:
+          ein Gesicht zum Versprechen "wir kümmern uns um den Rest". Derselbe
+          Claim steht auf den Fahrzeugen (siehe Hero der Startseite) und
+          bekommt hier sein eigenes Bild -- bislang nur als Social-Share-Vorschau
+          verwendet (layout.tsx), auf der Seite selbst aber noch nie gezeigt. */}
+      <section className="pb-[clamp(2rem,1rem+2vw,3rem)]">
+        <div className="container-site">
+          <figure data-reveal>
+            <Figure
+              name="lieferdienst-sprinter"
+              widths={[1280, 960, 640]}
+              ratio={2.49}
+              alt="Ein HiWo-med-Mitarbeiter winkt aus dem Fenster seines Lieferfahrzeugs, im Hintergrund der Staffelsee mit Alpenkette."
+              sizes="(min-width: 1280px) 1280px, 100vw"
+              className="h-[clamp(13rem,36vh,19rem)] w-full sm:h-[clamp(14rem,38vh,20rem)] lg:h-[clamp(16rem,40vh,23rem)]"
+              priority
+            />
+            <FigureCaption>
+              „Bleiben Sie Mediziner, wir kümmern uns um den Rest.“ Der Satz steht auf unseren
+              Fahrzeugen – und ist der Grund für alles, was auf dieser Seite folgt.
+            </FigureCaption>
+          </figure>
+        </div>
+      </section>
 
       {/* Sortiment */}
       <section className="section-y bg-paper-raised" aria-labelledby="sortiment">

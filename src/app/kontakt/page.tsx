@@ -47,7 +47,17 @@ export default function KontaktPage() {
                   ratio={1.3}
                   alt="Das Firmenschild von HiWo-med mit Logo und dem Hinweis „Lagerhausstr. 4“ vor blauem Himmel."
                   sizes="(min-width: 1024px) 50vw, 100vw"
-                  className="aspect-[1.3/1] w-full"
+                  /* Feste vh-Höhe statt reiner Breiten-Aspect-Ratio: Auf
+                     breiten Monitoren wird die Spalte sehr breit, und mit ihr
+                     (per aspect-ratio) auch die Bildhöhe -- auf großen
+                     Bildschirmen ragte das Bild dadurch weit über die erste
+                     Bildschirmhöhe hinaus und war beim Laden der Seite nur
+                     als schmaler Streifen unten sichtbar. Die Höhe jetzt an
+                     der Viewport-Höhe zu koppeln (statt an der Spaltenbreite)
+                     hält das Bild unabhängig von der Bildschirmbreite
+                     vollständig im ersten sichtbaren Bereich. */
+                  className="h-[clamp(13rem,40vh,20rem)] w-full lg:h-[clamp(16rem,42vh,24rem)]"
+                  position="50% 42%"
                   priority
                 />
                 <FigureCaption>
@@ -171,7 +181,7 @@ export default function KontaktPage() {
                 ratio={2.49}
                 alt="Ein HiWo-med-Transporter auf einer Straße am Staffelsee, dahinter die Alpenkette."
                 sizes="(min-width: 1024px) 50vw, 100vw"
-                className="aspect-[16/10] w-full lg:aspect-[1.7/1]"
+                className="h-[clamp(12rem,36vh,18rem)] w-full lg:h-[clamp(14rem,38vh,21rem)]"
               />
               <FigureCaption>
                 Uffing liegt am Nordufer des Staffelsees – von hier aus starten die Touren
