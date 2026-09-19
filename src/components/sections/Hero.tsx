@@ -100,20 +100,43 @@ export function Hero() {
       {/* Fotospalte: bricht auf lg+ bis zum rechten Viewport-Rand aus (siehe
           .hero-bleed), auf Mobil/Tablet eigene, an die Bildschirmhöhe
           gekoppelte Höhe -- volle Farbe statt Wasserzeichen, deshalb kein
-          figure-frame-Rahmen und keine Bildunterschrift hier. */}
+          figure-frame-Rahmen und keine Bildunterschrift hier.
+
+          Eigene, höher aufgelöste Variante (hero-sprinter-*, aus dem
+          unbeschnittenen Originalfoto, bis 2000px breit) statt der
+          bestehenden lieferdienst-sprinter-*-Dateien (max. 1280px): Der
+          Hero zeigt das Bild deutlich größer/gezoomter als die
+          Leistungen-Seite, bei 1280px wirkte es dadurch vor allem auf
+          großen und hochauflösenden Bildschirmen weich/verpixelt. Das
+          Originalfoto hat außerdem mehr Himmel/Wagen-Rand um den Fahrer
+          herum als der alte 2.49:1-Bannerzuschnitt -- dadurch bleibt beim
+          Cover-Crop auf sehr schmalen wie sehr breiten Spalten genug Luft,
+          ohne dass Kopf oder Hand abgeschnitten werden. */}
       <div className="relative h-[46vh] min-h-[300px] overflow-hidden bg-paper-tint lg:h-auto lg:min-h-[440px]">
         <img
-          src="/img/lieferdienst-sprinter-1280.webp"
-          srcSet="/img/lieferdienst-sprinter-1280.webp 1280w, /img/lieferdienst-sprinter-960.webp 960w, /img/lieferdienst-sprinter-640.webp 640w"
+          src="/img/hero-sprinter-2000.webp"
+          srcSet="/img/hero-sprinter-2000.webp 2000w, /img/hero-sprinter-1500.webp 1500w, /img/hero-sprinter-1100.webp 1100w, /img/hero-sprinter-750.webp 750w"
           sizes="(min-width: 1024px) 62vw, 100vw"
-          width={1280}
-          height={514}
+          width={2000}
+          height={1333}
           alt="Ein HiWo-med-Mitarbeiter winkt aus dem Fenster seines Lieferfahrzeugs, im Hintergrund der Staffelsee mit Alpenkette."
           loading="eager"
           decoding="async"
           fetchPriority="high"
           className="hero-photo-reveal absolute inset-0 h-full w-full object-cover"
-          style={{ objectPosition: "38% 48%" }}
+          style={{ objectPosition: "40% 62%" }}
+        />
+        {/* Weicher Übergang statt Hartkante zwischen Textspalte (Papier-Weiß)
+            und Foto: links auf lg+ (dort trifft die Papierfläche seitlich
+            aufs Bild), oben auf Mobil/Tablet (dort liegt das Bild unter dem
+            Textblock). */}
+        <div
+          className="pointer-events-none absolute inset-y-0 left-0 hidden w-24 bg-gradient-to-r from-paper to-transparent lg:block"
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-paper to-transparent lg:hidden"
+          aria-hidden="true"
         />
       </div>
 

@@ -28,8 +28,39 @@ export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
 
   // Schlanker Scroll-Zustand: nur eine Haarlinie und etwas weniger Höhe.
+  //
+  // Bug: Ein einzelner Schwellenwert (vorher: scrollY > 12) lässt den
+  // Header bei genau diesem Wert unkontrolliert zwischen groß und klein
+  // hin- und herspringen. Ursache ist ein Feedback-Loop: Der Header steht
+  // "sticky" ganz oben und zählt weiterhin mit seiner vollen Höhe zum
+  // Dokumentfluss -- schrumpft er (96px -> 72px), wird das Dokument
+  // insgesamt kürzer und der Browser (Scroll Anchoring) korrigiert
+  // scrollY, damit der sichtbare Inhalt stabil bleibt. Liegt scrollY nahe
+  // am Schwellenwert, kann genau diese Korrektur ihn wieder unter- bzw.
+  // überschreiten -- der Header schrumpft, wächst, schrumpft, ... in
+  // Dauerschleife.
+  //
+  // Fix: zwei unterschiedliche Schwellenwerte (Hysterese/Schmitt-Trigger)
+  // mit größerem Abstand, als die Höhenänderung selbst verursachen kann
+  // (max. 24px). Ein einmal erreichter Zustand hält damit, bis scrollY
+  // klar auf die andere Seite wechselt -- an der Grenze kann er sich
+  // nicht mehr selbst zurückschalten.
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
+    let isScrolled = false;
+    const ENTER = 48;
+    const EXIT = 16;
+
+    const onScroll = () => {
+      const y = window.scrollY;
+      if (!isScrolled && y > ENTER) {
+        isScrolled = true;
+        setScrolled(true);
+      } else if (isScrolled && y < EXIT) {
+        isScrolled = false;
+        setScrolled(false);
+      }
+    };
+
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
