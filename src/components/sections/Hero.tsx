@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import { ArrowRight, Button } from "@/components/ui/Button";
 import { company } from "@/data/company";
 
@@ -33,66 +31,70 @@ const heroFacts = [
  */
 export function Hero() {
   return (
-    <section className="hero-bleed" aria-label="Einstieg">
-      <div className="hero-bleed-text relative flex flex-col justify-center pb-8 pt-[clamp(1.75rem,1rem+2vw,3.25rem)] lg:pb-[clamp(1.75rem,1rem+2vw,3.25rem)]">
-        <div
-          className="pointer-events-none absolute left-0 top-0 hidden h-[clamp(8rem,20vw,16rem)] w-[2px] bg-magenta lg:block"
-          aria-hidden="true"
-        />
-
-        <div className="max-w-[36rem]">
-          <p className="t-eyebrow flex flex-wrap items-center gap-x-3 gap-y-1 text-muted">
-            <span className="text-ink">Medizinischer Fachhandel</span>
-            <span aria-hidden="true" className="h-[2px] w-5 bg-magenta" />
-            <span>
-              {company.address.city} · seit {company.foundedYear}
-            </span>
-          </p>
-
-          <h1 className="t-display mt-4 lg:mt-5" data-reveal>
-            Alles, was der Praxisalltag braucht.
-            <br className="hidden sm:block" />{" "}
-            <span className="text-muted">
-              Geliefert von Menschen,
-              <br className="hidden sm:block" /> die ihn kennen.
-            </span>
-          </h1>
-
-          {/* Der Markenclaim – steht auf genau dem Fahrzeug im Foto rechts. */}
-          <p
-            className="t-serif mt-5 text-[clamp(1.2rem,1rem+1vw,1.65rem)] leading-[1.3] text-ink lg:mt-6"
-            data-reveal
-            style={{ "--reveal-delay": "80ms" } as React.CSSProperties}
-          >
-            „{company.claim}“
-          </p>
-          <p
-            className="mt-2 text-[0.875rem] text-muted"
-            data-reveal
-            style={{ "--reveal-delay": "140ms" } as React.CSSProperties}
-          >
-            Der Satz steht auf genau diesem Fahrzeug – seit {company.foundedYear}.
-          </p>
-
+    /* lg:-mt-[96px] zieht den ganzen Hero unter den Header (siehe
+       SiteHeader.tsx: "overlay" macht ihn dort transparent, solange
+       ungescrollt) -- das Foto reicht dadurch bis an die echte obere
+       Kante statt darunter zu beginnen. Nur ab lg: erst ab dieser Breite
+       liegt Bild neben Text (die Bedingung, unter der der Header
+       überhaupt transparent wird); im gestapelten Mobil-Layout stünde
+       oben sonst der Text unter dem Header, nicht das Foto. */
+    <section className="hero-bleed lg:-mt-[96px]" aria-label="Einstieg">
+      <div className="hero-bleed-text lg:pt-[96px]">
+        <div className="relative flex flex-col justify-center pb-8 pt-[clamp(1.75rem,1rem+2vw,3.25rem)] lg:pb-[clamp(1.75rem,1rem+2vw,3.25rem)]">
           <div
-            className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-3 lg:mt-6"
-            data-reveal
-            style={{ "--reveal-delay": "200ms" } as React.CSSProperties}
-          >
-            <Button href="/kontakt/">
-              Beratung anfragen
-              <ArrowRight />
-            </Button>
-            <Button href="/leistungen/" variant="outline">
-              Was wir leisten
-            </Button>
-            <Link
-              href="/leistungen/#logistik"
-              className="inline-flex items-center gap-2 py-2.5 font-semibold text-ink underline-offset-4 transition-colors hover:text-magenta-ink hover:underline"
+            className="pointer-events-none absolute left-0 top-0 hidden h-[clamp(8rem,20vw,16rem)] w-[2px] bg-magenta lg:block"
+            aria-hidden="true"
+          />
+
+          <div className="max-w-[36rem]">
+            <p className="t-eyebrow flex flex-wrap items-center gap-x-3 gap-y-1 text-muted">
+              <span className="text-ink">Medizinischer Fachhandel</span>
+              <span aria-hidden="true" className="h-[2px] w-5 bg-magenta" />
+              <span>
+                {company.address.city} · seit {company.foundedYear}
+              </span>
+            </p>
+
+            <h1 className="t-display mt-4 lg:mt-5" data-reveal>
+              Alles, was der Praxisalltag braucht.
+              <br className="hidden sm:block" />{" "}
+              <span className="text-muted">
+                Geliefert von Menschen,
+                <br className="hidden sm:block" /> die ihn kennen.
+              </span>
+            </h1>
+
+            {/* Der Markenclaim – steht auf genau dem Fahrzeug im Foto rechts. */}
+            <p
+              className="t-serif mt-5 text-[clamp(1.2rem,1rem+1vw,1.65rem)] leading-[1.3] text-ink lg:mt-6"
+              data-reveal
+              style={{ "--reveal-delay": "80ms" } as React.CSSProperties}
             >
-              Wie wir ausliefern
-              <ArrowRight className="text-magenta" />
-            </Link>
+              „{company.claim}“
+            </p>
+            <p
+              className="mt-2 text-[0.875rem] text-muted"
+              data-reveal
+              style={{ "--reveal-delay": "140ms" } as React.CSSProperties}
+            >
+              Der Satz steht auf genau diesem Fahrzeug – seit {company.foundedYear}.
+            </p>
+
+            {/* Nur noch ein Button statt drei Optionen (Button + Outline-
+                Button + Text-Link) -- "Was wir leisten" und "Wie wir
+                ausliefern" stehen ohnehin in der Hauptnavigation bzw. eine
+                Sektion tiefer (Positioning/Logistics); der Hero braucht
+                nur die eine Entscheidung, keine Aufzählung. */}
+            <div
+              className="mt-6 lg:mt-8"
+              data-reveal
+              style={{ "--reveal-delay": "200ms" } as React.CSSProperties}
+            >
+              <Button href="/kontakt/">
+                Beratung anfragen
+                <ArrowRight />
+              </Button>
+            </div>
           </div>
         </div>
       </div>
@@ -136,6 +138,15 @@ export function Hero() {
         />
         <div
           className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-paper to-transparent lg:hidden"
+          aria-hidden="true"
+        />
+        {/* Abdunkelung oben, nur ab lg: Der Header liegt dort transparent
+            über dem Bild (siehe oben), Navigation/Telefon/FastOrder
+            brauchen dafür verlässlichen Kontrast -- unabhängig davon, ob
+            an der Stelle gerade heller Himmel oder dunkler Wagen zu sehen
+            ist. */}
+        <div
+          className="pointer-events-none absolute inset-x-0 top-0 hidden h-[140px] bg-gradient-to-b from-black/45 to-transparent lg:block"
           aria-hidden="true"
         />
       </div>
