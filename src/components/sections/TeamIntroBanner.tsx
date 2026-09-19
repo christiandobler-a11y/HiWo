@@ -18,10 +18,14 @@ export function TeamIntroBanner() {
   let letterIndex = 0;
 
   return (
-    <section className="overflow-hidden border-y border-line bg-paper-tint">
+    <section className="overflow-hidden border-y border-line bg-paper">
       {/* Kein Hintergrundbild mehr hier -- selbst nur hinter der Tagline
           platziert wirkte der Fotoschleier noch wie ein unerwünschter
-          Farbverlauf. Reines bg-paper-tint stattdessen. */}
+          Farbverlauf. Reines bg-paper stattdessen -- deckungsgleich mit dem
+          Ton, auf den die Porträts unten (siehe TeamMember-Fotos) freigestellt
+          sind. Vorher bg-paper-tint: der etwas dunklere Band-Ton passte nicht
+          zu den freigestellten Fotos und machte genau die Kacheln wieder
+          sichtbar, die eigentlich unsichtbar verschmelzen sollen. */}
       <div className="pt-9 sm:pt-11">
         <div className="container-site">
           <p className="text-build t-serif text-[clamp(1.4rem,1.15rem+1.1vw,2.1rem)] leading-tight text-ink">
