@@ -36,7 +36,7 @@ export function CompanyTeaser() {
             (Text links, Bild rechts) unabhängig von der Reihenfolge im
             Markup bei. */}
         <div className="grid items-start gap-x-12 gap-y-12 lg:grid-cols-12">
-          <figure className="lg:col-span-5 lg:col-start-8" data-reveal>
+          <figure className="lg:col-span-5 lg:col-start-8 lg:row-start-1" data-reveal>
             <Figure
               name="geschaeftsfuehrung"
               widths={[1000, 700]}

@@ -6,7 +6,6 @@ import { Figure, FigureCaption } from "@/components/ui/Figure";
 import { SectionHead, SectionMark } from "@/components/ui/Section";
 import { company } from "@/data/company";
 import { applicationContact, employerFacts, openPositions } from "@/data/career";
-import { teamHeadcount } from "@/data/team";
 
 export const metadata: Metadata = {
   title: "Karriere – Arbeiten bei HiWo-med",
@@ -27,11 +26,6 @@ export default function KarrierePage() {
         label="Karriere"
         title={<>Ein Betrieb, in dem man gesehen wird.</>}
         lead="Bei uns kennt jeder jeden. Entscheidungen werden schnell getroffen, gute Ideen finden Gehör, und wer Verantwortung übernehmen will, bekommt sie. Das ist kein Versprechen für die Stellenanzeige – es ist der Grund, warum viele hier zwanzig Jahre und länger bleiben."
-        meta={[
-          { k: "Standort", v: `${company.address.city}, Oberbayern` },
-          { k: "Team", v: `${teamHeadcount} Kolleginnen und Kollegen` },
-          { k: "Bewerbung", v: company.email.jobs },
-        ]}
       />
 
       <section className="pb-[clamp(2rem,1rem+2vw,3rem)]">

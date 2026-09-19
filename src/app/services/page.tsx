@@ -152,11 +152,6 @@ export default function ServicesPage() {
         label="Services & Schulungen"
         title="Fortbildung und Prüfleistungen aus dem eigenen Haus"
         lead="Fünf Angebote rund um Hygiene, Wundversorgung und Notfall – gehalten von Mitarbeitenden, die im Alltag bei unseren Kunden unterwegs sind. Vier davon finden bei Ihnen vor Ort statt."
-        meta={[
-          { k: "Angebote", v: "Seminar, Hygiene-Check, Trinkwasserprobe, Notfall, Wunde" },
-          { k: "Ort", v: "Überwiegend inhouse in Ihrer Einrichtung" },
-          { k: "Anmeldung", v: company.email.training },
-        ]}
       />
 
       <section className="pb-[clamp(2rem,1rem+2vw,3rem)]">

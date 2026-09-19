@@ -4,14 +4,7 @@ import { PageHeader } from "@/components/layout/PageHeader";
 import { ContactCta } from "@/components/sections/ContactCta";
 import { TeamIntroBanner } from "@/components/sections/TeamIntroBanner";
 import { SectionMark } from "@/components/ui/Section";
-import { company } from "@/data/company";
-import {
-  earliestYear,
-  longTenureCount,
-  teamGroups,
-  teamHeadcount,
-  type TeamMember,
-} from "@/data/team";
+import { longTenureCount, teamGroups, teamHeadcount, type TeamMember } from "@/data/team";
 
 export const metadata: Metadata = {
   title: "Team – die Menschen hinter HiWo-med",
@@ -66,11 +59,6 @@ export default function TeamPage() {
           </>
         }
         lead={`Wer bei HiWo-med anruft, spricht mit jemandem aus diesem Verzeichnis. ${longTenureCount} Kolleginnen und Kollegen sind seit mehr als zwanzig Jahren dabei – das ist der Grund, warum wir Abläufe in Praxen oft besser kennen als deren Lieferantenliste.`}
-        meta={[
-          { k: "Standort", v: `Alle an einem Ort: ${company.address.city}` },
-          { k: "Längste Zugehörigkeit", v: `seit ${earliestYear}` },
-          { k: "Erreichbarkeit", v: company.hours.compact },
-        ]}
       />
 
       <TeamIntroBanner />
