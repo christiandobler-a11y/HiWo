@@ -94,7 +94,7 @@ export const teamGroups: TeamGroup[] = [
       },
       {
         name: "Sarah Stahr",
-        photo: "sarah_stahr_0-v4",
+        photo: "sarah_stahr_0-v5",
         status: "in Babypause",
         lowRes: true,
       },
