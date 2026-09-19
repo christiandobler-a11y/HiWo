@@ -35,12 +35,17 @@ export function Hero() {
       className="relative -mt-[84px] flex min-h-[620px] items-end overflow-hidden md:-mt-[96px] md:min-h-[700px] lg:h-[82vh] lg:min-h-[740px] lg:max-h-[820px]"
       aria-label="Einstieg"
     >
+      {/* Per KI-Superauflösung (EDSR, 2x) aus dem Originalfoto (2000px)
+          hochskaliert auf 4000px -- bei diesem Vollbild-Hero plus dem
+          zusätzlichen scale(1.45)-Zuschnitt (siehe unten) reicht die
+          Ausgangsauflösung auf breiten/hochauflösenden Bildschirmen sonst
+          nicht aus, das Bild wirkte weich. */}
       <img
-        src="/img/hero-sprinter-2000.webp"
-        srcSet="/img/hero-sprinter-2000.webp 2000w, /img/hero-sprinter-1500.webp 1500w, /img/hero-sprinter-1100.webp 1100w, /img/hero-sprinter-750.webp 750w"
+        src="/img/hero-sprinter-4000.webp"
+        srcSet="/img/hero-sprinter-4000.webp 4000w, /img/hero-sprinter-3200.webp 3200w, /img/hero-sprinter-2400.webp 2400w, /img/hero-sprinter-1800.webp 1800w, /img/hero-sprinter-1200.webp 1200w"
         sizes="100vw"
-        width={2000}
-        height={1333}
+        width={4000}
+        height={2666}
         alt="Ein HiWo-med-Mitarbeiter winkt aus dem Fenster seines Lieferfahrzeugs, im Hintergrund der Staffelsee mit Alpenkette."
         loading="eager"
         decoding="async"
