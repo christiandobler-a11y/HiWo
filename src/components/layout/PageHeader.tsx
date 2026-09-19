@@ -11,12 +11,17 @@ export function PageHeader({
   label,
   title,
   lead,
+  leadBelow = false,
   meta,
   children,
 }: {
   label: string;
   title: ReactNode;
   lead?: ReactNode;
+  /** Lead unter den Titel stellen statt daneben -- lässt die rechte Spalte
+   *  frei, z. B. wenn direkt darunter ein Bild ohne Text davor stehen soll
+   *  (siehe Kontaktseite). */
+  leadBelow?: boolean;
   /** Kurze Faktenzeile unter der Einleitung, z. B. Öffnungszeiten. */
   meta?: { k: string; v: string }[];
   children?: ReactNode;
@@ -29,15 +34,23 @@ export function PageHeader({
       />
       <div className="container-site">
         <SectionMark label={label} className="mb-7" />
-        <div className="grid gap-x-12 gap-y-8 lg:grid-cols-12">
-          <h1 className="t-h1 lg:col-span-7">{title}</h1>
-          {lead ? (
-            <div className="lg:col-span-5 lg:pt-2">
-              <p className="t-lead">{lead}</p>
-              {children}
-            </div>
-          ) : null}
-        </div>
+        {leadBelow ? (
+          <div className="max-w-[38rem]">
+            <h1 className="t-h1">{title}</h1>
+            {lead ? <p className="t-lead mt-5">{lead}</p> : null}
+            {children}
+          </div>
+        ) : (
+          <div className="grid gap-x-12 gap-y-8 lg:grid-cols-12">
+            <h1 className="t-h1 lg:col-span-7">{title}</h1>
+            {lead ? (
+              <div className="lg:col-span-5 lg:pt-2">
+                <p className="t-lead">{lead}</p>
+                {children}
+              </div>
+            ) : null}
+          </div>
+        )}
 
         {meta?.length ? (
           <dl className="mt-11 grid border-t border-line sm:grid-cols-3 sm:divide-x sm:divide-line">
