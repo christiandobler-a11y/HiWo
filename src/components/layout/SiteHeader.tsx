@@ -87,31 +87,25 @@ export function SiteHeader() {
 
   // Auf der Startseite liegt der Header anfangs als helle, durchscheinende
   // Glasleiste über dem Hero-Foto (das Foto reicht dafür bis unter den
-  // Header, siehe Hero.tsx) statt in einer eigenen weißen Leiste davor zu
-  // stehen -- sobald gescrollt oder das mobile Menü offen ist, wird er wie
-  // überall sonst solide weiß.
+  // Header, siehe Hero.tsx: der Hero ist inzwischen bei jeder Breite eine
+  // randabfallende Vollbildfläche) statt in einer eigenen weißen Leiste
+  // davor zu stehen -- sobald gescrollt oder das mobile Menü offen ist,
+  // wird er wie überall sonst solide weiß.
   //
-  // Nur ab lg: Erst ab dieser Breite liegt der Hero im Nebeneinander-
-  // Layout (Bild neben Text), darunter ist er gestapelt (Text zuerst) --
-  // unterhalb von lg stünde der Header sonst über reinem Papier-Weiß statt
-  // über dem Foto.
-  //
-  // Erste Fassung tönte die Leiste dunkel und musste Navigation/Telefon/
-  // FastOrder deshalb auf helle Schrift umschalten -- das sah zu schwer
-  // aus und die Navigation reicht dabei über die Grenze zwischen weißer
-  // Textspalte und Foto, mit fester heller Schrift war "Leistungen" (über
-  // Weiß) praktisch unsichtbar. Jetzt stattdessen ein helles, geblurtes
-  // Papier-Glas (bg-paper/70 + backdrop-blur): Der Blur hellt auf, was
-  // darunterliegt, unabhängig davon ob dort gerade Himmel oder dunkler
-  // Wagen zu sehen ist -- die normale dunkle Schrift bleibt deshalb
-  // überall unverändert lesbar, keine Sonderfarben nötig.
+  // Bewusst ein helles, geblurtes Papier-Glas (bg-paper/70 + backdrop-blur)
+  // statt dunkler Tönung mit heller Schrift: Eine frühere Fassung tönte
+  // die Leiste dunkel und musste Navigation/Telefon/FastOrder deshalb auf
+  // helle Schrift umschalten -- sah zu schwer aus und brauchte
+  // Sonderfarben. Der Blur hellt jetzt auf, was darunterliegt, unabhängig
+  // vom Bildinhalt -- die normale dunkle Schrift bleibt überall
+  // unverändert lesbar.
   const isHome = pathname === "/";
   const overlay = isHome && !scrolled && !open;
 
   return (
     <header
       className={`sticky top-0 z-50 bg-paper transition-[background-color,border-color,backdrop-filter] duration-200 ${
-        overlay ? "lg:bg-paper/70 lg:backdrop-blur-md" : ""
+        overlay ? "bg-paper/70 backdrop-blur-md" : ""
       } ${scrolled ? "border-b border-line" : "border-b border-transparent"}`}
     >
       <div className="container-site">

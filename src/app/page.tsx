@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { Hero } from "@/components/sections/Hero";
+import { Hero, HeroFacts } from "@/components/sections/Hero";
 import { Positioning } from "@/components/sections/Positioning";
 import { Assortment } from "@/components/sections/Assortment";
 import { Logistics } from "@/components/sections/Logistics";
@@ -22,6 +22,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <HeroFacts />
       <Positioning />
       <Assortment />
       <Logistics />

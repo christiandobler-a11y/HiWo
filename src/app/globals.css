@@ -482,49 +482,26 @@ html.js [data-reveal].reveal-flip[data-revealed="true"] {
 /* Neuer Hero: echtes Foto blendet voll sichtbar (statt blass) ein, mit
    einem sehr leichten Zoom-out -- kein Wasserzeichen mehr, sondern das
    eigentliche Bild. */
+/* Endzustand hier bewusst nicht scale(1): Der Hero ist inzwischen eine
+   randabfallende Vollbildfläche (viel breiter im Seitenverhältnis als
+   das Foto selbst) -- object-fit:cover zeigt dabei automatisch die
+   komplette Bildbreite ohne jeden horizontalen Zuschnitt, wodurch der
+   Fahrer optisch exakt hinter der Textkarte landet. Der zusätzliche
+   Zoom verschafft echten Zuschnitt-Spielraum (siehe transformOrigin in
+   Hero.tsx), um ihn rechts an der Karte vorbei ins Bild zu holen. */
 @keyframes hero-photo-reveal {
   from {
     opacity: 0;
-    transform: scale(1.06);
+    transform: scale(1.5);
   }
   to {
     opacity: 1;
-    transform: scale(1);
+    transform: scale(1.45);
   }
 }
 
 .hero-photo-reveal {
   animation: hero-photo-reveal 1100ms var(--ease-out-quiet) both;
-}
-
-/* Hero-Split: Textspalte auf Leseweite gedeckelt (max-w im Markup), die
-   Bildspalte nimmt den Rest bis zum Viewport-Rand ein -- auf breiten
-   Monitoren wird das Foto dadurch bewusst größer statt Leerraum
-   entstehen zu lassen. Bewusst NUR das einfache Gutter als Innenabstand,
-   keine an container-site angelehnte Center-Berechnung: Erste Fassung
-   hat Spaltenbreite UND einen auf die volle Viewport-Breite berechneten
-   padding-left kombiniert -- beides hat sich gegenseitig abgezogen und
-   dem Text auf breiten Screens praktisch keine Breite mehr gelassen
-   (Wörter sind buchstabenweise umgebrochen). */
-.hero-bleed {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-}
-
-@media (min-width: 1024px) {
-  .hero-bleed {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
-  }
-}
-
-.hero-bleed-text {
-  padding-inline: var(--gutter);
-}
-
-@media (min-width: 1024px) {
-  .hero-bleed-text {
-    padding-right: clamp(2rem, 4vw, 4rem);
-  }
 }
 
 @media (hover: hover) {
