@@ -85,34 +85,33 @@ export function SiteHeader() {
 
   const isActive = (href: string) => pathname === href || pathname.startsWith(href);
 
-  // Auf der Startseite liegt der Header anfangs als durchscheinende,
-  // dunkel getönte Leiste über dem Hero-Foto (das Foto reicht dafür bis
-  // unter den Header, siehe Hero.tsx) statt in einer eigenen weißen
-  // Leiste davor zu stehen -- sobald gescrollt oder das mobile Menü offen
-  // ist, wird er wie überall sonst solide weiß.
+  // Auf der Startseite liegt der Header anfangs als helle, durchscheinende
+  // Glasleiste über dem Hero-Foto (das Foto reicht dafür bis unter den
+  // Header, siehe Hero.tsx) statt in einer eigenen weißen Leiste davor zu
+  // stehen -- sobald gescrollt oder das mobile Menü offen ist, wird er wie
+  // überall sonst solide weiß.
   //
   // Nur ab lg: Erst ab dieser Breite liegt der Hero im Nebeneinander-
   // Layout (Bild neben Text), darunter ist er gestapelt (Text zuerst) --
   // unterhalb von lg stünde der Header sonst über reinem Papier-Weiß statt
-  // über dem Foto. Alle "overlay"-Klassen sind deshalb konsequent mit
-  // lg: vorangestellt; ohne overlay bleiben nur die Basis-Klassen (normale
-  // helle Leiste, wie auf jeder anderen Seite) übrig.
+  // über dem Foto.
   //
-  // Bewusst eine durchgehende getönte Leiste über die volle Breite statt
-  // seitenabhängiger heller/dunkler Textfarben: Die Navigation sitzt in
-  // der Mitte der Leiste und reicht dabei über die Grenze zwischen der
-  // weißen Textspalte links und dem Foto rechts -- mit fester heller
-  // Schrift wäre "Leistungen" (über Weiß) unlesbar gewesen, während
-  // "Kontakt" (über dem Foto) einwandfrei las. Ein einheitlicher, dezent
-  // getönter Balken macht die Schriftfarbe unabhängig davon, was gerade
-  // darunter liegt.
+  // Erste Fassung tönte die Leiste dunkel und musste Navigation/Telefon/
+  // FastOrder deshalb auf helle Schrift umschalten -- das sah zu schwer
+  // aus und die Navigation reicht dabei über die Grenze zwischen weißer
+  // Textspalte und Foto, mit fester heller Schrift war "Leistungen" (über
+  // Weiß) praktisch unsichtbar. Jetzt stattdessen ein helles, geblurtes
+  // Papier-Glas (bg-paper/70 + backdrop-blur): Der Blur hellt auf, was
+  // darunterliegt, unabhängig davon ob dort gerade Himmel oder dunkler
+  // Wagen zu sehen ist -- die normale dunkle Schrift bleibt deshalb
+  // überall unverändert lesbar, keine Sonderfarben nötig.
   const isHome = pathname === "/";
   const overlay = isHome && !scrolled && !open;
 
   return (
     <header
       className={`sticky top-0 z-50 bg-paper transition-[background-color,border-color,backdrop-filter] duration-200 ${
-        overlay ? "lg:bg-black/25 lg:backdrop-blur-md" : ""
+        overlay ? "lg:bg-paper/70 lg:backdrop-blur-md" : ""
       } ${scrolled ? "border-b border-line" : "border-b border-transparent"}`}
     >
       <div className="container-site">
@@ -135,9 +134,7 @@ export function SiteHeader() {
               />
             </Link>
             <span
-              className={`mb-1.5 hidden select-none border border-line-strong px-1.5 py-[3px] text-[0.5625rem] font-medium uppercase leading-none tracking-[0.14em] text-muted transition-colors lg:inline-block ${
-                overlay ? "lg:border-white/40 lg:text-white/80" : ""
-              }`}
+              className="mb-1.5 hidden select-none border border-line-strong px-1.5 py-[3px] text-[0.5625rem] font-medium uppercase leading-none tracking-[0.14em] text-muted lg:inline-block"
               title="Dies ist ein Gestaltungskonzept, nicht die veröffentlichte Website."
             >
               Konzept
@@ -154,12 +151,6 @@ export function SiteHeader() {
                     aria-current={isActive(item.href) ? "page" : undefined}
                     className={`relative py-2 text-[0.95rem] font-medium transition-colors hover:text-ink ${
                       isActive(item.href) ? "text-ink" : "text-muted"
-                    } ${
-                      overlay
-                        ? isActive(item.href)
-                          ? "lg:text-white lg:hover:text-white"
-                          : "lg:text-white/75 lg:hover:text-white"
-                        : ""
                     }`}
                   >
                     {item.label}
@@ -176,41 +167,26 @@ export function SiteHeader() {
           </nav>
 
           <div className="flex items-center gap-3">
-            {/* Telefonnummer, FastOrder & Burger: alle mit denselben
-                Basis-Klassen (normale, dunkle Schrift) plus lg:-Overrides
-                für den Fall "overlay" -- so bleibt unterhalb von lg (wo der
-                Hero noch gestapelt ist, kein Foto hinter dem Header) immer
-                die normale, dunkle Schrift stehen. */}
+            {/* Telefonnummer ist der eigentliche Hauptkanal des Unternehmens. */}
             <a
               href={company.phone.href}
-              className={`hidden items-center gap-2 text-[0.95rem] font-semibold text-ink transition-colors hover:text-magenta-ink xl:flex ${
-                overlay ? "lg:text-white lg:hover:text-white/80" : ""
-              }`}
+              className="hidden items-center gap-2 text-[0.95rem] font-semibold text-ink transition-colors hover:text-magenta-ink xl:flex"
             >
               <PhoneIcon />
               {company.phone.display}
             </a>
 
+            {/* FastOrder: sichtbar, aber bewusst sekundär gestaltet. */}
             <a
               href={fastOrder.href}
               target="_blank"
               rel="noreferrer noopener"
-              className={`group hidden min-h-11 items-center gap-2.5 rounded-[3px] border border-line-strong px-4 py-2.5 transition-colors hover:border-magenta sm:inline-flex ${
-                overlay ? "lg:border-white/40 lg:hover:border-white" : ""
-              }`}
+              className="group hidden min-h-11 items-center gap-2.5 rounded-[3px] border border-line-strong px-4 py-2.5 transition-colors hover:border-magenta sm:inline-flex"
             >
-              <span
-                className={`text-[0.9rem] font-semibold text-ink transition-colors group-hover:text-magenta-ink ${
-                  overlay ? "lg:text-white lg:group-hover:text-white" : ""
-                }`}
-              >
+              <span className="text-[0.9rem] font-semibold text-ink transition-colors group-hover:text-magenta-ink">
                 {fastOrder.label}
               </span>
-              <span
-                className={`text-[0.7rem] font-medium uppercase tracking-[0.1em] text-muted ${
-                  overlay ? "lg:text-white/70" : ""
-                }`}
-              >
+              <span className="text-[0.7rem] font-medium uppercase tracking-[0.1em] text-muted">
                 {fastOrder.qualifier}
               </span>
               <ArrowRight className="text-magenta transition-transform duration-200 group-hover:translate-x-0.5" />

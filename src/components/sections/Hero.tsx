@@ -135,15 +135,6 @@ export function Hero() {
           className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-paper to-transparent lg:hidden"
           aria-hidden="true"
         />
-        {/* Abdunkelung oben, nur ab lg: Der Header liegt dort transparent
-            über dem Bild (siehe oben), Navigation/Telefon/FastOrder
-            brauchen dafür verlässlichen Kontrast -- unabhängig davon, ob
-            an der Stelle gerade heller Himmel oder dunkler Wagen zu sehen
-            ist. */}
-        <div
-          className="pointer-events-none absolute inset-x-0 top-0 hidden h-[140px] bg-gradient-to-b from-black/45 to-transparent lg:block"
-          aria-hidden="true"
-        />
       </div>
 
       {/* Fakten-Zeile: eigene Grid-Zeile unter Text- und Bildspalte, auf
