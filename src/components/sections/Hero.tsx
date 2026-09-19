@@ -40,12 +40,7 @@ export function Hero() {
        oben sonst der Text unter dem Header, nicht das Foto. */
     <section className="hero-bleed lg:-mt-[96px]" aria-label="Einstieg">
       <div className="hero-bleed-text lg:pt-[96px]">
-        <div className="relative flex flex-col justify-center pb-8 pt-[clamp(1.75rem,1rem+2vw,3.25rem)] lg:pb-[clamp(1.75rem,1rem+2vw,3.25rem)]">
-          <div
-            className="pointer-events-none absolute left-0 top-0 hidden h-[clamp(8rem,20vw,16rem)] w-[2px] bg-magenta lg:block"
-            aria-hidden="true"
-          />
-
+        <div className="flex flex-col justify-center pb-8 pt-[clamp(1.75rem,1rem+2vw,3.25rem)] lg:pb-[clamp(1.75rem,1rem+2vw,3.25rem)]">
           <div className="max-w-[36rem]">
             <p className="t-eyebrow flex flex-wrap items-center gap-x-3 gap-y-1 text-muted">
               <span className="text-ink">Medizinischer Fachhandel</span>
