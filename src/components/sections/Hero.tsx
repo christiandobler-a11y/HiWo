@@ -59,7 +59,7 @@ export function Hero() {
               </span>
             </h1>
 
-            {/* Der Markenclaim – steht seit Jahren auf den Fahrzeugen. */}
+            {/* Der Markenclaim – steht auf genau dem Fahrzeug im Foto rechts. */}
             <p
               className="t-serif mt-5 text-[clamp(1.2rem,1rem+1vw,1.65rem)] leading-[1.3] text-ink lg:mt-6"
               data-reveal
@@ -72,7 +72,7 @@ export function Hero() {
               data-reveal
               style={{ "--reveal-delay": "140ms" } as React.CSSProperties}
             >
-              Der Satz steht seit {company.foundedYear} auf unseren Fahrzeugen.
+              Der Satz steht auf genau diesem Fahrzeug – seit {company.foundedYear}.
             </p>
 
             {/* Nur noch ein Button statt drei Optionen (Button + Outline-
@@ -99,26 +99,23 @@ export function Hero() {
           gekoppelte Höhe -- volle Farbe statt Wasserzeichen, deshalb kein
           figure-frame-Rahmen und keine Bildunterschrift hier.
 
-          Testkandidat: Kollege mit Hubwagen im Feld statt Fahrer im
-          Fahrzeugfenster -- unposierter, zeigt die eigentliche
-          Lagerlogistik-Arbeit statt eines Blicks in die Kamera. Nur in
-          960px Breite verfügbar (kein höher aufgelöstes Original wie beim
-          Fahrer-Foto) -- auf sehr breiten/hochauflösenden Bildschirmen
-          kann das dadurch weicher wirken als der jetzt hochauflösende
-          hero-sprinter. */}
+          Der Hubwagen-Feld-Kandidat kam nicht an (Bildwahl wieder
+          verworfen); zurück zum Fahrer-Foto in hoher Auflösung
+          (hero-sprinter-*, aus dem unbeschnittenen Originalfoto, bis
+          2000px breit statt der 1280px-Bannerdatei). */}
       <div className="relative h-[46vh] min-h-[300px] overflow-hidden bg-paper-tint lg:h-auto lg:min-h-[440px]">
         <img
-          src="/img/hero-logistik-feld-960.webp"
-          srcSet="/img/hero-logistik-feld-960.webp 960w, /img/hero-logistik-feld-640.webp 640w"
+          src="/img/hero-sprinter-2000.webp"
+          srcSet="/img/hero-sprinter-2000.webp 2000w, /img/hero-sprinter-1500.webp 1500w, /img/hero-sprinter-1100.webp 1100w, /img/hero-sprinter-750.webp 750w"
           sizes="(min-width: 1024px) 62vw, 100vw"
-          width={960}
-          height={385}
-          alt="Ein HiWo-med-Mitarbeiter zieht einen Hubwagen mit Paletten über einen Feldweg, im Hintergrund Weiden und die Alpenkette."
+          width={2000}
+          height={1333}
+          alt="Ein HiWo-med-Mitarbeiter winkt aus dem Fenster seines Lieferfahrzeugs, im Hintergrund der Staffelsee mit Alpenkette."
           loading="eager"
           decoding="async"
           fetchPriority="high"
           className="hero-photo-reveal absolute inset-0 h-full w-full object-cover"
-          style={{ objectPosition: "46% 55%" }}
+          style={{ objectPosition: "40% 62%" }}
         />
         {/* Weicher Übergang statt Hartkante zwischen Textspalte (Papier-Weiß)
             und Foto: links auf lg+ (dort trifft die Papierfläche seitlich
