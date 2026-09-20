@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 
+import { company } from "@/data/company";
 import { PlusToggleIcon } from "@/components/ui/Button";
 import { SectionHead } from "@/components/ui/Section";
 
@@ -15,7 +16,7 @@ import { SectionHead } from "@/components/ui/Section";
 const reasons = [
   {
     title: "Ein Ansprechpartner statt einer Warteschleife",
-    text: "Montag bis Freitag von 8 bis 17 Uhr geht jemand ans Telefon, der die Praxis kennt. Dazu ein fester Außendienstpartner mit eigenem Gebiet, der vorbeikommt – nicht nur anruft.",
+    text: `${company.hours.compact} geht jemand ans Telefon, der die Praxis kennt. Dazu ein fester Außendienstpartner mit eigenem Gebiet, der vorbeikommt – nicht nur anruft.`,
     detail:
       "Fünf feste Gebiete, fünf feste Gesichter: Oberbayern, Oberland und Schwaben, Chiemgau und Niederbayern werden jeweils von derselben Person betreut – dazu die durchgehend besetzte Auftragsannahme im Innendienst.",
   },

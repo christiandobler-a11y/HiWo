@@ -104,13 +104,18 @@ p {
   text-wrap: pretty;
 }
 
-/* Deutsche Komposita: erst trennen, im Notfall umbrechen. */
+/* Keine automatische Trennung: Der Browser wählte dabei wiederholt
+   Trennstellen, die zwar sprachlich zulässig, aber unruhig aussehen (z. B.
+   "Zusammenar-beit" statt "Zusammen-arbeit") -- von mehreren Personen
+   unabhängig als störend gemeldet. Zeilen brechen jetzt nur noch an
+   Wortgrenzen; overflow-wrap bleibt als Notbremse gegen zu breite,
+   einzelne Wörter (z. B. "Trinkwasserprobenentnahme") auf schmalen Spalten. */
 p,
 li,
 dd,
 figcaption,
 blockquote {
-  hyphens: auto;
+  hyphens: none;
   overflow-wrap: break-word;
 }
 
@@ -129,16 +134,6 @@ span {
   overflow-wrap: anywhere;
 }
 
-/* Auf schmalen Geräten dürfen auch Überschriften getrennt werden.
-   Ab Tablet bleibt die Schlagzeile ungetrennt – das ist die bessere Optik. */
-@media (max-width: 767px) {
-  h1,
-  h2,
-  h3,
-  h4 {
-    hyphens: auto;
-  }
-}
 
 ::selection {
   background: var(--color-magenta);

@@ -10,8 +10,7 @@ import { fieldServiceMembers } from "@/data/team";
 
 export const metadata: Metadata = {
   title: "Kontakt – HiWo-med in Uffing am Staffelsee",
-  description:
-    "HiWo-med Medizintechnik GmbH, Lagerhausstraße 4, 82449 Uffing am Staffelsee. Montag bis Freitag von 8 bis 17 Uhr persönlich erreichbar: +49 8846 920 40.",
+  description: `HiWo-med Medizintechnik GmbH, Lagerhausstraße 4, 82449 Uffing am Staffelsee. ${company.hours.compact} persönlich erreichbar: +49 8846 920 40.`,
   alternates: { canonical: "/kontakt/" },
 };
 
