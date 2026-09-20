@@ -98,10 +98,10 @@ export default function LeistungenPage() {
             <div className="lg:col-span-4 lg:col-start-9">
               <figure data-reveal>
                 <Figure
-                  name="instrument-detail"
+                  name="instrument-detail-v2"
                   widths={[900, 640]}
                   ratio={1.45}
-                  alt="Eine chirurgische Pinzette auf hellem Untergrund."
+                  alt="Mehrere chirurgische Klemmen mit Ringgriffen, aufeinandergestapelt auf hellem Untergrund."
                   sizes="(min-width: 1024px) 32vw, 100vw"
                   className="aspect-[1.45/1] w-full"
                 />
