@@ -15,7 +15,7 @@ import { deliveryRegions } from "@/data/company";
 const logisticsDetails = [
   {
     title: "Bis an den Lagerort",
-    text: "Unsere Fahrerinnen und Fahrer stellen die Ware nicht an der Tür ab, sondern bringen sie dorthin, wo sie hingehört.",
+    text: "Unsere Fahrer stellen die Ware nicht an der Tür ab, sondern bringen sie dorthin, wo sie hingehört.",
   },
   {
     title: "Verpackungen zurück",
@@ -41,9 +41,9 @@ export function Logistics() {
           title={<span id="logistik">Eigenes Lager. Eigene Fahrzeuge. Eigene Leute.</span>}
           lead={
             <span className="text-night-muted">
-              Wir geben die Auslieferung nicht aus der Hand. Acht Kolleginnen und Kollegen fahren
-              die Touren selbst – deshalb wissen wir, wann eine Lieferung ankommt, und können es
-              auch zusagen.
+              Wir geben die Auslieferung nicht aus der Hand. Acht Kollegen fahren die Touren
+              selbst – deshalb wissen wir, wann eine Lieferung ankommt, und können es auch
+              zusagen.
             </span>
           }
         />
@@ -77,8 +77,8 @@ export function Logistics() {
             <div className="accordion-rows" data-open={locationOpen || undefined}>
               <div id="logistik-standort-detail" className="overflow-hidden" aria-hidden={!locationOpen}>
                 <p className="pt-3 text-[0.9375rem] leading-relaxed text-night-muted">
-                  Acht Fahrerinnen und Fahrer, ein Versorgungsgebiet: von Uffing bis in den
-                  Großraum München und darüber hinaus.
+                  Acht Fahrer, ein Versorgungsgebiet: von Uffing bis in den Großraum München und
+                  darüber hinaus.
                 </p>
               </div>
             </div>
