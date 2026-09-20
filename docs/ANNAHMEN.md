@@ -161,7 +161,7 @@ externen Kartensuche. Beim Relaunch: Karte erst nach Consent nachladen.
 | Geschäftsführung vor Bande | 960 × 385 | inhaltlich stark |
 | Innendienst-Büro | 960 × 384 | brauchbar, nur im Ausschnitt 1,9 : 1 |
 | Standortschild | 2440 × 960 | einziges hochauflösendes Motiv |
-| Schulungssituation | 960 × 385 | wirkt eher wie Werbedruck als Reportage |
+| Schulungssituation | 960 × 385 (KI-hochskaliert auf 1920 × 770) | wirkt eher wie Werbedruck als Reportage |
 | Instrument (Klemmen-Stapel) | 2400 × 1600 | ersetzt durch freies Stockfoto (Unsplash-Lizenz), Original wirkte stark verwaschen/artefaktbehaftet |
 | 29 Mitarbeiterporträts | 661 × 784 | einheitlich, professionell, gut brauchbar |
 | Porträts Sarah Stahr, James Fuchs | 150 × 185 | **zu klein**, im Code als `lowRes` markiert |
