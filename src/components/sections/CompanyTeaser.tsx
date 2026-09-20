@@ -6,18 +6,18 @@ import { longTenureCount, teamGroups, teamHeadcount } from "@/data/team";
 
 /** Eine Auswahl quer durch alle Bereiche – nicht nur die Führungsebene. */
 const portraitStrip = [
-  "Andrea",
-  "Anton1",
-  "Hafi",
-  "Klaus",
-  "Sandra2",
-  "Niki",
-  "Daniela1",
-  "Franz",
-  "Kathi",
-  "Branko",
-  "Michi1",
-  "Heiko",
+  "Andrea-v3",
+  "Anton1-v3",
+  "Hafi-v3",
+  "Klaus-v3",
+  "Sandra2-v3",
+  "Niki-v3",
+  "Daniela1-v3",
+  "Franz-v3",
+  "Kathi-v3",
+  "Branko-v3",
+  "Michi1-v3",
+  "Heiko-v3",
 ];
 
 const nameByPhoto = new Map(
