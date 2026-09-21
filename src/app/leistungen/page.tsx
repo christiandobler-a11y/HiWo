@@ -59,7 +59,7 @@ export default function LeistungenPage() {
         <div className="container-site">
           <figure data-reveal>
             <Figure
-              name="lieferdienst-sprinter-v2"
+              name="lieferdienst-sprinter-v3"
               widths={[1280, 960, 640]}
               ratio={2.49}
               alt="Ein HiWo-med-Mitarbeiter winkt aus dem Fenster seines Lieferfahrzeugs, im Hintergrund der Staffelsee mit Alpenkette."
@@ -219,7 +219,7 @@ export default function LeistungenPage() {
 
             <figure className="lg:col-span-5" data-reveal>
               <Figure
-                name="lager-regale-v3"
+                name="lager-regale-v4"
                 widths={[960, 640]}
                 ratio={2.49}
                 alt="Regalgang im Lager von HiWo-med, beidseitig gefüllt mit Verbandmaterial und Kartons."

@@ -176,7 +176,7 @@ export default function KontaktPage() {
           <div className="grid gap-x-12 gap-y-10 lg:grid-cols-12">
             <figure className="lg:col-span-6 lg:col-start-7 lg:row-start-1" data-reveal>
               <Figure
-                name="sprinter-staffelsee-v2"
+                name="sprinter-staffelsee-v3"
                 widths={[1280, 960, 640]}
                 ratio={2.49}
                 alt="Ein HiWo-med-Transporter auf einer Straße am Staffelsee, dahinter die Alpenkette."

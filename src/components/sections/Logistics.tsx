@@ -51,7 +51,7 @@ export function Logistics() {
         <div className="mt-14 grid gap-x-12 gap-y-12 lg:grid-cols-12">
           <figure className="lg:col-span-5" data-reveal>
             <Figure
-              name="lager-regale-v3"
+              name="lager-regale-v4"
               widths={[960, 640]}
               ratio={2.49}
               alt="Blick durch einen Gang im HiWo-med-Lager: beidseitig Regale mit Kartons und Verbandmaterial bis unter die Decke."
