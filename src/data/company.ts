@@ -35,7 +35,7 @@ export const company = {
     friday: "Freitag",
     fridayTime: "08:00 – 15:00 Uhr durchgehend",
     /** Kompakte Fassung für Fakten-Zeilen und Fließtext. */
-    compact: "Mo–Do 08:00 – 17:00 Uhr, Fr 08:00 – 15:00 Uhr, durchgehend",
+    compact: "Montag bis Donnerstag 08:00 – 17:00 Uhr, Freitag 08:00 – 15:00 Uhr, durchgehend",
   },
   register: {
     court: "Amtsgericht München",
