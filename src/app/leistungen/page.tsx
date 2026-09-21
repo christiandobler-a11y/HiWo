@@ -219,7 +219,7 @@ export default function LeistungenPage() {
 
             <figure className="lg:col-span-5" data-reveal>
               <Figure
-                name="lager-regale-v5"
+                name="lager-regale-v6"
                 widths={[960, 640]}
                 ratio={2.49}
                 alt="Regalgang im Lager von HiWo-med, beidseitig gefüllt mit Verbandmaterial und Kartons."
