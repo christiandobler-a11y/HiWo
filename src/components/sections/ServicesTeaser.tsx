@@ -34,7 +34,7 @@ export function ServicesTeaser() {
                 position="100% 55%"
               />
               <FigureCaption>
-                Vier von fünf Angeboten finden inhouse statt – in Ihren Räumen, mit Ihrem Team
+                Vier von fünf Schulungen finden inhouse statt – in Ihren Räumen, mit Ihrem Team
                 und Ihrem Equipment.
               </FigureCaption>
             </figure>

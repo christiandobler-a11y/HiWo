@@ -19,7 +19,7 @@ const logisticsDetails = [
   },
   {
     title: "Kisten zurück",
-    text: "Bei der eigenen Auslieferung setzen wir, wo möglich, wiederverwendbare Transportkisten ein, die wir bei der nächsten Tour direkt wieder mitnehmen.",
+    text: "Bei der eigenen Auslieferung setzen wir, wo möglich, wiederverwendbare Transportkisten ein. Die Ware wird bei Ihnen abgegeben und verräumt, die leere Kiste nehmen wir spätestens bei der nächsten Tour direkt wieder mit.",
   },
   {
     title: "Bestellung bis 13:00 Uhr",

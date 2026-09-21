@@ -63,7 +63,7 @@ export function CompanyTeaser() {
                 können: in das Wohl und die Gesundheit ihrer Patienten.“
               </p>
               <footer className="mt-4 text-[0.875rem] text-muted">
-                Aus dem Selbstverständnis von HiWo-med
+                {company.managingDirector}, Geschäftsführer
               </footer>
             </blockquote>
             <p className="mt-8 leading-relaxed text-muted">
