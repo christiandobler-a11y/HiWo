@@ -212,11 +212,9 @@ export default function KontaktPage() {
                   <ArrowRight />
                 </Button>
               </div>
-              {/* Prototyp-Hinweis: Eine eingebettete Karte wird beim echten
-                  Relaunch erst nach Einwilligung geladen (Consent). */}
               <p className="mt-6 text-[0.8125rem] leading-relaxed text-muted">
-                Hinweis zum Konzept: Eine eingebettete Karte fehlt hier bewusst. Beim echten
-                Relaunch wird sie erst nach ausdrücklicher Einwilligung nachgeladen.
+                Eine eingebettete Karte fehlt hier bewusst, weil sie ohne Einwilligung Daten an
+                Dritte überträgt. Sie wird erst nach ausdrücklicher Einwilligung nachgeladen.
               </p>
             </div>
           </div>

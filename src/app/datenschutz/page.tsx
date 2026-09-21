@@ -6,7 +6,7 @@ import { company } from "@/data/company";
 
 export const metadata: Metadata = {
   title: "Datenschutz",
-  description: "Datenschutzerklärung der HiWo-med Medizintechnik GmbH für dieses Website-Konzept.",
+  description: "Datenschutzerklärung der HiWo-med Medizintechnik GmbH.",
   alternates: { canonical: "/datenschutz/" },
 };
 
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
  * die technische Umsetzung, und gelten deshalb unverändert.
  *
  * Bewusst NICHT übernommen: die dortigen Abschnitte zu Session-Cookies,
- * Adobe-/Google-Web-Fonts und Google Maps. Dieser Prototyp nutzt keine
+ * Adobe-/Google-Web-Fonts und Google Maps. Diese Website nutzt keinen
  * dieser Dienste (Schriften sind lokal eingebettet, siehe Hero.tsx u. a.;
  * keine Karte, kein Tracking) -- sie hier zu behaupten wäre falsch. Der
  * technische Abschnitt unten bleibt deshalb ehrlich bei dem, was diese
@@ -29,7 +29,7 @@ export default function DatenschutzPage() {
       <PageHeader
         label="Rechtliches"
         title="Datenschutz"
-        lead="Wer für die Datenverarbeitung verantwortlich ist, welche Rechte Sie haben – und was dieser Entwurf technisch tatsächlich tut."
+        lead="Wer für die Datenverarbeitung verantwortlich ist, welche Rechte Sie haben – und was diese Website technisch tatsächlich tut."
       />
 
       <section className="pb-[var(--section-y)]">
@@ -106,11 +106,11 @@ export default function DatenschutzPage() {
 
             <hr className="my-10 border-t border-line" />
 
-            <h2 className="t-h3">Was dieser Entwurf technisch tut</h2>
+            <h2 className="t-h3">Was diese Website technisch tut</h2>
             <p>
               Der Abschnitt oben betrifft das Unternehmen und gilt unabhängig von der jeweiligen
-              Website-Technik. Technisch unterscheidet sich dieser Entwurf deutlich von der
-              aktuellen Website – er kommt bewusst mit weniger externen Diensten aus:
+              Website-Technik. Technisch unterscheidet sich diese Website deutlich von der
+              vorherigen – sie kommt bewusst mit weniger externen Diensten aus:
             </p>
             <ul className="list-tick mt-5">
               <li>
@@ -122,7 +122,7 @@ export default function DatenschutzPage() {
               </li>
               <li>
                 Schriften werden <strong>lokal ausgeliefert</strong>. Anders als auf der
-                aktuellen Website gibt es keine Verbindung zu Adobe-, Google- oder einem anderen
+                vorherigen Website gibt es keine Verbindung zu Adobe-, Google- oder einem anderen
                 Font-Dienst.
               </li>
               <li>
@@ -140,17 +140,6 @@ export default function DatenschutzPage() {
               </li>
             </ul>
 
-            <h2 className="t-h3">Für die Umsetzung</h2>
-            <p>
-              Vor einem Livegang ist eine vollständige, juristisch geprüfte
-              Datenschutzerklärung erforderlich. Sie sollte insbesondere Server-Logfiles des
-              dann tatsächlich genutzten Hosting-Anbieters, die Kontaktaufnahme per E-Mail, das
-              Bewerbungsverfahren sowie jeden zu diesem Zeitpunkt neu hinzugekommenen externen
-              Dienst (z. B. Karte, Analyse-Tool, Consent-Management) abdecken. Sollten Funktionen
-              der aktuellen Website wie das Online-Portal, Web Fonts oder Google Maps in der
-              neuen Seite doch wieder eingebunden werden, ist der entsprechende Abschnitt der
-              bisherigen Erklärung dafür zu übernehmen und zu prüfen.
-            </p>
             <p>
               Siehe auch das <Link href="/impressum/">Impressum</Link>.
             </p>

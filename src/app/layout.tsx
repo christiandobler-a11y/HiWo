@@ -50,10 +50,8 @@ export const metadata: Metadata = {
     images: [{ url: "/img/lieferdienst-sprinter-v4-1280.webp", width: 1280, height: 514 }],
   },
   robots: {
-    // Prototyp: bewusst nicht indexierbar, damit er der echten Seite nicht
-    // in die Quere kommt. Vor einem Livegang zu entfernen.
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
   },
   icons: { icon: "/icon.png", apple: "/apple-icon.png" },
 };

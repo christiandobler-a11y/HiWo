@@ -114,7 +114,6 @@ export function SiteHeader() {
             scrolled ? "h-[72px]" : "h-[84px] md:h-[96px]"
           }`}
         >
-          {/* Logo + dezente Prototyp-Kennzeichnung */}
           <div className="flex items-end gap-3">
             <Link
               href="/"
@@ -127,12 +126,6 @@ export function SiteHeader() {
                 }`}
               />
             </Link>
-            <span
-              className="mb-1.5 hidden select-none border border-line-strong px-1.5 py-[3px] text-[0.5625rem] font-medium uppercase leading-none tracking-[0.14em] text-muted lg:inline-block"
-              title="Dies ist ein Gestaltungskonzept, nicht die veröffentlichte Website."
-            >
-              Konzept
-            </span>
           </div>
 
           {/* Hauptnavigation ab Large */}

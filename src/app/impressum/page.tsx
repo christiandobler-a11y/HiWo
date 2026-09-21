@@ -12,11 +12,7 @@ export const metadata: Metadata = {
 /**
  * Pflichtangaben nach § 5 DDG sowie Haftungshinweise und Allgemeine
  * Geschäftsbedingungen, wörtlich von der bestehenden Website
- * (hiwomed.de/de/impressum-agb.html, Stand August 2026) übernommen --
- * beides bezieht sich auf das Unternehmen und den Geschäftsbetrieb, nicht
- * auf die technische Umsetzung dieser Seite, und gilt deshalb unverändert
- * für den Prototyp. Vor einem echten Livegang ist eine rechtliche Prüfung
- * trotzdem erforderlich (siehe Hinweis am Seitenende).
+ * (hiwomed.de/de/impressum-agb.html, Stand August 2026) übernommen.
  */
 export default function ImpressumPage() {
   return (
@@ -733,17 +729,6 @@ export default function ImpressumPage() {
               nicht ausdrücklich eine andere Fassung vereinbart wurde.
             </p>
             <p className="text-[0.875rem]">Stand: August 2026</p>
-
-            <hr className="my-10 border-t border-line" />
-
-            <p className="text-[0.875rem]">
-              <strong>Hinweis zu diesem Entwurf:</strong> Anbieterkennzeichnung,
-              Haftungshinweise und Allgemeine Geschäftsbedingungen sind wörtlich von der
-              bestehenden Website übernommen (Stand August 2026) – sie betreffen den
-              Geschäftsbetrieb, nicht die technische Umsetzung dieser Seite, und gelten deshalb
-              unverändert auch für den Prototyp. Vor einem echten Livegang sollte dieser Stand
-              trotzdem noch einmal juristisch bestätigt werden.
-            </p>
           </div>
         </div>
       </section>

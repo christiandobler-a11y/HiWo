@@ -152,12 +152,6 @@ export function SiteFooter() {
           Unser Angebot richtet sich ausschließlich an Ärzte, medizinische Fachkreise und
           weitere gewerbliche Kunden. Ein Verkauf an Verbraucher (B2C) findet nicht statt.
         </p>
-
-        {/* Dezente Prototyp-Kennzeichnung – kein Banner, kein Overlay. */}
-        <p className="mt-3 text-[0.75rem] leading-relaxed text-night-muted">
-          Website-Konzept · Gestaltungsentwurf auf Basis öffentlich zugänglicher Inhalte und
-          Bilder der bestehenden Website. Bildmaterial ist Prototyp-Material.
-        </p>
       </div>
     </footer>
   );
