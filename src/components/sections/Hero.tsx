@@ -100,7 +100,7 @@ export function Hero() {
             data-reveal
             style={{ "--reveal-delay": "140ms" } as React.CSSProperties}
           >
-            Der Satz steht auf genau diesem Fahrzeug – seit {company.foundedYear}.
+            Der Satz steht so auf allen unseren Lieferfahrzeugen – seit {company.foundedYear}.
           </p>
 
           <div
