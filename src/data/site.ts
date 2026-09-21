@@ -55,7 +55,7 @@ export const assortment = [
   },
   {
     name: "Sprechstundenbedarf",
-    note: "Verbrauchsmaterialien und Verbandstoffe welche über Sprechstundenbedarf abgerechnet werden.",
+    note: "Verbrauchsmaterialien welche über Sprechstundenbedarf abgerechnet werden.",
   },
   {
     name: "Praxiseinrichtung",
