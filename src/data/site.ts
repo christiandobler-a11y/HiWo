@@ -34,40 +34,45 @@ export const SITE_URL = "https://www.hiwomed.de";
 /**
  * Sortimentsbereiche.
  *
- * ACHTUNG (Prototyp): Die bestehende Website nennt keine Warengruppen –
- * sie verweist nur auf den Gesamtkatalog. Die folgenden Bereiche sind aus
- * belegbaren Hinweisen abgeleitet (Katalogtitel „Medizintechnik von A–Z“,
- * Leistungs- und Seminarseiten, Produktaufnahmen aus dem Lager) und vor
- * einem echten Relaunch anhand des Katalogs 2025/26 zu verifizieren.
- * Siehe docs/ANNAHMEN.md.
+ * Aus dem tatsächlichen Gesamtkatalog (HiWo-Katalog_2019-20.pdf, verlinkt
+ * von der Sortimentsseite) übernommen -- die 11 echten Kapitel des
+ * Katalogs auf die für das Kerngeschäft (Arztpraxen, MVZ, ambulante
+ * OP-Zentren, Tageskliniken) relevanten 8 eingegrenzt. Nicht übernommen:
+ * Röntgen, Inkontinenz und Pflegebedarf -- diese drei Kapitel richten
+ * sich stärker an Pflege- und Senioreneinrichtungen, laut Positionierung
+ * nur die sekundäre Zielgruppe.
  */
 export const assortment = [
   {
-    name: "Verbandstoffe & Wundversorgung",
-    note: "Klassische Verbandmittel bis zur modernen, herstellerneutralen Wundversorgung.",
+    name: "Laborbedarf",
+    note: "Laborzubehör und Verbrauchsmaterial für Diagnostik und Probenverarbeitung.",
   },
   {
-    name: "Hygiene, Desinfektion & Flächenschutz",
-    note: "Hände-, Haut-, Flächen- und Instrumentendesinfektion inklusive Dokumentationshilfen.",
-  },
-  {
-    name: "Instrumente & Aufbereitung",
-    note: "Instrumente für die tägliche Anwendung sowie Bedarf für die Medizinprodukteaufbereitung.",
-  },
-  {
-    name: "Injektion & Infusion",
-    note: "Von der Akupunkturnadel bis zur Zylinderampulle.",
-  },
-  {
-    name: "Einmalartikel & Praxisbedarf",
+    name: "Praxisbedarf",
     note: "Medizinische Verbrauchsartikel für den laufenden Praxisbetrieb.",
-  },
-  {
-    name: "Notfallausstattung",
-    note: "Notfallequipment und Defibrillation – auf Wunsch mit passendem Training.",
   },
   {
     name: "Praxiseinrichtung",
     note: "Mobiliar und Ausstattung für Behandlungsräume und Funktionsbereiche.",
+  },
+  {
+    name: "Verbandmittel & Wundversorgung",
+    note: "Klassische Verbandmittel bis zur modernen, herstellerneutralen Wundversorgung.",
+  },
+  {
+    name: "Hygiene & Desinfektion",
+    note: "Hände-, Haut-, Flächen- und Instrumentendesinfektion inklusive Dokumentationshilfen.",
+  },
+  {
+    name: "EKG & Ultraschall",
+    note: "Zubehör und Verbrauchsmaterial für EKG- und Ultraschalldiagnostik.",
+  },
+  {
+    name: "Notfallmedizin",
+    note: "Notfallequipment und Defibrillation – auf Wunsch mit passendem Training.",
+  },
+  {
+    name: "Hospitalbedarf",
+    note: "Klinischer Bedarf für ambulante OP-Zentren und Tageskliniken.",
   },
 ] as const;

@@ -20,8 +20,9 @@ export function Assortment() {
           lead={
             <>
               Von der Akupunkturnadel bis zur Zylinderampulle. Wir führen, was im Praxisalltag
-              regelmäßig gebraucht wird, beziehen ausschließlich CE-gekennzeichnete Produkte und
-              arbeiten nur mit Lieferanten, die wie wir eine Qualitätssicherung eingeführt haben.
+              regelmäßig gebraucht wird, ausschließlich qualifizierte Produkte namhafter
+              Hersteller, und arbeiten nur mit Lieferanten, die wie wir eine Qualitätssicherung
+              eingeführt haben.
             </>
           }
         />
