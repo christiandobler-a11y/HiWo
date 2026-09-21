@@ -75,15 +75,6 @@ export default function ImpressumPage() {
 
             <div className="mt-8 flex items-center gap-5">
               <img
-                src="/img/verpackungslizenz.webp"
-                width={220}
-                height={220}
-                alt="Siegel „Verpackungslizenzierung activate DE 2026“"
-                loading="lazy"
-                decoding="async"
-                className="h-24 w-24"
-              />
-              <img
                 src="/img/iso-9001-320.webp"
                 width={320}
                 height={240}

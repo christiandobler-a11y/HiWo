@@ -1,5 +1,6 @@
 import { ArrowRight, Button } from "@/components/ui/Button";
 import { company } from "@/data/company";
+import { fastOrder } from "@/data/site";
 
 /** Drei harte Fakten direkt unter dem Einstieg – ohne Karten, nur Haarlinien. */
 const heroFacts = [
@@ -87,7 +88,6 @@ export function Hero() {
             </span>
           </h1>
 
-          {/* Der Markenclaim – steht auf genau dem Fahrzeug im Foto dahinter. */}
           <p
             className="t-serif mt-5 text-[clamp(1.2rem,1rem+1vw,1.65rem)] leading-[1.3] text-night-ink lg:mt-6"
             data-reveal
@@ -95,21 +95,22 @@ export function Hero() {
           >
             „{company.claim}“
           </p>
-          <p
-            className="mt-2 text-[0.875rem] text-night-muted"
-            data-reveal
-            style={{ "--reveal-delay": "140ms" } as React.CSSProperties}
-          >
-            Der Satz steht so auf allen unseren Lieferfahrzeugen – seit {company.foundedYear}.
-          </p>
 
           <div
-            className="mt-6 lg:mt-7"
+            className="mt-6 flex flex-wrap items-center gap-3 lg:mt-7"
             data-reveal
             style={{ "--reveal-delay": "200ms" } as React.CSSProperties}
           >
             <Button href="/kontakt/">
               Beratung anfragen
+              <ArrowRight />
+            </Button>
+            {/* Auf Mobile ist der Header zu schmal für den FastOrder-Button
+                (Logo + Menüknopf beanspruchen den Platz) -- deshalb hier
+                zusätzlich sichtbar, verschwindet ab sm wieder, sobald ihn
+                der Header selbst zeigt. */}
+            <Button href={fastOrder.href} variant="onDark" className="sm:hidden">
+              {fastOrder.label}
               <ArrowRight />
             </Button>
           </div>
