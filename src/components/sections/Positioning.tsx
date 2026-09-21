@@ -18,7 +18,7 @@ const reasons = [
     title: "Ein Ansprechpartner statt einer Warteschleife",
     text: `${company.hours.compact} geht jemand ans Telefon, der die Praxis kennt. Dazu ein fester Außendienstpartner mit eigenem Gebiet, der vorbeikommt – nicht nur anruft.`,
     detail:
-      "Fünf feste Gebiete, fünf feste Gesichter: Oberbayern, Oberland und Schwaben, Chiemgau und Niederbayern werden jeweils von derselben Person betreut – dazu die durchgehend besetzte Auftragsannahme im Innendienst.",
+      "Fünf feste Ansprechpartner für Ihre Region: Oberbayern, Oberland und Schwaben, Chiemgau und Niederbayern werden jeweils von derselben Person betreut – dazu die durchgehend besetzte Auftragsannahme im Innendienst.",
   },
   {
     title: "Ware aus dem eigenen Lager, nicht aus dem Katalog",

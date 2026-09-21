@@ -69,7 +69,7 @@ export const services: Service[] = [
       "Der jährliche Rezertifizierungskurs für Hygienebeauftragte – mit praktischen Übungen statt Folienschlacht.",
     description: [
       "An die Hygiene in der Praxis werden laufend höhere Anforderungen gestellt. Das Seminar bringt Ihr Team auf den aktuellen Stand der Hygienevorschriften, vermittelt praxisnahe Tipps und schließt praktische Übungen ein.",
-      "Die Schulung gilt für Hygienebeauftragte als jährlicher Rezertifizierungskurs gemäß § 4 DGUV Vorschrift 1. Inzwischen werden zwei Hygienebeauftragte pro Praxis gefordert.",
+      "Die Schulung gilt für Hygienebeauftragte als jährlicher Rezertifizierungskurs gemäß § 4 DGUV Vorschrift 1.",
     ],
     facts: [
       { label: "Format", value: "Präsenzseminar" },
@@ -116,13 +116,13 @@ export const services: Service[] = [
     title: "Trinkwasserprobenentnahme",
     format: "Dienstleistung",
     claim:
-      "Die jährliche Untersuchung für die Medizinprodukteaufbereitung – Entnahme, Labor und Prüfbericht aus einer Hand.",
+      "Die regelmäßige Untersuchung für die Medizinprodukteaufbereitung – Entnahme, Labor und Prüfbericht aus einer Hand.",
     description: [
       "Die mikrobiologische Qualität des Trinkwassers spielt eine entscheidende Rolle bei der Aufbereitung von Medizinprodukten. Gesundheitsämter fordern die regelmäßige Untersuchung derjenigen Entnahmestelle, die für die Instrumentenaufbereitung verwendet wird.",
       "HiWo-med übernimmt die fachgerechte Probenentnahme sowie die Organisation der Laboruntersuchung – unkompliziert und praxisnah.",
     ],
     facts: [
-      { label: "Turnus", value: "Jährlich" },
+      { label: "Turnus", value: "Regelmäßig" },
       { label: "Labor", value: "Akkreditiertes Partnerlabor" },
       { label: "Ergebnis", value: "Prüfbericht inklusive Rückfragenklärung" },
     ],

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const principles = [
   {
     title: "Partner, nicht Verkäufer",
-    text: "Wir verstehen uns als Partner, der mit Qualitätsprodukten, kompetenter Beratung und zuverlässiger Betreuung dafür sorgt, dass Bestell- und Versorgungsprozesse effizient laufen. Verkauft wird dabei auch – aber das ist die Folge, nicht der Zweck.",
+    text: "Wir verstehen uns als Partner, der mit Qualitätsprodukten, kompetenter Beratung und zuverlässiger Betreuung dafür sorgt, dass Bestell- und Versorgungsprozesse effizient laufen. Wir verbinden fachliche Beratung mit zuverlässiger Versorgung und persönlicher Betreuung.",
   },
   {
     title: "Qualität, die überprüfbar ist",

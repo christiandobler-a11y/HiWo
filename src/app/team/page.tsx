@@ -59,7 +59,7 @@ export default function TeamPage() {
         label="Team"
         title={
           <>
-            {teamHeadcount} Menschen, {teamGroups.length} Bereiche, ein Haus
+            {teamHeadcount} Menschen, {teamGroups.length} Bereiche, ein gemeinsamer Standort
           </>
         }
         lead={`Wer bei HiWo-med anruft, spricht mit jemandem aus diesem Verzeichnis. ${longTenureCount} Kolleginnen und Kollegen sind seit mehr als zwanzig Jahren dabei – das ist der Grund, warum wir Abläufe in Praxen oft besser kennen als deren Lieferantenliste.`}

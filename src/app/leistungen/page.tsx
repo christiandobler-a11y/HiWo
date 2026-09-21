@@ -134,7 +134,7 @@ export default function LeistungenPage() {
         <div className="container-site">
           <SectionHead
             label="Ablauf"
-            title={<span id="ablauf">Von der Bestellung bis ins Regal</span>}
+            title={<span id="ablauf">Von Ihrer Bestellung bis in Ihre Praxis</span>}
             lead="Vier Schritte, die bei uns komplett im Haus stattfinden – deshalb können wir Zusagen machen und einhalten."
           />
 
