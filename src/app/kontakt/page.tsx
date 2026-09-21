@@ -205,7 +205,7 @@ export default function KontaktPage() {
               </ul>
               <div className="mt-8">
                 <Button
-                  href={`https://www.openstreetmap.org/search?query=${mapsQuery}`}
+                  href={`https://www.google.com/maps/search/?api=1&query=${mapsQuery}`}
                   variant="outline"
                 >
                   Route planen
