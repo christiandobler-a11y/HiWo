@@ -32,7 +32,7 @@ const orderFlow = [
   },
   {
     title: "Übergabe",
-    text: "Die Lieferung kommt bis an den gewünschten Lagerort und wird dort abgegeben und verräumt. Wo möglich liefern wir in wiederverwendbaren Transportkisten – die leere Kiste nehmen wir spätestens bei der nächsten Tour wieder mit.",
+    text: "Die Lieferung kommt bis an den gewünschten Lagerort. Wo möglich liefern wir in wiederverwendbaren Transportkisten, die wir im Normalfall gleich wieder mitnehmen.",
   },
 ];
 
