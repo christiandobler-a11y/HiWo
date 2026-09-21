@@ -75,7 +75,7 @@ export const keyFigures = [
     value: company.foundedYear,
     unit: "",
     label: "gegründet in Uffing am Staffelsee",
-    detail: "Familiengeführt in zweiter Generation – seit 1989.",
+    detail: "Familiengeführt, heute in zweiter Generation.",
     source: "Logo / Katalogtitel 2025/26",
     countUp: false,
     numberFormat: "plain" as const,

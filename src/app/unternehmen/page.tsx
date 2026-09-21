@@ -49,7 +49,7 @@ const timeline = [
     text: "Kolleginnen und Kollegen, die heute noch da sind, fangen an: Auftragsannahme, Lieferlogistik, Lager, Außendienst.",
   },
   {
-    year: "2016",
+    year: "2021",
     title: "Zweite Generation",
     text: `${company.managingDirector} übernimmt die Geschäftsführung. Der Gründer bleibt als Berater an Bord.`,
   },
@@ -88,7 +88,7 @@ export default function UnternehmenPage() {
                 priority
               />
               <FigureCaption>
-                {company.managingDirector} (links), Geschäftsführer seit 2016, mit Firmengründer{" "}
+                {company.managingDirector} (links), Geschäftsführer seit 2021, mit Firmengründer{" "}
                 {company.founder}.
               </FigureCaption>
             </figure>

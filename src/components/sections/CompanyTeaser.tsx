@@ -46,7 +46,7 @@ export function CompanyTeaser() {
               className="aspect-[1.6/1] w-full"
             />
             <FigureCaption>
-              {company.managingDirector}, Geschäftsführer seit 2016, mit Firmengründer{" "}
+              {company.managingDirector}, Geschäftsführer seit 2021, mit Firmengründer{" "}
               {company.founder}.
             </FigureCaption>
           </figure>

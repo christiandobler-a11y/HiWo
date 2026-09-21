@@ -144,8 +144,17 @@ export function SiteFooter() {
           </ul>
         </div>
 
-        {/* Dezente Prototyp-Kennzeichnung – kein Banner, kein Overlay. */}
+        {/* B2B-Hinweis: gehört an eine Stelle, die auf jeder Seite steht,
+            nicht nur auf der Leistungen-Seite -- Fachkreise-Beschränkung
+            ist eine durchgehende Geschäftsbedingung, kein Detail einer
+            einzelnen Unterseite. */}
         <p className="mt-6 text-[0.75rem] leading-relaxed text-night-muted">
+          Unser Angebot richtet sich ausschließlich an Ärzte, medizinische Fachkreise und
+          weitere gewerbliche Kunden. Ein Verkauf an Verbraucher (B2C) findet nicht statt.
+        </p>
+
+        {/* Dezente Prototyp-Kennzeichnung – kein Banner, kein Overlay. */}
+        <p className="mt-3 text-[0.75rem] leading-relaxed text-night-muted">
           Website-Konzept · Gestaltungsentwurf auf Basis öffentlich zugänglicher Inhalte und
           Bilder der bestehenden Website. Bildmaterial ist Prototyp-Material.
         </p>

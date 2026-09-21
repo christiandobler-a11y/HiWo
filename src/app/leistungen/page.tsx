@@ -272,8 +272,8 @@ export default function LeistungenPage() {
                 ))}
               </ul>
               <p className="mt-6 text-[0.9rem] leading-relaxed text-muted">
-                Dazu kommt ein kleiner Anteil Privatkundschaft vor Ort. Der Schwerpunkt liegt
-                aber eindeutig bei professionellen Einrichtungen.
+                Unser Angebot richtet sich ausschließlich an Ärzte, medizinische Fachkreise und
+                weitere gewerbliche Kunden. Ein Verkauf an Verbraucher (B2C) findet nicht statt.
               </p>
             </div>
           </div>

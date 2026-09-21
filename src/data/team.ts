@@ -36,7 +36,7 @@ export const teamGroups: TeamGroup[] = [
     summary:
       "Zwei Generationen, ein Unternehmen: der Gründer als Berater, die zweite Generation in der Verantwortung.",
     members: [
-      { name: "Simon Hirschvogel", photo: "Simon1-v3", since: 2016, role: "Geschäftsführer" },
+      { name: "Simon Hirschvogel", photo: "Simon1-v3", since: 2021, role: "Geschäftsführer" },
       { name: "Wolfgang Hirschvogel", photo: "Senior3-v3", role: "Firmengründer, Berater" },
     ],
   },

@@ -16,7 +16,7 @@ import { company } from "@/data/company";
 
 /** Drei harte Fakten direkt unter dem Einstieg – ohne Karten, nur Haarlinien. */
 const heroFacts = [
-  { k: "Gegründet", v: `${company.foundedYear} · familiengeführt in zweiter Generation` },
+  { k: "Gegründet", v: `${company.foundedYear} · heute in zweiter Generation geführt` },
   { k: "Erreichbar", v: company.hours.compact },
   { k: "Lager", v: "1.500 m² · über 6.000 Artikel sofort verfügbar" },
 ];
