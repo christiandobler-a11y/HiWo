@@ -119,7 +119,7 @@ export const services: Service[] = [
       "Die jährliche Untersuchung für die Medizinprodukteaufbereitung – Entnahme, Labor und Prüfbericht aus einer Hand.",
     description: [
       "Die mikrobiologische Qualität des Trinkwassers spielt eine entscheidende Rolle bei der Aufbereitung von Medizinprodukten. Gesundheitsämter fordern die regelmäßige Untersuchung derjenigen Entnahmestelle, die für die Instrumentenaufbereitung verwendet wird.",
-      "HiWo-med übernimmt die fachgerechte Probenentnahme sowie die Organisation der Laboruntersuchung – unkompliziert, rechtssicher und praxisnah.",
+      "HiWo-med übernimmt die fachgerechte Probenentnahme sowie die Organisation der Laboruntersuchung – unkompliziert und praxisnah.",
     ],
     facts: [
       { label: "Turnus", value: "Jährlich" },
