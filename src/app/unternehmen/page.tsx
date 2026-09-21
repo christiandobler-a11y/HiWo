@@ -24,7 +24,7 @@ const principles = [
   },
   {
     title: "Qualität, die überprüfbar ist",
-    text: "Wir liefern ausschließlich Produkte mit CE-Kennzeichnung und beziehen sie von Lieferanten, die wie wir eine Qualitätssicherung eingeführt haben. Unser eigenes Qualitätsmanagement ist nach ISO 9001 zertifiziert.",
+    text: "Wir führen ausschließlich qualifizierte Produkte namhafter Hersteller und beziehen sie von Lieferanten, die wie wir eine Qualitätssicherung eingeführt haben. Unser eigenes Qualitätsmanagement ist nach ISO 9001 zertifiziert.",
   },
   {
     title: "Nachfragen statt annehmen",

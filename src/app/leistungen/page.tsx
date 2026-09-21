@@ -82,7 +82,7 @@ export default function LeistungenPage() {
             label="Sortiment"
             split
             title={<span id="sortiment">Medizintechnik von A&nbsp;bis&nbsp;Z</span>}
-            lead="Wir liefern ausschließlich Produkte mit CE-Kennzeichnung und beziehen sie von Lieferanten, die wie wir eine Qualitätssicherung eingeführt haben. Die Preise sind marktgerecht – das Dienstleistungsniveau ist es, was den Unterschied macht."
+            lead="Wir führen ausschließlich qualifizierte Produkte namhafter Hersteller und beziehen sie von Lieferanten, die wie wir eine Qualitätssicherung eingeführt haben. Die Preise sind marktgerecht – das Dienstleistungsniveau ist es, was den Unterschied macht."
           />
 
           <div className="mt-14 grid gap-x-12 gap-y-12 lg:grid-cols-12">
