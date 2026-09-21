@@ -153,7 +153,7 @@ export default function KontaktPage() {
                     </span>
                     <span className="mt-2 block">{company.hours.friday}</span>
                     <span className="block text-[0.9375rem] text-muted">
-                      {company.hours.fridayTime} – {company.hours.note}
+                      {company.hours.fridayTime}
                     </span>
                   </dd>
                 </div>

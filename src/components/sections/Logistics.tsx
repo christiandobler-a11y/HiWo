@@ -22,8 +22,8 @@ const logisticsDetails = [
     text: "Bei der eigenen Auslieferung setzen wir, wo möglich, wiederverwendbare Transportkisten ein – im Normalfall nehmen wir sie gleich wieder mit.",
   },
   {
-    title: "Bestellung bis 13:00 Uhr",
-    text: "Außerhalb unseres Liefergebiets geht die Ware bei Lagerverfügbarkeit noch am selben Tag per UPS raus.",
+    title: "Bestellung bis 17:00 Uhr",
+    text: "Innerhalb unseres Liefergebiets ist die Bestellung in der Regel schon am nächsten Tag bei Ihnen.",
   },
 ];
 

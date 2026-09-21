@@ -89,7 +89,7 @@ export function SiteFooter() {
               <br />
               <span className="font-semibold text-night-ink">{company.hours.friday}</span>
               <br />
-              {company.hours.fridayTime} — {company.hours.note}.
+              {company.hours.fridayTime}.
             </p>
 
             <a

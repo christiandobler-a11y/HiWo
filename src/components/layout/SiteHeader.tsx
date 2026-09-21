@@ -246,9 +246,7 @@ export function SiteHeader() {
               <PhoneIcon />
               {company.phone.display}
             </a>
-            <p className="text-[0.8125rem] text-muted">
-              {company.hours.compact} – {company.hours.note}.
-            </p>
+            <p className="text-[0.8125rem] text-muted">{company.hours.compact}.</p>
           </div>
         </nav>
       </div>
