@@ -87,7 +87,11 @@ export function Positioning() {
             <SectionHead
               index="02"
               label="Positionierung"
-              title={<span id="positionierung">Kein Onlineshop. Ein Versorgungspartner.</span>}
+              title={
+                <span id="positionierung">
+                  Persönlich betreut. Digital bestellt. Zuverlässig versorgt.
+                </span>
+              }
             />
             {/* Zielgruppen kurz benannt -- stand vorher als längerer Absatz
                 im Hero, ist dort aber zu viel Text neben der Headline. */}
