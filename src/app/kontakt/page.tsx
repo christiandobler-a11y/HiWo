@@ -28,7 +28,7 @@ export default function KontaktPage() {
       <PageHeader
         label="Kontakt"
         title={<>Ein Anruf reicht.</>}
-        lead="Montag bis Donnerstag 8 bis 17 Uhr, freitags bis 15 Uhr geht bei uns direkt jemand ans Telefon – ohne Auswahlmenü, ohne Rückrufversprechen."
+        lead="Montag bis Donnerstag 8 bis 17 Uhr, freitags 8 bis 15 Uhr geht bei uns direkt jemand ans Telefon – ohne Auswahlmenü, ohne Rückrufversprechen."
       />
 
       <section className="pb-[var(--section-y)] pt-4">

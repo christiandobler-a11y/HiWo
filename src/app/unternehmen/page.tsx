@@ -106,9 +106,9 @@ export default function UnternehmenPage() {
               <p className="mt-8 leading-relaxed text-muted">
                 Das ist kein Leitbild, das an der Wand hängt. Es ist die Begründung für den
                 eigenen Lieferdienst, für das große Lager und dafür, dass Montag bis Donnerstag
-                von 8 bis 17 Uhr und freitags bis 15 Uhr persönlich jemand ans Telefon geht: Jede
-                Minute, die eine Praxis nicht mit Beschaffung verbringt, ist eine Minute für
-                Patienten.
+                von 8 bis 17 Uhr und freitags von 8 bis 15 Uhr persönlich jemand ans Telefon
+                geht: Jede Minute, die eine Praxis nicht mit Beschaffung verbringt, ist eine
+                Minute für Patienten.
               </p>
             </div>
           </div>
