@@ -15,7 +15,7 @@ export function KeyFigures() {
           <div>
             <SectionMark index="07" label="Substanz" className="mb-5" />
             <h2 id="kennzahlen" className="t-h2 max-w-[20ch]">
-              Gewachsen, nicht aufgeblasen.
+              Gemeinsam gewachsen, nicht aufgeblasen.
             </h2>
           </div>
           <p className="max-w-[34rem] text-[0.9375rem] leading-relaxed text-muted">

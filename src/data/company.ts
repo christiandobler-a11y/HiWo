@@ -8,6 +8,8 @@
  * Unsicherheiten sind in docs/ANNAHMEN.md dokumentiert.
  */
 
+import { teamHeadcount } from "@/data/team";
+
 export const company = {
   legalName: "HiWo-med Medizintechnik GmbH",
   shortName: "HiWo-med",
@@ -97,7 +99,7 @@ export const keyFigures = [
     countUp: true,
   },
   {
-    value: 31,
+    value: teamHeadcount,
     unit: "",
     label: "Kolleginnen und Kollegen",
     detail: "Innendienst, Außendienst, Einkauf, Lager, Logistik und Buchhaltung.",
