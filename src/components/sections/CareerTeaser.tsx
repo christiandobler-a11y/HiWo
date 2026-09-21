@@ -12,7 +12,7 @@ export function CareerTeaser() {
         <div className="grid items-center gap-x-12 gap-y-12 lg:grid-cols-12">
           <figure className="order-2 lg:order-1 lg:col-span-5" data-reveal>
             <Figure
-              name="fuhrpark-team"
+              name="fuhrpark-team-v2"
               widths={[900, 640]}
               ratio={1.45}
               alt="Zwei Mitarbeiter von HiWo-med stehen vor einem Firmenfahrzeug in der oberbayerischen Landschaft."

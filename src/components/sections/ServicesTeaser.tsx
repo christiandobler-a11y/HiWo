@@ -25,7 +25,7 @@ export function ServicesTeaser() {
 
             <figure className="mt-10" data-reveal>
               <Figure
-                name="seminar-vor-ort-v2"
+                name="seminar-vor-ort-v3"
                 widths={[960, 640]}
                 ratio={2.49}
                 alt="Schulungssituation bei HiWo-med mit Erste-Hilfe-Material auf dem Tisch und dem Hinweis „individuell und vor Ort“."

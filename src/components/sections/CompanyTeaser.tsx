@@ -38,7 +38,7 @@ export function CompanyTeaser() {
         <div className="grid items-start gap-x-12 gap-y-12 lg:grid-cols-12">
           <figure className="lg:col-span-5 lg:col-start-8 lg:row-start-1" data-reveal>
             <Figure
-              name="geschaeftsfuehrung"
+              name="geschaeftsfuehrung-v2"
               widths={[1000, 700]}
               ratio={1.6}
               alt={`${company.managingDirector} und Firmengründer ${company.founder} im Gespräch vor einer HiWo-med-Bande.`}

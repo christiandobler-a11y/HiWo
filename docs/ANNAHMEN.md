@@ -162,12 +162,13 @@ externen Kartensuche. Beim Relaunch: Karte erst nach Consent nachladen.
 
 | Motiv | Auflösung | Bewertung |
 |---|---|---|
-| Sprinter mit Fahrer (Hero) | 960 × 385 | inhaltlich stark, Auflösung knapp |
-| Sprinter am Staffelsee | 960 × 385 | gut, nur bis Containerbreite verwendbar |
-| Lagerregale | 960 × 385 | inhaltlich sehr gut, leicht unscharf |
-| Geschäftsführung vor Bande | 960 × 385 | inhaltlich stark |
-| Innendienst-Büro | 960 × 384 | brauchbar, nur im Ausschnitt 1,9 : 1 |
-| Standortschild | 2440 × 960 | einziges hochauflösendes Motiv |
+| Sprinter mit Fahrer (Hero) | 2000 × 1333 (KI-hochskaliert auf 4000 × 2666) | inhaltlich stark |
+| Sprinter am Staffelsee | 960 × 385 (KI-hochskaliert auf 1920 × 770) | gut |
+| Lagerregale | 960 × 385 (KI-hochskaliert auf 1920 × 770) | inhaltlich sehr gut |
+| Geschäftsführung vor Bande | 960 × 385 (KI-hochskaliert auf 1920 × 770) | inhaltlich stark |
+| Außendienst-Nahaufnahme / Lieferdienst-Sprinter | 960 × 385 (KI-hochskaliert auf 1920 × 770) | eine gemeinsame Quelle für beide Ausschnitte |
+| Fuhrpark-Team (schmal & breit) | 960 × 385 (KI-hochskaliert auf 1920 × 770) | brauchbar, eine gemeinsame Quelle für beide Ausschnitte |
+| Standortschild | 2440 × 960 | einziges nativ hochauflösendes Motiv, keine KI-Skalierung nötig |
 | Schulungssituation | 960 × 385 (KI-hochskaliert auf 1920 × 770) | wirkt eher wie Werbedruck als Reportage |
 | Instrument (Klemmen-Stapel) | 2400 × 1600 | ersetzt durch freies Stockfoto (Unsplash-Lizenz), Original wirkte stark verwaschen/artefaktbehaftet |
 | 29 Mitarbeiterporträts | 661 × 784 | einheitlich, professionell, gut brauchbar |
