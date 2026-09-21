@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import { PageHeader } from "@/components/layout/PageHeader";
 import { ArrowRight, Button } from "@/components/ui/Button";
-import { Figure, FigureCaption } from "@/components/ui/Figure";
+import { Figure } from "@/components/ui/Figure";
 import { SectionMark } from "@/components/ui/Section";
 import { company } from "@/data/company";
 import { services, type Service } from "@/data/services";
@@ -170,10 +170,6 @@ export default function ServicesPage() {
               position="100% 55%"
               priority
             />
-            <FigureCaption>
-              Hygiene-Check, Notfalltraining und Wundworkshop finden in Ihren Räumen statt – mit
-              Ihrem Team und Ihrem Equipment.
-            </FigureCaption>
           </figure>
         </div>
       </section>

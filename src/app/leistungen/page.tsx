@@ -28,7 +28,7 @@ const orderFlow = [
   },
   {
     title: "Auslieferung",
-    text: "Im eigenen Liefergebiet fahren unsere Kolleginnen und Kollegen selbst. Darüber hinaus geht die Ware bei Bestellung bis 13:00 Uhr am selben Tag per UPS raus.",
+    text: "Im eigenen Liefergebiet fahren unsere Kolleginnen und Kollegen selbst. Bestellungen bis 17:00 Uhr sind in der Regel schon am nächsten Tag bei Ihnen.",
   },
   {
     title: "Übergabe",

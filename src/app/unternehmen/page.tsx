@@ -106,7 +106,7 @@ export default function UnternehmenPage() {
               <p className="mt-8 leading-relaxed text-muted">
                 Das ist kein Leitbild, das an der Wand hängt. Es ist die Begründung für den
                 eigenen Lieferdienst, für das große Lager und dafür, dass zwischen 8 und 17 Uhr
-                jemand ans Telefon geht: Jede Minute, die eine Praxis nicht mit Beschaffung
+                persönlich jemand ans Telefon geht: Jede Minute, die eine Praxis nicht mit Beschaffung
                 verbringt, ist eine Minute für Patienten.
               </p>
             </div>
