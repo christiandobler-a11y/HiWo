@@ -102,7 +102,7 @@ export function CompanyTeaser() {
                     src={`/team/${photo}.webp`}
                     width={420}
                     height={525}
-                    alt={`Porträt von ${nameByPhoto.get(photo) ?? "Mitarbeitenden"} bei HiWo-med`}
+                    alt={`Porträt von ${nameByPhoto.get(photo) ?? "Mitarbeitenden"}`}
                     loading="lazy"
                     decoding="async"
                   />

@@ -12,9 +12,9 @@ import { CareerTeaser } from "@/components/sections/CareerTeaser";
 import { ContactCta } from "@/components/sections/ContactCta";
 
 export const metadata: Metadata = {
-  title: "HiWo-med Medizintechnik – Versorgungspartner für medizinische Einrichtungen",
+  title: "HiWo-med Medizintechnik – Fachhandel für Arztpraxen",
   description:
-    "Medizinischer Fachhandel aus Uffing am Staffelsee: über 6.000 Artikel sofort ab Lager, eigener Lieferdienst im Großraum München und Oberbayern, persönlicher Außendienst und Schulungen für Praxen, MVZ und Kliniken.",
+    "Medizinischer Fachhandel aus Uffing am Staffelsee: über 6.000 Artikel sofort ab Lager, eigener Lieferdienst und persönliche Betreuung für Arztpraxen.",
   alternates: { canonical: "/" },
 };
 

@@ -24,7 +24,7 @@ const principles = [
   },
   {
     title: "Qualität, die überprüfbar ist",
-    text: "Wir führen ausschließlich qualifizierte Produkte namhafter Hersteller und beziehen sie von Lieferanten, die wie wir eine Qualitätssicherung eingeführt haben. Unser eigenes Qualitätsmanagement ist nach ISO 9001 zertifiziert.",
+    text: "Wir führen ausschließlich qualifizierte Produkte namhafter Hersteller und beziehen sie von Lieferanten, die wie wir eine Qualitätssicherung eingeführt haben. Unser eigenes Qualitätsmanagement ist nach ISO 9001 zertifiziert. Jede Lieferung durchläuft bei uns eine Wareneingangsprüfung, jede Charge ist rückverfolgbar. Bei Rückrufen und Sicherheitsmitteilungen der Hersteller informieren wir betroffene Kunden gezielt.",
   },
   {
     title: "Nachfragen statt annehmen",
@@ -181,7 +181,7 @@ export default function UnternehmenPage() {
         <div className="container-site">
           <div className="grid gap-x-12 gap-y-12 lg:grid-cols-12">
             <div className="lg:col-span-5">
-              <SectionMark label="Substanz" onDark className="mb-6" />
+              <SectionMark label="Reichweite" onDark className="mb-6" />
               <h2 id="substanz" className="t-h2">
                 Regional verwurzelt, überregional lieferfähig
               </h2>

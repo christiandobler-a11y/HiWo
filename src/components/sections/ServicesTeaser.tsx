@@ -19,7 +19,7 @@ export function ServicesTeaser() {
             <SectionHead
               index="06"
               label="Services & Schulungen"
-              title={<span id="services">Fortbildung, die im Haus bleibt.</span>}
+              title={<span id="services">Schulungen direkt bei Ihnen vor Ort.</span>}
               lead="Hygiene, Wundversorgung, Notfall und Trinkwasserproben: Unsere Referentinnen und Referenten sind eigene Mitarbeitende mit einschlägiger Qualifikation – nicht zugekaufte Trainer."
             />
 

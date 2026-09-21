@@ -33,18 +33,18 @@ const sourceSerif = Source_Serif_4({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "HiWo-med Medizintechnik – Versorgungspartner für medizinische Einrichtungen",
+    default: "HiWo-med Medizintechnik – Fachhandel für Arztpraxen",
     template: "%s | HiWo-med Medizintechnik",
   },
   description:
-    "Medizinischer Fachhandel aus Uffing am Staffelsee: über 6.000 Artikel sofort ab Lager, eigener Lieferdienst im Großraum München und Oberbayern, persönlicher Außendienst und Schulungen für Praxen, MVZ und Kliniken.",
+    "Medizinischer Fachhandel aus Uffing am Staffelsee: über 6.000 Artikel sofort ab Lager, eigener Lieferdienst und persönliche Betreuung für Arztpraxen.",
   applicationName: "HiWo-med",
   authors: [{ name: company.legalName }],
   openGraph: {
     type: "website",
     locale: "de_DE",
     siteName: "HiWo-med Medizintechnik",
-    title: "HiWo-med Medizintechnik – Versorgungspartner für medizinische Einrichtungen",
+    title: "HiWo-med Medizintechnik – Fachhandel für Arztpraxen",
     description:
       "Über 6.000 Artikel sofort ab Lager, eigener Lieferdienst und persönliche Betreuung – seit 1989 aus Uffing am Staffelsee.",
     images: [{ url: "/img/lieferdienst-sprinter-v4-1280.webp", width: 1280, height: 514 }],

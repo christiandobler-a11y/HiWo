@@ -16,18 +16,22 @@ import { SectionHead } from "@/components/ui/Section";
 const reasons = [
   {
     title: "Ein Ansprechpartner statt einer Warteschleife",
+    /** Kurzform für den "Mehr erfahren"-Linktext -- beschreibend statt gleichlautend. */
+    topic: "Betreuung",
     text: `${company.hours.compact} geht jemand ans Telefon, der die Praxis kennt. Dazu ein fester Außendienstpartner mit eigenem Gebiet, der vorbeikommt – nicht nur anruft.`,
     detail:
       "Fünf feste Ansprechpartner für Ihre Region: Oberbayern, Oberland und Schwaben, Chiemgau und Niederbayern werden jeweils von derselben Person betreut – dazu die durchgehend besetzte Auftragsannahme im Innendienst.",
   },
   {
     title: "Ware aus dem eigenen Lager, nicht aus dem Katalog",
+    topic: "Lieferung",
     text: "Über 6.000 Artikel liegen auf 1.500 m² sofort verfügbar. Was bestellt wird, ist in der Regel schon da – im Großraum München am Folgetag, ausgefahren vom eigenen Lieferdienst.",
     detail:
-      "Oberland, Rosenheim, Traunstein, Augsburg und Schwaben: 1–3 Werktage mit dem eigenen Lieferdienst. Restliches Bundesgebiet: Bestellung bis 13 Uhr, Versand per UPS noch am selben Tag.",
+      "Oberland, Rosenheim, Traunstein, Augsburg und Schwaben: 1–3 Arbeitstage mit dem eigenen Lieferdienst. Restliches Bundesgebiet: Bestellung bis 13 Uhr, Versand per UPS noch am selben Tag.",
   },
   {
     title: "Beratung, die über den Karton hinausgeht",
+    topic: "Beratung",
     text: "Hygiene, Wundversorgung, Notfallmanagement, Trinkwasserproben: Fachleute aus dem eigenen Haus schulen Ihr Team – herstellerneutral und bei Ihnen vor Ort.",
     detail:
       "Im Team stecken eigene Qualifikationen dahinter, keine externen Referenten: staatlich geprüfte Desinfektorin, ausgebildeter Hygieneberater und mehrere Kolleginnen und Kollegen mit Zusatzqualifizierung zum Medizinprodukteberater.",
@@ -64,7 +68,7 @@ function ReasonItem({
           aria-controls={detailId}
           className="mt-3.5 inline-flex items-center gap-1.5 text-[0.8125rem] font-semibold text-magenta-ink transition-colors hover:text-magenta-deep"
         >
-          {open ? "Weniger anzeigen" : "Mehr erfahren"}
+          {open ? `Weniger zu ${reason.topic}` : `Mehr zu ${reason.topic}`}
           <PlusToggleIcon open={open} />
         </button>
 
@@ -86,7 +90,7 @@ export function Positioning() {
           <div className="lg:col-span-5">
             <SectionHead
               index="02"
-              label="Positionierung"
+              label="Warum HiWo-med"
               title={
                 <span id="positionierung">
                   Persönlich betreut. Digital bestellt. Zuverlässig versorgt.

@@ -46,7 +46,7 @@ export type Service = {
   id: string;
   /** Kurzform für Listen und Navigation. */
   title: string;
-  /** Format: Seminar, Inhouse-Leistung, Dienstleistung … */
+  /** Wo das Angebot stattfindet -- einheitlich "Präsenzseminar" oder "Vor Ort in Ihrer Praxis". */
   format: string;
   /** Eine Zeile, die den Nutzen benennt – kein Marketingtext. */
   claim: string;
@@ -64,9 +64,9 @@ export const services: Service[] = [
   {
     id: "hygiene-seminar",
     title: "Hygiene in der Arztpraxis",
-    format: "Seminar",
+    format: "Präsenzseminar",
     claim:
-      "Der jährliche Rezertifizierungskurs für Hygienebeauftragte – mit praktischen Übungen statt Folienschlacht.",
+      "Der jährliche Rezertifizierungskurs für Hygienebeauftragte – mit praktischen Übungen statt trockener Theorie.",
     description: [
       "An die Hygiene in der Praxis werden laufend höhere Anforderungen gestellt. Das Seminar bringt Ihr Team auf den aktuellen Stand der Hygienevorschriften, vermittelt praxisnahe Tipps und schließt praktische Übungen ein.",
       "Die Schulung gilt für Hygienebeauftragte als jährlicher Rezertifizierungskurs gemäß § 4 DGUV Vorschrift 1.",
@@ -91,17 +91,17 @@ export const services: Service[] = [
   {
     id: "hygiene-check",
     title: "Hygiene-Check",
-    format: "Inhouse",
+    format: "Vor Ort in Ihrer Praxis",
     claim:
-      "Eine strukturierte Ist-Aufnahme in Ihren eigenen Räumen – herstellerunabhängig und mit fertiger Dokumentation.",
+      "Eine strukturierte Ist-Aufnahme in Ihren eigenen Räumen – herstellerneutral und mit fertiger Dokumentation.",
     description: [
       "Unsere ausgebildeten Hygienefachberaterinnen und -berater kommen in die Praxis, erheben den Ist-Zustand und beraten anschließend individuell. Das gibt die nötige Sicherheit bei der Einhaltung aller geltenden Hygienevorschriften.",
       "Ob Hygienebeauftragte, Mediziner oder die gesamte Belegschaft: In rund zwei Stunden erhalten die Teilnehmenden Grundwissen zu den gesetzlichen Vorgaben und eine Beratung, die direkt auf Ihren Praxisbetrieb zugeschnitten ist.",
     ],
     facts: [
-      { label: "Format", value: "Inhouse, bei Ihnen vor Ort" },
+      { label: "Format", value: "Vor Ort in Ihrer Praxis" },
       { label: "Dauer", value: "ca. 2 Stunden" },
-      { label: "Bindung", value: "Herstellerunabhängig" },
+      { label: "Bindung", value: "Herstellerneutral" },
     ],
     contents: [
       "Alle Hygienebereiche: Hände-, Haut-, Flächen- und Instrumentendesinfektion",
@@ -114,7 +114,7 @@ export const services: Service[] = [
   {
     id: "trinkwasserprobe",
     title: "Trinkwasserprobenentnahme",
-    format: "Dienstleistung",
+    format: "Vor Ort in Ihrer Praxis",
     claim:
       "Die regelmäßige Untersuchung für die Medizinprodukteaufbereitung – Entnahme, Labor und Prüfbericht aus einer Hand.",
     description: [
@@ -145,14 +145,14 @@ export const services: Service[] = [
   {
     id: "notfalltraining",
     title: "Basis-Notfalltraining",
-    format: "Inhouse",
+    format: "Vor Ort in Ihrer Praxis",
     claim:
       "Damit das Praxisteam im Ernstfall nicht überlegen muss – inklusive Kontrolle Ihres Notfallequipments.",
     description: [
       "Präventiv zu helfen ist die wirksamste Maßnahme für den Notfall. Wir bereiten Ihr Praxisteam auf einen Notfall in Ihren eigenen Räumen vor – die Schwerpunkte legen wir nach Bedarf fest.",
     ],
     facts: [
-      { label: "Format", value: "Inhouse, bei Ihnen vor Ort" },
+      { label: "Format", value: "Vor Ort in Ihrer Praxis" },
       { label: "Dauer", value: "ca. 3 Stunden" },
       { label: "Gruppengröße", value: "bis zu 10 Teilnehmende" },
     ],
@@ -168,14 +168,14 @@ export const services: Service[] = [
   {
     id: "wundworkshop",
     title: "Wundworkshop",
-    format: "Inhouse",
+    format: "Vor Ort in Ihrer Praxis",
     claim:
       "Moderne Wundversorgung, herstellerneutral und auf den Kenntnisstand Ihres Teams zugeschnitten.",
     description: [
       "Der Workshop vertieft vorhandene Kenntnisse der modernen Wundversorgung. Inhalte und Tiefe stimmen wir vorab individuell mit Ihnen ab.",
     ],
     facts: [
-      { label: "Format", value: "Inhouse, bei Ihnen vor Ort" },
+      { label: "Format", value: "Vor Ort in Ihrer Praxis" },
       { label: "Dauer", value: "ca. 1 – 2 Stunden" },
       { label: "Bindung", value: "Herstellerneutral" },
     ],

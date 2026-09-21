@@ -13,7 +13,7 @@ export function KeyFigures() {
       <div className="container-site">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <SectionMark index="07" label="Substanz" className="mb-5" />
+            <SectionMark index="07" label="Zahlen" className="mb-5" />
             <h2 id="kennzahlen" className="t-h2 max-w-[20ch]">
               Gemeinsam gewachsen, nicht aufgeblasen.
             </h2>
