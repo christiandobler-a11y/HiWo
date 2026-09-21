@@ -40,7 +40,9 @@ export const SITE_URL = "https://www.hiwomed.de";
  * OP-Zentren, Tageskliniken) relevanten 8 eingegrenzt. Nicht übernommen:
  * Röntgen, Inkontinenz und Pflegebedarf -- diese drei Kapitel richten
  * sich stärker an Pflege- und Senioreneinrichtungen, laut Positionierung
- * nur die sekundäre Zielgruppe.
+ * nur die sekundäre Zielgruppe. "Sprechstundenbedarf" zusätzlich als
+ * eigene, 9. Kategorie ergänzt -- kein eigenes Katalogkapitel, aber ein
+ * für Arztpraxen zentraler, gesondert abgerechneter Warenbereich.
  */
 export const assortment = [
   {
@@ -50,6 +52,10 @@ export const assortment = [
   {
     name: "Praxisbedarf",
     note: "Medizinische Verbrauchsartikel für den laufenden Praxisbetrieb.",
+  },
+  {
+    name: "Sprechstundenbedarf",
+    note: "Verbrauchsmaterial, das Praxen quartalsweise über die Sprechstundenbedarfs-Vereinbarung mit den Krankenkassen abrechnen.",
   },
   {
     name: "Praxiseinrichtung",
