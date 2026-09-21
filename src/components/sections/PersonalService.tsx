@@ -15,7 +15,7 @@ export function PersonalService() {
         <div className="grid items-start gap-x-12 gap-y-12 lg:grid-cols-12">
           <figure className="lg:col-span-5" data-reveal>
             <Figure
-              name="aussendienst-nah-v3"
+              name="aussendienst-nah-v4"
               widths={[960, 640]}
               ratio={2.49}
               alt="Ein Außendienstmitarbeiter winkt lächelnd aus dem Fenster seines HiWo-med-Transporters."

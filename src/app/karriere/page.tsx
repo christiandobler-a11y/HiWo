@@ -32,7 +32,7 @@ export default function KarrierePage() {
         <div className="container-site">
           <figure data-reveal>
             <Figure
-              name="fuhrpark-team-breit-v3"
+              name="fuhrpark-team-breit-v4"
               widths={[1280, 960, 640]}
               ratio={2.49}
               alt="Zwei Mitarbeiter von HiWo-med vor einem Firmenfahrzeug in der oberbayerischen Landschaft."

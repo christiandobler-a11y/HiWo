@@ -75,7 +75,7 @@ export default function UnternehmenPage() {
           <div className="grid gap-x-12 gap-y-10 lg:grid-cols-12">
             <figure className="lg:col-span-7" data-reveal>
               <Figure
-                name="geschaeftsfuehrung-v3"
+                name="geschaeftsfuehrung-v4"
                 widths={[1000, 700]}
                 ratio={1.6}
                 alt={`${company.managingDirector} und Firmengründer ${company.founder} im Gespräch vor einer HiWo-med-Bande.`}
@@ -219,7 +219,7 @@ export default function UnternehmenPage() {
             <div className="lg:col-span-6 lg:col-start-7">
               <figure data-reveal>
                 <Figure
-                  name="sprinter-staffelsee-v3"
+                  name="sprinter-staffelsee-v4"
                   widths={[1280, 960, 640]}
                   ratio={2.49}
                   alt="Ein HiWo-med-Transporter auf einer Straße am Staffelsee, dahinter die Alpenkette."

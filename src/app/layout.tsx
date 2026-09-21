@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title: "HiWo-med Medizintechnik – Versorgungspartner für medizinische Einrichtungen",
     description:
       "Über 6.000 Artikel sofort ab Lager, eigener Lieferdienst und persönliche Betreuung – seit 1989 aus Uffing am Staffelsee.",
-    images: [{ url: "/img/lieferdienst-sprinter-v3-1280.webp", width: 1280, height: 514 }],
+    images: [{ url: "/img/lieferdienst-sprinter-v4-1280.webp", width: 1280, height: 514 }],
   },
   robots: {
     // Prototyp: bewusst nicht indexierbar, damit er der echten Seite nicht
