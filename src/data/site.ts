@@ -55,7 +55,7 @@ export const assortment = [
   },
   {
     name: "Sprechstundenbedarf",
-    note: "Verbrauchsmaterial, das Praxen quartalsweise über die Sprechstundenbedarfs-Vereinbarung mit den Krankenkassen abrechnen.",
+    note: "Verbrauchsmaterialien und Verbandstoffe welche über Sprechstundenbedarf abgerechnet werden.",
   },
   {
     name: "Praxiseinrichtung",
@@ -63,7 +63,7 @@ export const assortment = [
   },
   {
     name: "Verbandmittel & Wundversorgung",
-    note: "Klassische Verbandmittel bis zur modernen, herstellerneutralen Wundversorgung.",
+    note: "Klassische Verbandmittel bis zur modernen Wundversorgung.",
   },
   {
     name: "Hygiene & Desinfektion",
