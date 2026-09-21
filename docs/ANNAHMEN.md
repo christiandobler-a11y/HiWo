@@ -131,16 +131,23 @@ auch ohne.
 
 ### 2.8 Datenschutz und Impressum — **rechtlich**
 
-- **Datenschutz:** Der Prototyp enthält **bewusst keine ausformulierte
-  Datenschutzerklärung.** Eine solche ist ein Rechtstext und wird nicht
-  gestaltet, sondern juristisch erstellt. Stattdessen listet
-  `/datenschutz/` auf, was der Entwurf technisch tut (keine Cookies, kein
-  Tracking, lokale Schriften, keine Einbettungen, kein Formular).
-- **Impressum:** Die Pflichtangaben nach § 5 DDG sind übernommen. Die
-  ausführlichen Haftungshinweise, die Regelungen zu externen Links und die
-  AGB der bestehenden Seite sind **nicht** abgebildet und beim Relaunch
-  unverändert und nach rechtlicher Prüfung zu übertragen.
-- Die bestehende Seite nutzt bereits ein Consent-Tool (CCM19). Dessen
+- **Impressum:** Die Pflichtangaben nach § 5 DDG sowie die Haftungshinweise
+  (eigene Inhalte, externe Links, Urheberrecht) und die vollständigen AGB
+  sind wörtlich von `hiwomed.de/de/impressum-agb.html` (Stand August 2026)
+  übernommen — das betrifft den Geschäftsbetrieb, nicht die technische
+  Umsetzung, und gilt deshalb unverändert auch für den Prototyp.
+- **Datenschutz:** Verantwortlicher, externer Datenschutzbeauftragter
+  (Fischer Management Beratungs GmbH) und die Betroffenenrechte sind
+  ebenfalls von der bestehenden Website übernommen. **Bewusst nicht**
+  übernommen sind die dortigen Abschnitte zu Session-Cookies,
+  Adobe-/Google-Web-Fonts und Google Maps — dieser Prototyp nutzt keinen
+  dieser Dienste, sie zu behaupten wäre falsch. `/datenschutz/` listet
+  stattdessen weiterhin ehrlich auf, was der Entwurf technisch tatsächlich
+  tut (keine Cookies, kein Tracking, lokale Schriften, keine Einbettungen,
+  kein Formular).
+- Beide Seiten tragen weiterhin den Hinweis, dass vor einem echten
+  Livegang eine juristische Bestätigung dieses Stands erforderlich ist.
+- Die bestehende Seite nutzt zusätzlich ein Consent-Tool (CCM19). Dessen
   Konfiguration ist zu übernehmen, sobald externe Dienste eingebunden werden.
 
 ### 2.9 Karte auf der Kontaktseite

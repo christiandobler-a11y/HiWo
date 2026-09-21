@@ -44,6 +44,15 @@ export const company = {
   },
   managingDirector: "Simon Hirschvogel",
   founder: "Wolfgang Hirschvogel",
+  /** Externer Datenschutzbeauftragter laut hiwomed.de/de/datenschutz.html. */
+  dataProtectionOfficer: {
+    company: "Fischer Management Beratungs GmbH",
+    contact: "Alexander G.V. Fischer",
+    street: "Bretonischer Ring 6",
+    zip: "85630",
+    city: "Grasbrunn",
+    email: "datenschutz@fischer-management.de",
+  },
   links: {
     fastOrder: "https://hiwomed.fast-order.cloud/login",
     shop: "https://hiwomed-shop.de/register",
