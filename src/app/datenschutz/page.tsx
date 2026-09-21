@@ -82,9 +82,13 @@ export default function DatenschutzPage() {
               Hosting-Anbieters Daten für Sicherungszwecke gespeichert, die möglicherweise eine
               Identifizierung zulassen (IP-Adresse, Datum, Uhrzeit und aufgerufene Seiten). Die
               IP-Adresse wird nicht zur Identifizierung des Nutzers verwendet, es werden weder
-              personenbezogene noch zu identifizierende Nutzerprofile erstellt. Eine Weitergabe
-              an Dritte erfolgt nicht ohne Ihre ausdrückliche Einwilligung. Die statistische
-              Auswertung anonymisierter Datensätze bleibt vorbehalten.
+              personenbezogene noch zu identifizierende Nutzerprofile erstellt. Rechtsgrundlage
+              ist Art. 6 Abs. 1 lit. f DSGVO – unser berechtigtes Interesse an einem sicheren
+              und störungsfreien Betrieb der Website. Diese Daten werden nach spätestens 30
+              Tagen automatisch gelöscht, soweit sie nicht zur Aufklärung eines konkreten
+              Sicherheitsvorfalls weiter benötigt werden. Eine Weitergabe an Dritte erfolgt
+              nicht ohne Ihre ausdrückliche Einwilligung. Die statistische Auswertung
+              anonymisierter Datensätze bleibt vorbehalten.
             </p>
 
             <h3 className="t-h3">Ihre Rechte als betroffene Person</h3>
@@ -94,8 +98,10 @@ export default function DatenschutzPage() {
               auf Berichtigung unrichtiger Daten (Art. 16 DSGVO), auf Löschung (Art. 17 DSGVO),
               auf Einschränkung der Verarbeitung (Art. 18 DSGVO), auf Datenübertragbarkeit
               (Art. 20 DSGVO) sowie auf Widerspruch gegen die Verarbeitung (Art. 21 DSGVO).
-              Außerdem können Sie sich bei einer Aufsichtsbehörde für den Datenschutz über die
-              Verarbeitung Ihrer personenbezogenen Daten beschweren.
+              Außerdem können Sie sich bei einer Datenschutz-Aufsichtsbehörde beschweren
+              (Art. 77 DSGVO) – für HiWo-med als bayerisches Unternehmen zuständig ist das
+              Bayerische Landesamt für Datenschutzaufsicht (BayLDA), Promenade 18, 91522
+              Ansbach.
             </p>
 
             <hr className="my-10 border-t border-line" />

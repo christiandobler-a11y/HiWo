@@ -63,15 +63,17 @@ export default function ImpressumPage() {
             <h3 className="t-h3">Umsatzsteuer-Identifikationsnummer</h3>
             <p>Gemäß § 27a UStG: {company.register.vatId}</p>
 
-            <h3 className="t-h3">Verpackungsgesetz (VerpackG) / EU-Verpackungsverordnung</h3>
+            <h3 className="t-h3">Verpackungsgesetz (VerpackG) / EU-Verpackungsverordnung (PPWR)</h3>
             <p>
               Die Firma HiWo-med Medizintechnik kommt ihren gesetzlichen Verpflichtungen nach
-              dem deutschen Verpackungsgesetz (VerpackG) sowie den erweiterten Herstellerpflichten
-              (EPR) vollumfänglich nach. Wir sind bei der Stiftung Zentrale Stelle
-              Verpackungsregister (ZSVR) im öffentlichen Register LUCID als registrierter
-              Hersteller bzw. Erstinverkehrbringer von verpackten Waren gemeldet. Unsere
-              systembeteiligungspflichtigen Verpackungen einschließlich Versand- und
-              Transportverpackungen sind an ein genehmigtes duales System angeschlossen.
+              dem deutschen Verpackungsgesetz (VerpackG) sowie der seit 12. August 2026
+              unmittelbar geltenden EU-Verpackungsverordnung (Verordnung (EU) 2025/40, PPWR)
+              und den erweiterten Herstellerpflichten (EPR) vollumfänglich nach. Wir sind bei
+              der Stiftung Zentrale Stelle Verpackungsregister (ZSVR) im öffentlichen Register
+              LUCID als registrierter Hersteller bzw. Erstinverkehrbringer von verpackten Waren
+              gemeldet. Unsere systembeteiligungspflichtigen Verpackungen einschließlich
+              Versand- und Transportverpackungen sind an ein genehmigtes duales System
+              angeschlossen.
             </p>
             <p>Registrierungsnummer (LUCID): {company.register.lucid}</p>
 

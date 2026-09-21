@@ -149,6 +149,25 @@ auch ohne.
   Livegang eine juristische Bestätigung dieses Stands erforderlich ist.
 - Die bestehende Seite nutzt zusätzlich ein Consent-Tool (CCM19). Dessen
   Konfiguration ist zu übernehmen, sobald externe Dienste eingebunden werden.
+- **Rechtliche Prüfung nachgezogen (September 2026):** Auf Bitte noch
+  einmal explizit auf zwischenzeitliche Gesetzesänderungen geprüft:
+  - **OS-Streitschlichtungsplattform:** von der EU-Kommission zum
+    20.07.2025 eingestellt. War auf keiner der beiden Seiten enthalten —
+    weder in unserer Übernahme noch im gecrawlten Original —, insofern
+    nichts zu entfernen, aber gegengeprüft.
+  - **VSBG § 36** (Hinweispflicht zur Verbraucherschlichtung): gilt laut
+    aktueller Rechtslage nicht für reine B2B-Unternehmen ohne
+    Verbraucherverträge — für HiWo-med (siehe AGB Ziff. 1.2) zutreffend
+    nicht einschlägig, deshalb weiterhin bewusst nicht aufgenommen.
+  - **EU-Verpackungsverordnung (PPWR, VO (EU) 2025/40):** gilt seit
+    12.08.2026 unmittelbar — der Verpackungsabschnitt im Impressum
+    verweist jetzt explizit darauf, LUCID-Registrierungspflicht bleibt
+    im Kern unverändert bestehen.
+  - **Datenschutz:** Rechtsgrundlage (Art. 6 Abs. 1 lit. f DSGVO) und
+    Löschfrist (30 Tage) für die Server-Logfiles ergänzt — Art. 13 DSGVO
+    verlangt beides explizit, fehlte bisher. Zuständige Aufsichtsbehörde
+    (BayLDA, Ansbach) für Beschwerden konkret benannt statt nur generisch
+    „eine Aufsichtsbehörde“.
 
 ### 2.9 Karte auf der Kontaktseite
 
