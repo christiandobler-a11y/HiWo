@@ -18,8 +18,8 @@ const logisticsDetails = [
     text: "Unsere Fahrer stellen die Ware nicht an der Tür ab, sondern bringen sie dorthin, wo sie hingehört.",
   },
   {
-    title: "Verpackungen zurück",
-    text: "Anfallende Verpackungen nehmen wir bei der nächsten Tour kostenfrei wieder mit.",
+    title: "Kisten zurück",
+    text: "Bei der eigenen Auslieferung setzen wir, wo möglich, wiederverwendbare Transportkisten ein, die wir bei der nächsten Tour direkt wieder mitnehmen.",
   },
   {
     title: "Bestellung bis 13:00 Uhr",

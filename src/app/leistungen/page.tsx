@@ -32,7 +32,7 @@ const orderFlow = [
   },
   {
     title: "Übergabe",
-    text: "Die Lieferung kommt bis an den gewünschten Lagerort. Verpackungen nehmen wir bei der nächsten Tour kostenfrei wieder mit.",
+    text: "Die Lieferung kommt bis an den gewünschten Lagerort. Wo möglich liefern wir in wiederverwendbaren Transportkisten, die wir bei der nächsten Tour direkt wieder mitnehmen.",
   },
 ];
 
