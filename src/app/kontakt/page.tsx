@@ -25,75 +25,34 @@ export default function KontaktPage() {
         label="Kontakt"
         title={<>Ein Anruf reicht.</>}
         lead="Montag bis Donnerstag 8 bis 17 Uhr, freitags bis 15 Uhr geht bei uns direkt jemand ans Telefon – ohne Auswahlmenü, ohne Rückrufversprechen."
-        leadBelow
-      />
+      >
+        {/* Steht in der freien rechten Spalte direkt neben der Einleitung,
+            statt erst weiter unten -- auf breiten Bildschirmen blieb dieser
+            Bereich sonst bis zur Anschrift komplett leer. */}
+        <figure className="mt-8" data-reveal>
+          <Figure
+            name="standort-schild"
+            widths={[1248, 900, 640]}
+            ratio={1.3}
+            alt="Das Firmenschild von HiWo-med mit Logo und dem Hinweis „Lagerhausstr. 4“ vor blauem Himmel."
+            sizes="(min-width: 1024px) 40vw, 100vw"
+            className="h-[clamp(13rem,32vh,17rem)] w-full"
+            position="50% 42%"
+            priority
+          />
+          <FigureCaption>
+            Lager, Verwaltung und Fuhrpark liegen an einem Standort in der Lagerhausstraße.
+            Kostenfreie Parkplätze sind vorhanden, der Bahnhof Uffing liegt in unmittelbarer
+            Nähe.
+          </FigureCaption>
+        </figure>
+      </PageHeader>
 
       <section className="pb-[var(--section-y)] pt-4">
         <div className="container-site">
-          {/* Bild+Postfach-Liste zuerst im Markup, als ein zusammenhängender
-              Block (nicht per Grid-Row getrennt -- das würde auf Desktop
-              eine Lücke reißen, wenn die Kontaktdaten-Spalte höher ist).
-              "grid" ohne lg:grid-cols stapelt auf Schmalbildschirmen sonst
-              erst den ganzen Kontaktdaten-Block und zeigt das Schild-Foto
-              erst danach, kaum mehr als ein Sliver sichtbar (derselbe Bug
-              wie beim Geschäftsführungs-Foto). lg:col-start hält die
-              Desktop-Anordnung unabhängig von der Markup-Reihenfolge bei. */}
           <div className="grid gap-x-12 gap-y-12 lg:grid-cols-12">
-            <div className="lg:col-span-6 lg:col-start-7 lg:row-start-1">
-              <figure data-reveal>
-                <Figure
-                  name="standort-schild"
-                  widths={[1248, 900, 640]}
-                  ratio={1.3}
-                  alt="Das Firmenschild von HiWo-med mit Logo und dem Hinweis „Lagerhausstr. 4“ vor blauem Himmel."
-                  sizes="(min-width: 1024px) 50vw, 100vw"
-                  /* Feste vh-Höhe statt reiner Breiten-Aspect-Ratio: Auf
-                     breiten Monitoren wird die Spalte sehr breit, und mit ihr
-                     (per aspect-ratio) auch die Bildhöhe -- auf großen
-                     Bildschirmen ragte das Bild dadurch weit über die erste
-                     Bildschirmhöhe hinaus und war beim Laden der Seite nur
-                     als schmaler Streifen unten sichtbar. Die Höhe jetzt an
-                     der Viewport-Höhe zu koppeln (statt an der Spaltenbreite)
-                     hält das Bild unabhängig von der Bildschirmbreite
-                     vollständig im ersten sichtbaren Bereich. */
-                  className="h-[clamp(13rem,40vh,20rem)] w-full lg:h-[clamp(16rem,42vh,24rem)]"
-                  position="50% 42%"
-                  priority
-                />
-                <FigureCaption>
-                  Lager, Verwaltung und Fuhrpark liegen an einem Standort in der
-                  Lagerhausstraße. Kostenfreie Parkplätze sind vorhanden, der Bahnhof Uffing
-                  liegt in unmittelbarer Nähe.
-                </FigureCaption>
-              </figure>
-
-              <div className="mt-10">
-                <SectionMark label="Direkt zum richtigen Postfach" className="mb-6" />
-                <ul>
-                  {[
-                    {
-                      label: "Allgemeine Anfragen und Bestellungen",
-                      mail: company.email.general,
-                    },
-                    { label: "Seminare, Schulungen und Hygiene-Check", mail: company.email.training },
-                    { label: "Bewerbungen", mail: company.email.jobs },
-                  ].map((c) => (
-                    <li key={c.mail} className="border-t border-line py-4 last:border-b">
-                      <p className="text-[0.875rem] text-muted">{c.label}</p>
-                      <a
-                        href={`mailto:${c.mail}`}
-                        className="mt-1 inline-block py-2 font-semibold text-ink underline-offset-4 hover:text-magenta-ink hover:underline"
-                      >
-                        {c.mail}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
             {/* Kontaktdaten */}
-            <div className="lg:col-span-5 lg:col-start-1 lg:row-start-1">
+            <div className="lg:col-span-5 lg:col-start-1">
               <SectionMark label="Anschrift" className="mb-6" />
               <address className="not-italic">
                 <p className="t-h3">{company.legalName}</p>
@@ -162,6 +121,30 @@ export default function KontaktPage() {
                   E-Mail schreiben
                 </Button>
               </div>
+            </div>
+
+            <div className="lg:col-span-5 lg:col-start-7">
+              <SectionMark label="Direkt zum richtigen Postfach" className="mb-6" />
+              <ul>
+                {[
+                  {
+                    label: "Allgemeine Anfragen und Bestellungen",
+                    mail: company.email.general,
+                  },
+                  { label: "Seminare, Schulungen und Hygiene-Check", mail: company.email.training },
+                  { label: "Bewerbungen", mail: company.email.jobs },
+                ].map((c) => (
+                  <li key={c.mail} className="border-t border-line py-4 last:border-b">
+                    <p className="text-[0.875rem] text-muted">{c.label}</p>
+                    <a
+                      href={`mailto:${c.mail}`}
+                      className="mt-1 inline-block py-2 font-semibold text-ink underline-offset-4 hover:text-magenta-ink hover:underline"
+                    >
+                      {c.mail}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
