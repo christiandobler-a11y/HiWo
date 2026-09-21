@@ -87,29 +87,18 @@ export function Hero() {
             </span>
           </h1>
 
-          {/* Kurze Erklärung direkt unter der Headline: was, für wen, wie --
-              die Headline allein ist stimmungsvoll, aber nicht selbsterklärend. */}
-          <p
-            className="mt-4 max-w-[34rem] text-[1rem] leading-relaxed text-night-muted lg:mt-5"
-            data-reveal
-            style={{ "--reveal-delay": "40ms" } as React.CSSProperties}
-          >
-            Medizinischer Fachhandel für Arztpraxen, MVZ, ambulante OP-Zentren und
-            Tageskliniken – mit eigenem Lager, eigenem Lieferdienst und persönlicher Betreuung.
-          </p>
-
           {/* Der Markenclaim – steht auf genau dem Fahrzeug im Foto dahinter. */}
           <p
             className="t-serif mt-5 text-[clamp(1.2rem,1rem+1vw,1.65rem)] leading-[1.3] text-night-ink lg:mt-6"
             data-reveal
-            style={{ "--reveal-delay": "120ms" } as React.CSSProperties}
+            style={{ "--reveal-delay": "80ms" } as React.CSSProperties}
           >
             „{company.claim}“
           </p>
           <p
             className="mt-2 text-[0.875rem] text-night-muted"
             data-reveal
-            style={{ "--reveal-delay": "180ms" } as React.CSSProperties}
+            style={{ "--reveal-delay": "140ms" } as React.CSSProperties}
           >
             Der Satz steht auf genau diesem Fahrzeug – seit {company.foundedYear}.
           </p>
@@ -117,7 +106,7 @@ export function Hero() {
           <div
             className="mt-6 lg:mt-7"
             data-reveal
-            style={{ "--reveal-delay": "240ms" } as React.CSSProperties}
+            style={{ "--reveal-delay": "200ms" } as React.CSSProperties}
           >
             <Button href="/kontakt/">
               Beratung anfragen
@@ -135,7 +124,19 @@ export function HeroFacts() {
   return (
     <section className="pb-[clamp(2rem,1rem+2vw,3rem)] pt-10 lg:pt-12">
       <div className="container-site">
-        <dl className="grid border-t border-line sm:grid-cols-3 sm:divide-x sm:divide-line">
+        {/* Kurze Erklärung, was HiWo-med konkret ist -- im Foto-Hero direkt
+            über dem Foto gab es dafür keinen Platz, ohne den Text oben
+            abzuschneiden (feste Höhe, unten verankert). Hier auf Papier-Weiß
+            ist beliebig Raum dafür. */}
+        <p
+          className="max-w-[46rem] text-[1.0625rem] leading-relaxed text-muted"
+          data-reveal
+        >
+          Medizinischer Fachhandel für Arztpraxen, MVZ, ambulante OP-Zentren und
+          Tageskliniken – mit eigenem Lager, eigenem Lieferdienst und persönlicher Betreuung.
+        </p>
+
+        <dl className="mt-8 grid border-t border-line sm:grid-cols-3 sm:divide-x sm:divide-line">
           {heroFacts.map((f, i) => (
             <div
               key={f.k}
