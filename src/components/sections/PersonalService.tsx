@@ -60,7 +60,7 @@ export function PersonalService() {
             {fieldServiceMembers.map((m, i) => (
               <li
                 key={m.name}
-                className="reveal-flip [perspective:1000px]"
+                className="reveal-flip text-center [perspective:1000px]"
                 data-reveal
                 style={{ "--reveal-delay": `${i * 90}ms` } as React.CSSProperties}
               >

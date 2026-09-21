@@ -23,7 +23,11 @@ function tenureLabel(member: TeamMember) {
 
 function MemberCard({ member, delay }: { member: TeamMember; delay: number }) {
   return (
-    <li data-reveal style={{ "--reveal-delay": `${delay}ms` } as React.CSSProperties}>
+    <li
+      className="text-center"
+      data-reveal
+      style={{ "--reveal-delay": `${delay}ms` } as React.CSSProperties}
+    >
       <div className="figure-frame aspect-[4/5] w-full">
         <img
           src={`/team/${member.photo}.webp`}

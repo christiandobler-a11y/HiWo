@@ -234,6 +234,7 @@ export default function KontaktPage() {
             {fieldServiceMembers.map((m, i) => (
               <li
                 key={m.name}
+                className="text-center"
                 data-reveal
                 style={{ "--reveal-delay": `${i * 55}ms` } as React.CSSProperties}
               >
