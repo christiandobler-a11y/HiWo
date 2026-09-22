@@ -148,12 +148,32 @@ export default function UnternehmenPage() {
       {/* Zeitleiste */}
       <section className="section-y bg-paper-raised" aria-labelledby="geschichte">
         <div className="container-site">
-          <SectionHead
-            label="Geschichte"
-            split
-            title={<span id="geschichte">Seit {company.foundedYear}, zwei Generationen</span>}
-            lead="Seit 1989 ist HiWo-med kontinuierlich und aus eigener Kraft gewachsen – mit langfristigen Kundenbeziehungen, einem erfahrenen Team und der Verantwortung von zwei Generationen."
-          />
+          <div className="grid gap-x-12 gap-y-10 lg:grid-cols-12">
+            <div className="lg:col-span-5">
+              <SectionHead
+                label="Geschichte"
+                title={<span id="geschichte">Seit {company.foundedYear}, zwei Generationen</span>}
+                lead="Seit 1989 ist HiWo-med kontinuierlich und aus eigener Kraft gewachsen – mit langfristigen Kundenbeziehungen, einem erfahrenen Team und der Verantwortung von zwei Generationen."
+              />
+            </div>
+
+            {/* Historisches Luftbild, schwarz-weiß: der optische Beleg für
+                die Zeitleiste daneben -- ein echtes altes Foto sagt "seit
+                1989" glaubwürdiger, als es jeder Fließtext könnte. */}
+            <figure className="lg:col-span-6 lg:col-start-7" data-reveal>
+              <Figure
+                name="standort-frueher-v1"
+                widths={[1200, 800]}
+                ratio={1.5}
+                alt="Historische Schwarz-Weiß-Luftaufnahme des ersten eigenen HiWo-med-Standorts „An der Ach“ in Uffing am Staffelsee."
+                sizes="(min-width: 1024px) 45vw, 100vw"
+                className="aspect-[3/2] w-full"
+              />
+              <FigureCaption>
+                Der erste eigene Standort „An der Ach“ in Uffing – aus der Vogelperspektive.
+              </FigureCaption>
+            </figure>
+          </div>
 
           <ol className="mt-14">
             {timeline.map((t, i) => (
