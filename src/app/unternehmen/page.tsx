@@ -41,21 +41,51 @@ const timeline = [
   {
     year: "1989",
     title: "Gründung",
-    text: `${company.founder} gründet HiWo-med als Fachhandel für den niedergelassenen Bereich.`,
+    text: `${company.founder} gründet HiWo-med – zunächst als One-Man-Show in der eigenen Garage.`,
   },
   {
-    year: "1997 – 2009",
-    title: "Die Mannschaft wächst",
-    text: "Kolleginnen und Kollegen, die heute noch da sind, fangen an: Auftragsannahme, Lieferlogistik, Lager, Außendienst.",
+    year: "1992 – 1996",
+    title: "Erste eigene Lagerräume",
+    text: "Erste Lagerräume in der Kirchstraße in Uffing.",
+  },
+  {
+    year: "1996",
+    title: "Standort „An der Ach“",
+    text: "Bezug des Standortes „An der Ach“.",
+  },
+  {
+    year: "2002",
+    title: "Das Unternehmen wächst",
+    text: "HiWo-med beschäftigt 12 Mitarbeitende.",
+  },
+  {
+    year: "2009",
+    title: "Umzug in die Lagerhausstraße",
+    text: "Umzug an den jetzigen Standort „Lagerhausstraße“ – mehr Lager- und Büroflächen.",
+  },
+  {
+    year: "2012",
+    title: "Zweite Lagerhalle",
+    text: "Bau einer zweiten Lagerhalle am selben Standort.",
+  },
+  {
+    year: "2016",
+    title: "Simon Hirschvogel steigt ein",
+    text: `${company.managingDirector} steigt in das Unternehmen ein.`,
+  },
+  {
+    year: "2018",
+    title: "Lagerflächen erweitert",
+    text: "Ausbau und Erweiterung der Lagerflächen des bestehenden Hauptgebäudes.",
   },
   {
     year: "2021",
     title: "Zweite Generation",
-    text: `${company.managingDirector} übernimmt die Geschäftsführung. Der Gründer bleibt als Berater an Bord.`,
+    text: `${company.managingDirector} übernimmt die Geschäftsleitung. Die HiWo-med Medizintechnik GmbH wird gegründet und entsteht durch Ausgliederung des einzelkaufmännischen Unternehmens HiWo-med Wolfgang Hirschvogel e.K.`,
   },
   {
     year: "Heute",
-    title: "Versorgungsbetrieb",
+    title: "Versorgung aus einer Hand",
     text: `1.500 m² Lager, eigener Fuhrpark, ${teamHeadcount} Kolleginnen und Kollegen, eigener Schulungsbereich.`,
   },
 ];
@@ -122,7 +152,7 @@ export default function UnternehmenPage() {
             label="Geschichte"
             split
             title={<span id="geschichte">Seit {company.foundedYear}, zwei Generationen</span>}
-            lead="Gewachsen ist HiWo-med nicht durch Zukäufe, sondern durch Kunden, die geblieben sind – und durch Mitarbeitende, die geblieben sind."
+            lead="Seit 1989 ist HiWo-med kontinuierlich und aus eigener Kraft gewachsen – mit langfristigen Kundenbeziehungen, einem erfahrenen Team und der Verantwortung von zwei Generationen."
           />
 
           <ol className="mt-14">

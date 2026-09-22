@@ -43,10 +43,10 @@ export default function LeistungenPage() {
         label="Leistungen"
         title={
           <>
-            Versorgung heißt: Es ist da, wenn es gebraucht wird.
+            Versorgung heißt: Da sein, wenn es darauf ankommt.
           </>
         }
-        lead="HiWo-med ist medizinischer Fachhandel – aber der Handel ist nur der eine Teil. Der andere ist ein Lager, ein eigener Fuhrpark und eine Mannschaft, die weiß, wie eine Praxis arbeitet."
+        lead="HiWo-med verbindet medizinischen Fachhandel mit eigenem Lager, eigener Logistik und persönlicher Betreuung. Von der Bestellung über die Kommissionierung bis zur Auslieferung greifen bei uns alle Schritte ineinander – damit medizinische Einrichtungen zuverlässig versorgt sind."
       />
 
       {/* Hero-Bild: Die Seite bestand vorher nur aus Fließtext und Listen --
@@ -135,7 +135,7 @@ export default function LeistungenPage() {
           <SectionHead
             label="Ablauf"
             title={<span id="ablauf">Von Ihrer Bestellung bis in Ihre Praxis</span>}
-            lead="Vier Schritte, die bei uns komplett im Haus stattfinden – deshalb können wir Zusagen machen und einhalten."
+            lead="Vier Schritte, die bei uns komplett im Haus stattfinden. So bleibt die gesamte Versorgung in einer Hand."
           />
 
           <ol className="mt-14 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-6 lg:divide-x lg:divide-line">
@@ -168,9 +168,11 @@ export default function LeistungenPage() {
             title={<span id="logistik">Der Lieferdienst ist keine Zusatzleistung.</span>}
             lead={
               <span className="text-night-muted">
-                Er ist der Grund, warum eine Bestellung aus dem Großraum München in der Regel
-                schon am nächsten Tag in der Praxis steht – und warum wir wissen, wo sie gerade
-                ist.
+                Er gehört zu unserer Versorgung. Unsere eigenen Fahrer bringen die Ware direkt
+                in Ihre Praxis – persönlich, zuverlässig und auf kurzen Wegen. Wo möglich
+                liefern wir in wiederverwendbaren Transportbehältern und nehmen diese bei
+                Anlieferung wieder mit. So entsteht beim Kunden weniger Verpackungsaufwand und
+                die Versorgung bleibt persönlich.
               </span>
             }
           />

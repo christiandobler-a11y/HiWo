@@ -71,7 +71,7 @@ export const cultureHighlights = [
   "Flache Hierarchien",
   "Familienfreundlich",
   "Intensive Einarbeitung",
-  "Kostenfreie Parkplätze",
+  "Vermögenswirksame Leistungen",
   "Sommerfest & Weihnachtsfeier",
 ];
 
