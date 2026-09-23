@@ -18,7 +18,7 @@ const logisticsDetails = [
     text: "Unsere Fahrer stellen die Ware nicht an der Tür ab, sondern bringen sie dorthin, wo sie hingehört.",
   },
   {
-    title: "Kisten zurück",
+    title: "Eigenes Mehrwegsystem",
     text: "Bei der eigenen Auslieferung setzen wir, wo möglich, wiederverwendbare Transportkisten ein – im Normalfall nehmen wir sie gleich wieder mit.",
   },
   {

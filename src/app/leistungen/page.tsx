@@ -244,8 +244,8 @@ export default function LeistungenPage() {
             <div className="lg:col-span-6">
               <SectionHead
                 label="Betreuung"
-                title={<span id="betreuung">Innendienst und Außendienst – dieselbe Firma</span>}
-                lead="Zwischen dem Anruf in Uffing und dem Termin in Ihrer Praxis liegt kein Dienstleisterwechsel. Beide Seiten arbeiten mit denselben Daten und kennen dieselben Kunden."
+                title={<span id="betreuung">Innendienst und Außendienst – ein Team</span>}
+                lead="Was Sie mit unserem Innendienst besprechen, kommt auch bei Ihrem Ansprechpartner im Außendienst an. Beide arbeiten mit denselben Informationen, kennen Ihre Praxis und stimmen sich direkt miteinander ab. So müssen Sie Ihr Anliegen nicht mehrfach erklären – egal, ob Sie uns telefonisch in Uffing erreichen oder Ihr Außendienstmitarbeiter bei Ihnen vor Ort ist."
               />
               <ul className="list-tick mt-8 text-muted">
                 <li>{company.hours.compact} persönlich erreichbar</li>

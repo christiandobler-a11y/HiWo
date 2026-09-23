@@ -15,13 +15,12 @@ export function PersonalService() {
         <div className="grid items-start gap-x-12 gap-y-12 lg:grid-cols-12">
           <figure className="lg:col-span-5" data-reveal>
             <Figure
-              name="aussendienst-nah-v4"
+              name="klausi-sprinter-v1"
               widths={[960, 640]}
-              ratio={2.49}
-              alt="Ein Außendienstmitarbeiter winkt lächelnd aus dem Fenster seines HiWo-med-Transporters."
+              ratio={4 / 3}
+              alt="Ein Außendienstmitarbeiter blickt lächelnd aus dem Fenster seines Fahrzeugs."
               sizes="(min-width: 1024px) 40vw, 100vw"
               className="aspect-[4/3] w-full"
-              position="30% 45%"
             />
             <FigureCaption>
               Ihr Außendienst kommt persönlich vorbei – nicht nur am Telefon, sondern vor Ort
@@ -33,11 +32,11 @@ export function PersonalService() {
             <SectionHead
               index="05"
               label="Betreuung"
-              title={<span id="betreuung">Wir wissen, wie Ihre Praxis arbeitet.</span>}
+              title={<span id="betreuung">Wir verstehen, wie Ihre Praxis arbeitet.</span>}
               lead="Unser Außendienst betreut feste Gebiete. Das heißt: dieselbe Person, die vor zwei Jahren die Hygienebegehung begleitet hat, kennt heute noch Ihre Abläufe, Ihr Lager und Ihre Vorlieben beim Verbandmaterial."
             />
             <p className="mt-6 leading-relaxed text-muted">
-              Wir verstehen uns dabei nicht als Verkäufer, sondern als Partner: mit
+              Wir sehen uns dabei nicht als Verkäufer, sondern als Partner: mit
               Qualitätsprodukten, kompetenter Beratung und zuverlässiger Betreuung im Innen-
               wie im Außendienst. Einmal im Jahr fragen wir nach, ob das auch tatsächlich so
               ankommt.

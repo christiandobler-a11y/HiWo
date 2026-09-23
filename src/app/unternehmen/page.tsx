@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { PageHeader } from "@/components/layout/PageHeader";
+import { CompanyTimeline } from "@/components/sections/CompanyTimeline";
 import { ContactCta } from "@/components/sections/ContactCta";
 import { ArrowRight, Button } from "@/components/ui/Button";
 import { Figure, FigureCaption } from "@/components/ui/Figure";
@@ -33,60 +34,6 @@ const principles = [
   {
     title: "Mitarbeitende als Mitgestalter",
     text: "Wer bei uns arbeitet, übernimmt Verantwortung für seinen Bereich. Wir investieren jedes Jahr in Schulungs- und Weiterbildungsmaßnahmen – auch deshalb bleiben viele Kolleginnen und Kollegen über Jahrzehnte.",
-  },
-];
-
-/** Zeitleiste ausschließlich aus belegbaren Daten. */
-const timeline = [
-  {
-    year: "1989",
-    title: "Gründung",
-    text: `${company.founder} gründet HiWo-med – zunächst als One-Man-Show in der eigenen Garage.`,
-  },
-  {
-    year: "1992 – 1996",
-    title: "Erste eigene Lagerräume",
-    text: "Erste Lagerräume in der Kirchstraße in Uffing.",
-  },
-  {
-    year: "1996",
-    title: "Standort „An der Ach“",
-    text: "Bezug des Standortes „An der Ach“.",
-  },
-  {
-    year: "2002",
-    title: "Das Unternehmen wächst",
-    text: "HiWo-med beschäftigt 12 Mitarbeitende.",
-  },
-  {
-    year: "2009",
-    title: "Umzug in die Lagerhausstraße",
-    text: "Umzug an den jetzigen Standort „Lagerhausstraße“ – mehr Lager- und Büroflächen.",
-  },
-  {
-    year: "2012",
-    title: "Zweite Lagerhalle",
-    text: "Bau einer zweiten Lagerhalle am selben Standort.",
-  },
-  {
-    year: "2016",
-    title: "Simon Hirschvogel steigt ein",
-    text: `${company.managingDirector} steigt in das Unternehmen ein.`,
-  },
-  {
-    year: "2018",
-    title: "Lagerflächen erweitert",
-    text: "Ausbau und Erweiterung der Lagerflächen des bestehenden Hauptgebäudes.",
-  },
-  {
-    year: "2021",
-    title: "Zweite Generation",
-    text: `${company.managingDirector} übernimmt die Geschäftsleitung. Die HiWo-med Medizintechnik GmbH wird gegründet und entsteht durch Ausgliederung des einzelkaufmännischen Unternehmens HiWo-med Wolfgang Hirschvogel e.K.`,
-  },
-  {
-    year: "Heute",
-    title: "Versorgung aus einer Hand",
-    text: `1.500 m² Lager, eigener Fuhrpark, ${teamHeadcount} Kolleginnen und Kollegen, eigener Schulungsbereich.`,
   },
 ];
 
@@ -152,9 +99,15 @@ export default function UnternehmenPage() {
             <div className="lg:col-span-5">
               <SectionHead
                 label="Geschichte"
-                title={<span id="geschichte">Seit {company.foundedYear}, zwei Generationen</span>}
-                lead="Seit 1989 ist HiWo-med kontinuierlich und aus eigener Kraft gewachsen – mit langfristigen Kundenbeziehungen, einem erfahrenen Team und der Verantwortung von zwei Generationen."
-              />
+                title={<span id="geschichte">Seit {company.foundedYear}. Gewachsen aus Verantwortung.</span>}
+                lead="Seit der Gründung im Jahr 1989 hat sich HiWo-med kontinuierlich weiterentwickelt. Aus dem ursprünglichen Handelsunternehmen entstand über die Jahre ein leistungsfähiger medizinischer Versorger mit eigenem Lager, Fuhrpark und einem gewachsenen Team."
+              >
+                <p className="mt-4 leading-relaxed text-muted">
+                  Dabei ist eines immer gleich geblieben: die persönliche Verantwortung für
+                  unsere Kunden und eine zuverlässige Versorgung, auf die sich medizinische
+                  Einrichtungen im Alltag verlassen können.
+                </p>
+              </SectionHead>
             </div>
 
             {/* Historisches Luftbild, schwarz-weiß: der optische Beleg für
@@ -175,22 +128,12 @@ export default function UnternehmenPage() {
             </figure>
           </div>
 
-          <ol className="mt-14">
-            {timeline.map((t, i) => (
-              <li
-                key={t.year}
-                className="grid grid-cols-1 gap-x-10 gap-y-2 border-t border-line py-7 last:border-b sm:grid-cols-[10rem_1fr] lg:grid-cols-[14rem_1fr]"
-                data-reveal
-                style={{ "--reveal-delay": `${i * 60}ms` } as React.CSSProperties}
-              >
-                <p className="t-figure-sm text-magenta-ink sm:text-ink">{t.year}</p>
-                <div className="sm:pt-1">
-                  <h3 className="t-h3">{t.title}</h3>
-                  <p className="mt-2 max-w-[48rem] leading-relaxed text-muted">{t.text}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
+          <CompanyTimeline />
+
+          <p className="t-serif mt-10 border-t border-line pt-10 text-[clamp(1.15rem,1rem+0.6vw,1.4rem)] leading-[1.5] text-ink">
+            Seit {company.foundedYear}. Zwei Generationen. Ein Anspruch: zuverlässige Versorgung
+            medizinischer Einrichtungen.
+          </p>
         </div>
       </section>
 

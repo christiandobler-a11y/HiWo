@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 
-import { company } from "@/data/company";
 import { PlusToggleIcon } from "@/components/ui/Button";
 import { SectionHead } from "@/components/ui/Section";
 
@@ -15,12 +14,12 @@ import { SectionHead } from "@/components/ui/Section";
  */
 const reasons = [
   {
-    title: "Ein Ansprechpartner statt einer Warteschleife",
+    title: "Persönlicher Ansprechpartner statt Warteschleife",
     /** Kurzform für den "Mehr erfahren"-Linktext -- beschreibend statt gleichlautend. */
     topic: "Betreuung",
-    text: `${company.hours.compact} geht jemand ans Telefon, der die Praxis kennt. Dazu ein fester Außendienstpartner mit eigenem Gebiet, der vorbeikommt – nicht nur anruft.`,
+    text: "Montag bis Donnerstag von 08:00–17:00 Uhr und Freitag von 08:00–15:00 Uhr erreichen Sie bei uns einen persönlichen Ansprechpartner – ohne anonyme Hotline oder unnötige Weiterleitungen.",
     detail:
-      "Fünf feste Ansprechpartner für Ihre Region: Oberbayern, Oberland und Schwaben, Chiemgau und Niederbayern werden jeweils von derselben Person betreut – dazu die durchgehend besetzte Auftragsannahme im Innendienst.",
+      "Unser Team kennt Ihre Praxis, Ihre Abläufe und Ihre Ansprechpartner. Ergänzt wird die persönliche Betreuung durch einen festen Außendienstmitarbeiter für Ihr Gebiet, der regelmäßig bei Ihnen vor Ort ist und Ihre Anliegen persönlich aufnimmt.",
   },
   {
     title: "Ware aus dem eigenen Lager, nicht aus dem Katalog",
