@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import { PageHeader } from "@/components/layout/PageHeader";
-import { CompanyTimelineSpine } from "@/components/sections/CompanyTimelineSpine";
+import { CompanyTimelineGrouped } from "@/components/sections/CompanyTimelineGrouped";
 import { ContactCta } from "@/components/sections/ContactCta";
 import { ArrowRight, Button } from "@/components/ui/Button";
 import { Figure, FigureCaption } from "@/components/ui/Figure";
@@ -11,11 +11,11 @@ import { company, keyFigures } from "@/data/company";
 import { teamHeadcount } from "@/data/team";
 
 /**
- * TEST-Seite für die alternative Geschichte-Darstellung (Zeitstrahl
- * zwischen zwei Fotos statt Ausklapp-Liste) -- nicht verlinkt, nicht
- * indexiert. Sobald das Drohnenbild vom heutigen Standort da ist und
- * sich der Aufbau bewährt hat, wandert das Ergebnis in /unternehmen/
- * und diese Seite kann wieder weg.
+ * TEST-Seite für die alternative Geschichte-Darstellung (zehn Stationen
+ * in drei Epochen gruppiert, innerhalb jeder Epoche zweispaltig) --
+ * nicht verlinkt, nicht indexiert. Sobald das Drohnenbild vom heutigen
+ * Standort da ist und sich der Aufbau bewährt hat, wandert das Ergebnis
+ * in /unternehmen/ und diese Seite kann wieder weg.
  */
 export const metadata: Metadata = {
   title: "Unternehmen (Test) – Familienbetrieb in zweiter Generation",
@@ -115,7 +115,7 @@ export default function UnternehmenTestPage() {
             </p>
           </SectionHead>
 
-          <CompanyTimelineSpine />
+          <CompanyTimelineGrouped />
         </div>
       </section>
 
