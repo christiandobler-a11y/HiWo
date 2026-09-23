@@ -100,22 +100,59 @@ export default function UnternehmenTestPage() {
         </div>
       </section>
 
-      {/* Zeitleiste -- TEST: Spine-Variante statt Ausklapp-Liste */}
+      {/* Zeitleiste -- TEST: Epochen-Variante mit zweispaltigem Aufklapper.
+          SectionHead und Fotos liegen wie im Rest der Seite in der
+          durchgehenden container-site-Breite -- kein schmaler, zentrierter
+          Fotoblock mehr, der aus der Zeile bricht. */}
       <section className="section-y bg-paper-raised" aria-labelledby="geschichte">
         <div className="container-site">
-          <SectionHead
-            label="Geschichte"
-            title={<span id="geschichte">Seit {company.foundedYear}. Gewachsen aus Verantwortung.</span>}
-            lead="Seit der Gründung im Jahr 1989 hat sich HiWo-med kontinuierlich weiterentwickelt. Aus dem ursprünglichen Handelsunternehmen entstand über die Jahre ein leistungsfähiger medizinischer Versorger mit eigenem Lager, Fuhrpark und einem gewachsenen Team."
-          >
-            <p className="mt-4 leading-relaxed text-muted">
-              Dabei ist eines immer gleich geblieben: die persönliche Verantwortung für unsere
-              Kunden und eine zuverlässige Versorgung, auf die sich medizinische Einrichtungen
-              im Alltag verlassen können.
-            </p>
-          </SectionHead>
+          <div className="grid gap-x-12 gap-y-10 lg:grid-cols-12">
+            <div className="lg:col-span-5">
+              <SectionHead
+                label="Geschichte"
+                title={<span id="geschichte">Seit {company.foundedYear}. Gewachsen aus Verantwortung.</span>}
+                lead="Seit der Gründung im Jahr 1989 hat sich HiWo-med kontinuierlich weiterentwickelt. Aus dem ursprünglichen Handelsunternehmen entstand über die Jahre ein leistungsfähiger medizinischer Versorger mit eigenem Lager, Fuhrpark und einem gewachsenen Team."
+              >
+                <p className="mt-4 leading-relaxed text-muted">
+                  Dabei ist eines immer gleich geblieben: die persönliche Verantwortung für
+                  unsere Kunden und eine zuverlässige Versorgung, auf die sich medizinische
+                  Einrichtungen im Alltag verlassen können.
+                </p>
+              </SectionHead>
+            </div>
+
+            <figure className="lg:col-span-6 lg:col-start-7" data-reveal>
+              <Figure
+                name="standort-frueher-v1"
+                widths={[1200, 800]}
+                ratio={1.5}
+                alt="Historische Schwarz-Weiß-Luftaufnahme des ersten eigenen HiWo-med-Standorts „An der Ach“ in Uffing am Staffelsee."
+                sizes="(min-width: 1024px) 45vw, 100vw"
+                className="aspect-[3/2] w-full"
+              />
+              <FigureCaption>Der erste eigene Standort „An der Ach“ in Uffing, 1996.</FigureCaption>
+            </figure>
+          </div>
 
           <CompanyTimelineGrouped />
+
+          {/* Unteres Bild-Bookend, spiegelbildlich zum oberen: Platzhalter
+              bis das Drohnenbild vom heutigen Standort vorliegt. */}
+          <div className="mt-16 grid gap-x-12 gap-y-10 lg:grid-cols-12">
+            <div className="lg:col-span-5 lg:pt-6">
+              <p className="t-serif text-[clamp(1.15rem,1rem+0.6vw,1.4rem)] leading-[1.5] text-ink">
+                Heute – am selben Standort, deutlich gewachsen.
+              </p>
+            </div>
+            <div className="lg:col-span-6 lg:col-start-7">
+              <div className="figure-frame flex aspect-[3/2] w-full items-center justify-center border border-dashed border-line-strong bg-paper-tint">
+                <p className="max-w-[16rem] text-center text-[0.8125rem] leading-relaxed text-muted">
+                  Platzhalter – Drohnenbild vom heutigen Standort folgt in Kürze.
+                </p>
+              </div>
+              <FigureCaption>HiWo-med heute, Lagerhausstraße in Uffing.</FigureCaption>
+            </div>
+          </div>
         </div>
       </section>
 

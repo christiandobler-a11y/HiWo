@@ -3,7 +3,6 @@
 import { useState } from "react";
 
 import { PlusToggleIcon } from "@/components/ui/Button";
-import { Figure, FigureCaption } from "@/components/ui/Figure";
 import { company } from "@/data/company";
 
 /**
@@ -12,8 +11,11 @@ import { company } from "@/data/company";
  * gruppiert, innerhalb jeder Epoche zweispaltig. Das reduziert den
  * ersten Eindruck auf drei große Blöcke statt einer langen Liste von
  * zehn; jede Station ist weiterhin einzeln per Klick aufklappbar,
- * unabhängig von den anderen. Noch nicht produktiv verlinkt, siehe
- * /unternehmen-test/.
+ * unabhängig von den anderen. Rein textlich, ohne eigene Fotos -- die
+ * sitzen auf Seitenebene neben dem SectionHead bzw. am Ende der
+ * Section, damit die ganze Section dieselbe Breite wie der Rest der
+ * Seite hat (kein schmaler, zentrierter Fremdkörper mehr). Noch nicht
+ * produktiv verlinkt, siehe /unternehmen-test/.
  */
 type Milestone = { year: string; title: string; text: string };
 
@@ -133,20 +135,8 @@ function isOpenColor(open: boolean) {
 export function CompanyTimelineGrouped() {
   return (
     <div className="mt-14">
-      <figure className="mx-auto max-w-xl" data-reveal>
-        <Figure
-          name="standort-frueher-v1"
-          widths={[1200, 800]}
-          ratio={1.5}
-          alt="Historische Schwarz-Weiß-Luftaufnahme des ersten eigenen HiWo-med-Standorts „An der Ach“ in Uffing am Staffelsee."
-          sizes="(min-width: 1024px) 36rem, 100vw"
-          className="aspect-[3/2] w-full"
-        />
-        <FigureCaption>Der erste eigene Standort „An der Ach“ in Uffing, 1996.</FigureCaption>
-      </figure>
-
       {eras.map((era, i) => (
-        <div key={era.range} className={i === 0 ? "mt-14" : "mt-16"}>
+        <div key={era.range} className={i === 0 ? "" : "mt-16"}>
           <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 border-t-2 border-magenta pt-4">
             <span className="t-eyebrow text-magenta-ink">{era.range}</span>
             <h3 className="t-h3">{era.title}</h3>
@@ -158,15 +148,6 @@ export function CompanyTimelineGrouped() {
           </div>
         </div>
       ))}
-
-      <div className="mx-auto mt-16 max-w-xl">
-        <div className="figure-frame flex aspect-[3/2] w-full items-center justify-center border border-dashed border-line-strong bg-paper-tint">
-          <p className="max-w-[16rem] text-center text-[0.8125rem] leading-relaxed text-muted">
-            Platzhalter – Drohnenbild vom heutigen Standort folgt in Kürze.
-          </p>
-        </div>
-        <FigureCaption>HiWo-med heute, Lagerhausstraße in Uffing.</FigureCaption>
-      </div>
     </div>
   );
 }
