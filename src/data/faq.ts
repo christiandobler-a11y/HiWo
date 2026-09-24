@@ -15,11 +15,6 @@ export const faq = [
       "Im Großraum München in der Regel schon am nächsten Tag. Im Oberland, in Rosenheim, Traunstein, Augsburg und Schwaben innerhalb von 1–3 Arbeitstagen mit dem eigenen Lieferdienst. Im restlichen Bundesgebiet bei Bestellung bis 13:00 Uhr per UPS noch am selben Tag.",
   },
   {
-    question: "Beliefert ihr auch Privatpersonen?",
-    answer:
-      "Nein. Unser Angebot richtet sich ausschließlich an Ärzte, medizinische Fachkreise und weitere gewerbliche Kunden – ein Verkauf an Verbraucher findet nicht statt.",
-  },
-  {
     question: "Führt ihr auch Sprechstundenbedarf?",
     answer:
       "Ja, als eigenen Sortimentsbereich: Verbrauchsmaterialien, die Praxen über die Sprechstundenbedarfs-Vereinbarung mit den Krankenkassen abrechnen.",

@@ -2,9 +2,8 @@
 
 import { useState } from "react";
 
-import { Button, PlusToggleIcon } from "@/components/ui/Button";
+import { PlusToggleIcon } from "@/components/ui/Button";
 import { SectionHead } from "@/components/ui/Section";
-import { company } from "@/data/company";
 import { faq } from "@/data/faq";
 
 function FaqItem({ item, index }: { item: (typeof faq)[number]; index: number }) {
@@ -37,9 +36,9 @@ function FaqItem({ item, index }: { item: (typeof faq)[number]; index: number })
 
 /**
  * Kurze, echte Fragen -- keine Lückenfüller. Bewusst vor der ContactCta
- * platziert statt auf der Kontaktseite: schnelle Selbsthilfe hier, aber
- * die letzte Zeile führt direkt zum Anruf -- dem eigentlich gewünschten
- * Kanal, nicht zu einem Kontaktformular.
+ * platziert statt auf der Kontaktseite: schnelle Selbsthilfe hier, direkt
+ * gefolgt vom Telefon-CTA -- dem eigentlich gewünschten Kanal. Kein
+ * eigener Anruf-Button hier, das wäre doppelt.
  */
 export function Faq() {
   return (
@@ -56,10 +55,6 @@ export function Faq() {
             <FaqItem key={item.question} item={item} index={i} />
           ))}
         </ul>
-
-        <div className="mt-10">
-          <Button href={company.phone.href}>{company.phone.display}</Button>
-        </div>
       </div>
     </section>
   );
