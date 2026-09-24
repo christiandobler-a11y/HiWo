@@ -128,7 +128,7 @@ export const teamGroups: TeamGroup[] = [
     id: "logistik",
     name: "Lieferlogistik & Fuhrpark",
     summary:
-      "Acht Kolleginnen und Kollegen fahren die Ware selbst aus – bis an den gewünschten Lagerort in der Praxis, wo möglich in wiederverwendbaren Transportkisten, die im Normalfall gleich wieder mitgenommen werden.",
+      "Acht Kolleginnen und Kollegen fahren die Ware selbst aus – bis an den gewünschten Lagerort in der Praxis, wo möglich in wiederverwendbaren Transportkisten, die noch am selben Tag direkt wieder mitgenommen werden.",
     members: [
       {
         name: "Anton Wölfle",

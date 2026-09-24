@@ -48,7 +48,7 @@ const orderFlow = [
   },
   {
     title: "Übergabe",
-    text: "Die Lieferung kommt bis an den gewünschten Lagerort. Wo möglich liefern wir in wiederverwendbaren Transportkisten, die wir im Normalfall gleich wieder mitnehmen.",
+    text: "Die Lieferung kommt bis an den gewünschten Lagerort. Wo möglich liefern wir in wiederverwendbaren Transportkisten, die wir noch am selben Tag direkt wieder mitnehmen.",
   },
 ];
 

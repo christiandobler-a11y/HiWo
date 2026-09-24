@@ -19,7 +19,7 @@ const logisticsDetails = [
   },
   {
     title: "Eigenes Mehrwegsystem",
-    text: "Bei der eigenen Auslieferung setzen wir, wo möglich, wiederverwendbare Transportkisten ein – im Normalfall nehmen wir sie gleich wieder mit.",
+    text: "Bei der eigenen Auslieferung setzen wir, wo möglich, wiederverwendbare Transportkisten ein – die nehmen wir noch am selben Tag direkt wieder mit.",
   },
   {
     title: "Bestellung bis 17:00 Uhr",

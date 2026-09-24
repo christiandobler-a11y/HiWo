@@ -32,6 +32,6 @@ export const faq = [
   {
     question: "Was passiert mit den Transportkisten?",
     answer:
-      "Wo möglich liefern wir in wiederverwendbaren Transportkisten und nehmen sie im Normalfall bei der nächsten Auslieferung gleich wieder mit.",
+      "Wo möglich liefern wir in wiederverwendbaren Transportkisten und nehmen sie noch am selben Tag, direkt bei der Anlieferung, wieder mit.",
   },
 ] as const;
