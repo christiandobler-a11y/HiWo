@@ -2,12 +2,28 @@ import type { Metadata } from "next";
 
 import { PageHeader } from "@/components/layout/PageHeader";
 import { ContactCta } from "@/components/sections/ContactCta";
+import { Faq } from "@/components/sections/Faq";
 import { ArrowRight, Button } from "@/components/ui/Button";
 import { Figure, FigureCaption } from "@/components/ui/Figure";
 import { SectionHead, SectionMark } from "@/components/ui/Section";
 import { Stat } from "@/components/ui/Stat";
 import { company, customerGroups, deliveryRegions } from "@/data/company";
+import { faq } from "@/data/faq";
 import { assortment } from "@/data/site";
+
+/** FAQPage-Schema für Rich Snippets in der Suche. */
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faq.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
 
 export const metadata: Metadata = {
   title: "Leistungen – Versorgung, Lager und Lieferdienst",
@@ -281,6 +297,13 @@ export default function LeistungenPage() {
           </div>
         </div>
       </section>
+
+      <Faq />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
 
       <ContactCta />
     </>
