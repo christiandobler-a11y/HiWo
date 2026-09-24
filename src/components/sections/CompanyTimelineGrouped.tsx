@@ -6,16 +6,15 @@ import { PlusToggleIcon } from "@/components/ui/Button";
 import { company } from "@/data/company";
 
 /**
- * Zweite TEST-Variante der Geschichte-Section: zehn Stationen bleiben
- * -- inhaltlich unkürzbar, siehe Rückmeldung -- aber in drei Epochen
- * gruppiert, innerhalb jeder Epoche zweispaltig. Das reduziert den
- * ersten Eindruck auf drei große Blöcke statt einer langen Liste von
- * zehn; jede Station ist weiterhin einzeln per Klick aufklappbar,
+ * Zeitleiste der Geschichte-Section: zehn Stationen -- inhaltlich
+ * unkürzbar, jede einzeln benannt -- in drei Epochen gruppiert,
+ * innerhalb jeder Epoche zweispaltig. Das reduziert den ersten
+ * Eindruck auf drei große Blöcke statt einer langen Liste von zehn;
+ * jede Station ist weiterhin einzeln per Klick aufklappbar,
  * unabhängig von den anderen. Rein textlich, ohne eigene Fotos -- die
  * sitzen auf Seitenebene neben dem SectionHead bzw. am Ende der
- * Section, damit die ganze Section dieselbe Breite wie der Rest der
- * Seite hat (kein schmaler, zentrierter Fremdkörper mehr). Noch nicht
- * produktiv verlinkt, siehe /unternehmen-test/.
+ * Section (siehe unternehmen/page.tsx), damit die ganze Section
+ * dieselbe Breite wie der Rest der Seite hat.
  */
 type Milestone = { year: string; title: string; text: string };
 
