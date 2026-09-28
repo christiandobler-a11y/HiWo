@@ -133,22 +133,24 @@ export default function UnternehmenPage() {
 
           <CompanyTimelineGrouped />
 
-          {/* Unteres Bild-Bookend, spiegelbildlich zum oberen: Platzhalter
-              bis das Drohnenbild vom heutigen Standort vorliegt. */}
+          {/* Unteres Bild-Bookend, spiegelbildlich zum oberen. */}
           <div className="mt-16 grid gap-x-12 gap-y-10 lg:grid-cols-12">
             <div className="lg:col-span-5 lg:pt-6">
               <p className="t-serif text-[clamp(1.15rem,1rem+0.6vw,1.4rem)] leading-[1.5] text-ink">
                 Heute – am selben Standort, deutlich gewachsen.
               </p>
             </div>
-            <div className="lg:col-span-6 lg:col-start-7">
-              <div className="figure-frame flex aspect-[3/2] w-full items-center justify-center border border-dashed border-line-strong bg-paper-tint">
-                <p className="max-w-[16rem] text-center text-[0.8125rem] leading-relaxed text-muted">
-                  Platzhalter – Drohnenbild vom heutigen Standort folgt in Kürze.
-                </p>
-              </div>
+            <figure className="lg:col-span-6 lg:col-start-7" data-reveal>
+              <Figure
+                name="standort-heute-v1"
+                widths={[1200, 800]}
+                ratio={1.5}
+                alt="Luftaufnahme des heutigen HiWo-med-Standorts in der Lagerhausstraße in Uffing, mit Hauptgebäude und Lagerhalle."
+                sizes="(min-width: 1024px) 45vw, 100vw"
+                className="aspect-[3/2] w-full"
+              />
               <FigureCaption>HiWo-med heute, Lagerhausstraße in Uffing.</FigureCaption>
-            </div>
+            </figure>
           </div>
         </div>
       </section>
