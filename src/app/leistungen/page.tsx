@@ -237,16 +237,16 @@ export default function LeistungenPage() {
 
             <figure className="lg:col-span-5" data-reveal>
               <Figure
-                name="lager-regale-v6"
+                name="fuhrpark-sprinter-v1"
                 widths={[960, 640]}
-                ratio={2.49}
-                alt="Regalgang im Lager von HiWo-med, beidseitig gefüllt mit Verbandmaterial und Kartons."
+                ratio={2.4}
+                alt="Sieben HiWo-med-Lieferfahrzeuge nebeneinander vor der Lagerhalle in Uffing am Staffelsee."
                 sizes="(min-width: 1024px) 40vw, 100vw"
                 className="aspect-[4/3] w-full lg:aspect-[1.3/1]"
                 position="50% 50%"
               />
               <FigureCaption onDark>
-                Wareneingang, Qualitätskontrolle und Kommissionierung laufen an einem Standort.
+                Der eigene Fuhrpark vor der Lagerhalle – ein Fahrzeug ist immer schon unterwegs.
               </FigureCaption>
             </figure>
           </div>
