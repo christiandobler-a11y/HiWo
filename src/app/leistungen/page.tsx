@@ -245,9 +245,7 @@ export default function LeistungenPage() {
                 className="aspect-[4/3] w-full lg:aspect-[1.3/1]"
                 position="50% 50%"
               />
-              <FigureCaption onDark>
-                Der eigene Fuhrpark vor der Lagerhalle – ein Fahrzeug ist immer schon unterwegs.
-              </FigureCaption>
+              <FigureCaption onDark>Der eigene Fuhrpark vor der Lagerhalle in Uffing.</FigureCaption>
             </figure>
           </div>
         </div>
