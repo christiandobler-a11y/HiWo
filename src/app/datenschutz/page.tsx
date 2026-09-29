@@ -332,17 +332,62 @@ export default function DatenschutzPage() {
               hinausgehen.
             </p>
 
-            <h3 className="t-h3">10. Verarbeitung im Rahmen der Sprechstundenbedarfs- und Hilfsmittelversorgung</h3>
+            <h3 className="t-h3">10. Transparenzgebot (Information nach Art. 13 DSGVO)</h3>
             <p>
               Führen wir für eine Praxis Sprechstundenbedarf oder sonstige Hilfsmittel ab, die
-              über die gesetzlichen Krankenkassen abgerechnet werden, verarbeiten wir zusätzlich
-              zu den oben genannten Kontaktdaten auch die für die Abrechnung erforderlichen
-              Angaben. Dazu können insbesondere Verordnungen, Hilfsmittelpositionsnummern,
-              Angaben zur Krankenkasse sowie – soweit für die konkrete Versorgung notwendig –
-              Gesundheitsdaten im Sinne von Art. 9 DSGVO gehören.
+              über die gesetzlichen Krankenkassen abgerechnet werden, informieren wir Sie gemäß
+              Art. 13 DSGVO gesondert über die Verarbeitung der dabei anfallenden
+              personenbezogenen Daten.
             </p>
             <p>
-              <strong>Zweck und Rechtsgrundlage</strong>
+              <strong>Zweck der Verarbeitung</strong>
+              <br />
+              Ihre Daten sind zur Abwicklung der Vertragsleistung notwendig und werden je nach
+              Fall zu folgenden Zwecken verarbeitet: Erfüllung vertraglicher Verpflichtungen
+              gegenüber Ihrer Krankenkasse, Zahlungsabwicklung, Lieferung der bestellten Produkte,
+              Übermittlung Ihrer Adressdaten an Logistik-Unternehmen zur Warenlieferung,
+              Übermittlung der Abrechnungsdaten an ein Abrechnungszentrum und Weiterleitung an
+              den Kostenträger, Übermittlung von Daten an Ihre Krankenkasse bzw. den Medizinischen
+              Dienst (MDK) sowie Übermittlung elektronischer Kostenvoranschläge. Eine Übermittlung
+              in Drittländer findet dabei nicht statt.
+            </p>
+            <p>
+              <strong>Dauer der Verarbeitung</strong>
+              <br />
+              Wir verarbeiten Ihre Daten nur so lange, wie es zur Erfüllung des Vertrages oder
+              geltender Rechtsvorschriften sowie der Pflege unserer Geschäftsbeziehung zu Ihnen
+              erforderlich ist. Geschäftliche Unterlagen bewahren wir entsprechend den Vorgaben
+              des Handelsgesetzbuchs und der Abgabenordnung höchstens sechs bzw. zehn Jahre auf.
+              Wünschen Sie die Löschung Ihrer Daten, löschen oder anonymisieren wir diese
+              unverzüglich, soweit keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
+            </p>
+            <p>
+              Welche Rechte Ihnen als betroffene Person hinsichtlich dieser Daten zustehen, lesen
+              Sie unter Ziffer 13. Bei Fragen zu dieser Information steht Ihnen unser
+              Datenschutzbeauftragter (siehe Ziffer 2) gerne zur Verfügung.
+            </p>
+
+            <h3 className="t-h3">11. Datenschutzrichtlinien für die Sprechstundenbedarfs- und Hilfsmittelversorgung</h3>
+            <p>
+              Über die allgemeinen Regelungen dieser Datenschutzerklärung hinaus gelten für die
+              Versorgung von Praxen mit Sprechstundenbedarf und Hilfsmitteln nach SGB V unsere
+              internen Datenschutzrichtlinien. Sie legen fest, wie wir personenbezogene Daten
+              und besondere Kategorien personenbezogener Daten (insbesondere Gesundheitsdaten
+              gemäß Art. 9 DSGVO) im Rahmen dieser Versorgung erfassen, verarbeiten und schützen.
+            </p>
+            <p>
+              <strong>Kategorien der verarbeiteten Daten</strong>
+              <br />
+              Bei Auftragsannahme erfassen wir je nach Versorgung insbesondere Name, Adresse,
+              Geburtsdatum, Kontaktdaten, Angaben zur Krankenkasse und Versicherungsnummer, Daten
+              zur Verordnung und Indikation, Hilfsmittelpositionsnummer sowie Daten zu Auftrag,
+              Lieferung und Abrechnung. Bei Sonderanfertigungen erheben wir zusätzlich technische
+              Maß- und Messdaten, die zur Konzeption des Hilfsmittels benötigt werden; diese
+              gelten als vertrauliche technische Daten und werden nur nach schriftlicher
+              Einwilligung an Dritte weitergegeben.
+            </p>
+            <p>
+              <strong>Rechtsgrundlage</strong>
               <br />
               Die Verarbeitung erfolgt zur Erfüllung unserer vertraglichen Verpflichtungen
               gegenüber den gesetzlichen Krankenkassen (§ 127 SGB V), zur Abrechnung (§§ 300, 302
@@ -361,16 +406,18 @@ export default function DatenschutzPage() {
               möglich ohne unmittelbaren Personenbezug.
             </p>
             <p>
-              <strong>Speicherdauer</strong>
+              <strong>Speicherdauer und Löschung</strong>
               <br />
               Abrechnungs- und Versorgungsunterlagen bewahren wir entsprechend den Vorgaben des
-              Handelsgesetzbuchs und der Abgabenordnung höchstens sechs bzw. zehn Jahre auf. Eine
-              automatisierte Entscheidungsfindung im Sinne von Art. 22 DSGVO findet dabei nicht
-              statt; jeder Versorgungsfall wird nach den Vorgaben des jeweiligen Kostenträgers
-              individuell geprüft.
+              Handelsgesetzbuchs und der Abgabenordnung höchstens sechs bzw. zehn Jahre auf. Die
+              Daten werden gelöscht oder gesperrt, sobald der Zweck der Speicherung entfällt und
+              keine gesetzliche Aufbewahrungspflicht entgegensteht. Eine automatisierte
+              Entscheidungsfindung im Sinne von Art. 22 DSGVO findet dabei nicht statt; jeder
+              Versorgungsfall wird nach den Vorgaben des jeweiligen Kostenträgers individuell
+              geprüft.
             </p>
 
-            <h3 className="t-h3">11. Empfänger personenbezogener Daten</h3>
+            <h3 className="t-h3">12. Empfänger personenbezogener Daten</h3>
             <p>
               Wir übermitteln personenbezogene Daten grundsätzlich nur dann an Dritte, wenn dies
               für die jeweiligen Verarbeitungszwecke erforderlich ist, eine gesetzliche
@@ -395,7 +442,7 @@ export default function DatenschutzPage() {
               nicht statt.
             </p>
 
-            <h3 className="t-h3">12. Ihre Rechte als betroffene Person</h3>
+            <h3 className="t-h3">13. Ihre Rechte als betroffene Person</h3>
             <p>
               Sie haben nach Maßgabe der gesetzlichen Voraussetzungen folgende Rechte hinsichtlich
               Ihrer personenbezogenen Daten:
@@ -459,7 +506,7 @@ export default function DatenschutzPage() {
               Datenschutzbeauftragten wenden.
             </p>
 
-            <h3 className="t-h3">13. Beschwerderecht bei einer Aufsichtsbehörde</h3>
+            <h3 className="t-h3">14. Beschwerderecht bei einer Aufsichtsbehörde</h3>
             <p>
               Unbeschadet anderer verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe haben
               Sie das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung
@@ -486,7 +533,7 @@ export default function DatenschutzPage() {
               </a>
             </p>
 
-            <h3 className="t-h3">14. Bereitstellung personenbezogener Daten</h3>
+            <h3 className="t-h3">15. Bereitstellung personenbezogener Daten</h3>
             <p>
               Der Besuch unserer Website ist grundsätzlich ohne die aktive Angabe
               personenbezogener Daten möglich. Die bei einem Websiteaufruf technisch
@@ -503,13 +550,13 @@ export default function DatenschutzPage() {
               erforderlich, um ein Kundenkonto zu verwalten und Bestellungen abzuwickeln.
             </p>
 
-            <h3 className="t-h3">15. Automatisierte Entscheidungsfindung</h3>
+            <h3 className="t-h3">16. Automatisierte Entscheidungsfindung</h3>
             <p>
               Eine automatisierte Entscheidungsfindung einschließlich Profiling gemäß Art. 22
               DSGVO findet im Rahmen des Besuchs unserer Website nicht statt.
             </p>
 
-            <h3 className="t-h3">16. Datensicherheit und Verschlüsselung</h3>
+            <h3 className="t-h3">17. Datensicherheit und Verschlüsselung</h3>
             <p>
               Wir setzen geeignete technische und organisatorische Maßnahmen ein, um
               personenbezogene Daten vor Verlust, unbefugtem Zugriff, unzulässiger Verarbeitung
@@ -520,7 +567,7 @@ export default function DatenschutzPage() {
               gewährleistet werden kann.
             </p>
 
-            <h3 className="t-h3">17. Aktualität und Änderungen dieser Datenschutzerklärung</h3>
+            <h3 className="t-h3">18. Aktualität und Änderungen dieser Datenschutzerklärung</h3>
             <p>
               Wir behalten uns vor, diese Datenschutzerklärung anzupassen, wenn sich unsere
               Website, die eingesetzten technischen Dienste oder die rechtlichen Anforderungen
