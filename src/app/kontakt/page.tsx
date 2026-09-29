@@ -212,10 +212,6 @@ export default function KontaktPage() {
                   <ArrowRight />
                 </Button>
               </div>
-              <p className="mt-6 text-[0.8125rem] leading-relaxed text-muted">
-                Eine eingebettete Karte fehlt hier bewusst, weil sie ohne Einwilligung Daten an
-                Dritte überträgt. Sie wird erst nach ausdrücklicher Einwilligung nachgeladen.
-              </p>
             </div>
           </div>
         </div>

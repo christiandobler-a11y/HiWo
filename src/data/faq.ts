@@ -17,7 +17,7 @@ export const faq = [
   {
     question: "Führt ihr auch Sprechstundenbedarf?",
     answer:
-      "Ja, als eigenen Sortimentsbereich: Verbrauchsmaterialien, die Praxen über die Sprechstundenbedarfs-Vereinbarung mit den Krankenkassen abrechnen.",
+      "Ja, als eigenen Sortimentsbereich: Verbrauchsmaterialien, die Praxen über die Sprechstundenbedarfs-Vereinbarung abrechnen.",
   },
   {
     question: "Wie komme ich an einen FastOrder-Zugang?",
