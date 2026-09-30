@@ -47,7 +47,7 @@
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
-# Grundlegende Sicherheits-Header. Der Prototyp lädt ausschließlich eigene
+# Grundlegende Sicherheits-Header. Die Seite lädt ausschließlich eigene
 # Dateien – keine externen Skripte, Schriften, Karten oder Tracker.
 [[headers]]
   for = "/*"
@@ -55,7 +55,78 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     X-Frame-Options = "SAMEORIGIN"
-    # Der Entwurf soll nicht in Suchergebnissen auftauchen, solange er nur
-    # zur internen Abstimmung online ist. Vor einem echten Livegang
-    # entfernen – zusammen mit robots.ts und robots.index in layout.tsx.
-    X-Robots-Tag = "noindex, nofollow"
+
+# Weiterleitungen von den alten hiwomed.de/de/*.html-Adressen auf die neuen
+# Pfade -- alte, bereits bei Google indexierte Links (z. B. aus Suchergebnissen
+# oder Lesezeichen) sollen nicht ins Leere laufen. Reihenfolge wichtig: Netlify
+# nimmt die erste passende Regel, darum stehen die konkreten Pfade vor dem
+# Catch-all für alles verbleibende unter /de/*.
+[[redirects]]
+  from = "/de/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/de/home.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/de/leistungen.html"
+  to = "/leistungen/"
+  status = 301
+
+[[redirects]]
+  from = "/de/sortiment.html"
+  to = "/leistungen/"
+  status = 301
+
+[[redirects]]
+  from = "/de/seminare.html"
+  to = "/services/"
+  status = 301
+
+[[redirects]]
+  from = "/de/kontakt.html"
+  to = "/kontakt/"
+  status = 301
+
+[[redirects]]
+  from = "/de/team.html"
+  to = "/team/"
+  status = 301
+
+[[redirects]]
+  from = "/de/karriere.html"
+  to = "/karriere/"
+  status = 301
+
+[[redirects]]
+  from = "/de/unser-anspruch.html"
+  to = "/unternehmen/"
+  status = 301
+
+[[redirects]]
+  from = "/de/unsere-kunden.html"
+  to = "/unternehmen/"
+  status = 301
+
+[[redirects]]
+  from = "/de/impressum-agbs.html"
+  to = "/impressum/"
+  status = 301
+
+[[redirects]]
+  from = "/de/datenschutz.html"
+  to = "/datenschutz/"
+  status = 301
+
+[[redirects]]
+  from = "/de/sitemap.html"
+  to = "/sitemap.xml"
+  status = 301
+
+[[redirects]]
+  from = "/de/*"
+  to = "/"
+  status = 301
