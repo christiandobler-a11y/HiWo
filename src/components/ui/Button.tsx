@@ -45,7 +45,18 @@ export function Button({
     .filter(Boolean)
     .join(" ");
 
-  if (external || href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:")) {
+  // Eine Datei-Endung (z. B. /downloads/katalog.pdf) ist kein App-Router-Pfad --
+  // next/link würde dafür trotzdem eine RSC-Payload-Datei (".../datei.pdf.txt")
+  // prefetchen, die es nicht gibt, und einen 404 in der Konsole erzeugen.
+  const isFileDownload = /\.\w+$/.test(href.split(/[?#]/)[0]);
+
+  if (
+    external ||
+    href.startsWith("http") ||
+    href.startsWith("mailto:") ||
+    href.startsWith("tel:") ||
+    isFileDownload
+  ) {
     return (
       <a
         href={href}
