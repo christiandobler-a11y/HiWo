@@ -57,7 +57,11 @@ export const company = {
   links: {
     fastOrder: "https://hiwomed.fast-order.cloud/login",
     shop: "https://hiwomed-shop.de/register",
-    catalog: "https://www.hiwomed.de/media/files/downloads/HiWo-Katalog_2019-20.pdf",
+    /** Lokal im Projekt gehostet (public/downloads), nicht mehr extern
+     *  verlinkt -- der alte Dateispeicher des vorherigen Servers war nicht
+     *  Teil der Migration und ist nach der DNS-Umstellung nicht mehr
+     *  erreichbar. */
+    catalog: "/downloads/HiWo-Katalog-2025-26.pdf",
   },
 } as const;
 
