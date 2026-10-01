@@ -238,8 +238,8 @@ export default function KontaktPage() {
                 <div className="figure-frame aspect-[4/5] w-full">
                   <img
                     src={`/team/${m.photo}.webp`}
-                    width={420}
-                    height={525}
+                    width={480}
+                    height={600}
                     alt={`Porträt von ${m.name}`}
                     loading="lazy"
                     decoding="async"

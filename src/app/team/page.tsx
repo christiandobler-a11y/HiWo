@@ -29,8 +29,8 @@ function MemberCard({ member, delay }: { member: TeamMember; delay: number }) {
       <div className="figure-frame aspect-[4/5] w-full">
         <img
           src={`/team/${member.photo}.webp`}
-          width={420}
-          height={525}
+          width={480}
+          height={600}
           alt={`Porträt von ${member.name}`}
           loading="lazy"
           decoding="async"

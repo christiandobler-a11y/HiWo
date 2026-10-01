@@ -71,8 +71,8 @@ export default function KarrierePage() {
               <div className="figure-frame aspect-[4/5] w-[68px] shrink-0">
                 <img
                   src={`/team/${applicationContact.photo}.webp`}
-                  width={420}
-                  height={525}
+                  width={480}
+                  height={600}
                   alt={`Porträt von ${applicationContact.name}`}
                   loading="lazy"
                   decoding="async"

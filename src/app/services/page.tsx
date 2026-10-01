@@ -123,8 +123,8 @@ function ServiceEntry({ service, index }: { service: Service; index: number }) {
                 <div className="figure-frame aspect-[4/5] w-[72px] shrink-0">
                   <img
                     src={`/team/${t.photo}.webp`}
-                    width={420}
-                    height={525}
+                    width={480}
+                    height={600}
                     alt={`Porträt von ${t.name}`}
                     loading="lazy"
                     decoding="async"
