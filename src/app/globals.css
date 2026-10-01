@@ -121,7 +121,10 @@ blockquote {
 
 /* `anywhere` statt `break-word`: nur so schrumpft auch die intrinsische
    Mindestbreite mit – sonst sprengt ein Wort wie „Trinkwasserprobenentnahme“
-   auf schmalen Geräten die Spalte. */
+   auf schmalen Geräten die Spalte. `hyphens: manual` extra gesetzt, weil
+   diese Elemente oft innerhalb von p/li stehen, die weiter oben hyphens:
+   none bekommen -- das vererbt sich sonst auch hierher und ignoriert gezielt
+   im Text platzierte weiche Trennzeichen (­, siehe services.ts). */
 h1,
 h2,
 h3,
@@ -132,6 +135,7 @@ td,
 a,
 span {
   overflow-wrap: anywhere;
+  hyphens: manual;
 }
 
 

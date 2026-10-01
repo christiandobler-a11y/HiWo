@@ -54,7 +54,21 @@ export function CareerTeaser() {
                   </Button>
                 </div>
               </div>
-            ) : null}
+            ) : (
+              <div className="mt-9 border-t border-line pt-6">
+                <p className="t-eyebrow text-muted">Aktuell keine offene Stelle</p>
+                <p className="mt-3 max-w-[32rem] text-[0.9375rem] text-muted">
+                  Initiativbewerbungen sind trotzdem ausdrücklich willkommen – besonders in
+                  Lager, Logistik und Innendienst.
+                </p>
+                <div className="mt-6">
+                  <Button href="/karriere/">
+                    Benefits und Kontakt ansehen
+                    <ArrowRight />
+                  </Button>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

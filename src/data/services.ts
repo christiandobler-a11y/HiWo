@@ -113,7 +113,11 @@ export const services: Service[] = [
   },
   {
     id: "trinkwasserprobe",
-    title: "Trinkwasserprobenentnahme",
+    // Weiche Trennzeichen (­): ohne gezielte Trennstellen bricht der
+    // Browser dieses lange Wort auf schmalen Displays sonst mitten im Wort
+    // (z. B. "Trinkwasserprobenentnah-me"), weil overflow-wrap: anywhere in
+    // globals.css als Notbremse sonst irgendwo umbricht.
+    title: "Trinkwasser­proben­entnahme",
     format: "Vor Ort in Ihrer Praxis",
     claim:
       "Die regelmäßige Untersuchung für die Medizinprodukteaufbereitung – Entnahme, Labor und Prüfbericht aus einer Hand.",

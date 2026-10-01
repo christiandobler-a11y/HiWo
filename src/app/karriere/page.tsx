@@ -5,20 +5,17 @@ import { ArrowRight, Button } from "@/components/ui/Button";
 import { Figure, FigureCaption } from "@/components/ui/Figure";
 import { SectionHead, SectionMark } from "@/components/ui/Section";
 import { company } from "@/data/company";
-import { applicationContact, employerFacts, openPositions } from "@/data/career";
+import { applicationContact, employerFacts } from "@/data/career";
 
 export const metadata: Metadata = {
   title: "Karriere – Arbeiten bei HiWo-med",
   description:
-    "Offene Stellen, Benefits und Unternehmenskultur bei HiWo-med Medizintechnik in Uffing am Staffelsee: inhabergeführtes Familienunternehmen, flache Hierarchien, 30 Tage Urlaub, intensive Einarbeitung.",
+    "Initiativbewerbungen, Benefits und Unternehmenskultur bei HiWo-med Medizintechnik in Uffing am Staffelsee: inhabergeführtes Familienunternehmen, flache Hierarchien, 30 Tage Urlaub, intensive Einarbeitung.",
   alternates: { canonical: "/karriere/" },
 };
 
 export default function KarrierePage() {
-  const position = openPositions[0];
-  const applyHref = `mailto:${company.email.jobs}?subject=${encodeURIComponent(
-    `Bewerbung: ${position.title}`,
-  )}`;
+  const applyHref = `mailto:${company.email.jobs}?subject=${encodeURIComponent("Initiativbewerbung")}`;
 
   return (
     <>
@@ -51,115 +48,49 @@ export default function KarrierePage() {
         </div>
       </section>
 
-      {/* Offene Stelle */}
-      <section className="section-y bg-paper-raised" aria-labelledby="stellen">
+      {/* Keine offene Stelle derzeit -- die zuletzt ausgeschriebene (Sachbearbeiter
+          Innendienst) ist besetzt. Initiativbewerbungen sind der aktive
+          Bewerbungsweg, deshalb bekommt diese Einladung hier denselben Platz
+          und dieselbe Sichtbarkeit, die zuvor die Stellenanzeige hatte --
+          inklusive echtem Ansprechpartner statt anonymer Postfachadresse. */}
+      <section className="section-y bg-paper-raised" aria-labelledby="bewerbung">
         <div className="container-site">
           <SectionHead
-            label="Offene Stellen"
+            label="Bewerbung"
             split
-            title={<span id="stellen">Aktuell suchen wir Verstärkung</span>}
-            lead="Sie finden keine passende Ausschreibung? Initiativbewerbungen sind ausdrücklich willkommen – gerade in Lager, Logistik und Innendienst."
+            title={<span id="bewerbung">Aktuell keine offene Stelle – Initiativbewerbungen trotzdem ausdrücklich erwünscht</span>}
+            lead="Unsere zuletzt ausgeschriebene Stelle ist besetzt. Weil wir weiter wachsen, entstehen aber laufend neue Aufgaben, bevor dafür eine Anzeige online geht – besonders in Lager, Logistik und Innendienst. Schreiben Sie uns, was Sie können und was Sie suchen."
           />
 
-          <article className="mt-14 border-t-2 border-magenta pt-8">
-            <div className="grid gap-x-12 gap-y-10 lg:grid-cols-12">
-              <header className="lg:col-span-4">
-                <h3 className="t-h2">{position.title}</h3>
-                <dl className="mt-7 border-t border-line">
-                  <div className="grid grid-cols-[minmax(0,7rem)_1fr] gap-4 border-b border-line py-3">
-                    <dt className="text-[0.8125rem] uppercase leading-snug tracking-[0.08em] text-muted">
-                      Umfang
-                    </dt>
-                    <dd className="text-[0.9375rem] text-ink">{position.employment}</dd>
-                  </div>
-                  <div className="grid grid-cols-[minmax(0,7rem)_1fr] gap-4 border-b border-line py-3">
-                    <dt className="text-[0.8125rem] uppercase leading-snug tracking-[0.08em] text-muted">
-                      Ort
-                    </dt>
-                    <dd className="text-[0.9375rem] text-ink">{position.location}</dd>
-                  </div>
-                  <div className="grid grid-cols-[minmax(0,7rem)_1fr] gap-4 border-b border-line py-3">
-                    <dt className="text-[0.8125rem] uppercase leading-snug tracking-[0.08em] text-muted">
-                      Start
-                    </dt>
-                    <dd className="text-[0.9375rem] text-ink">zum nächstmöglichen Zeitpunkt</dd>
-                  </div>
-                </dl>
-
-                <div className="mt-8">
-                  <Button href={applyHref}>
-                    Jetzt bewerben
-                    <ArrowRight />
-                  </Button>
-                </div>
-
-                {/* Echter Ansprechpartner statt anonymer Postfachadresse. */}
-                <div className="mt-8 flex gap-4 border-t border-line pt-6">
-                  <div className="figure-frame aspect-[4/5] w-[68px] shrink-0">
-                    <img
-                      src={`/team/${applicationContact.photo}.webp`}
-                      width={420}
-                      height={525}
-                      alt={`Porträt von ${applicationContact.name}`}
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <div className="text-[0.875rem] leading-relaxed">
-                    <p className="font-semibold text-ink">{applicationContact.name}</p>
-                    <p className="text-muted">{applicationContact.role}</p>
-                    <a
-                      href={`mailto:${company.email.jobs}`}
-                      className="mt-0.5 inline-block py-2.5 text-magenta-ink underline-offset-4 hover:underline"
-                    >
-                      {company.email.jobs}
-                    </a>
-                  </div>
-                </div>
-              </header>
-
-              <div className="lg:col-span-7 lg:col-start-6">
-                {position.intro.map((p) => (
-                  <p key={p} className="leading-relaxed text-muted [&+p]:mt-4">
-                    {p}
-                  </p>
-                ))}
-
-                <h4 className="t-eyebrow mt-9 text-ink">Ihre Aufgaben</h4>
-                <ul className="list-tick mt-4 text-muted">
-                  {position.tasks.map((t) => (
-                    <li key={t}>{t}</li>
-                  ))}
-                </ul>
-
-                <h4 className="t-eyebrow mt-9 text-ink">Das bringen Sie mit</h4>
-                <ul className="list-tick mt-4 text-muted">
-                  {position.profile.map((t) => (
-                    <li key={t}>{t}</li>
-                  ))}
-                </ul>
-
-                <h4 className="t-eyebrow mt-9 text-ink">Das erwartet Sie</h4>
-                <ul className="list-tick mt-4 text-muted">
-                  {position.offer.map((t) => (
-                    <li key={t}>{t}</li>
-                  ))}
-                </ul>
-
-                <p className="mt-9 border-l-2 border-magenta pl-5 leading-relaxed text-ink">
-                  Senden Sie Ihre Bewerbung mit Angabe Ihres frühestmöglichen Eintrittstermins
-                  und Ihrer Gehaltsvorstellung per E-Mail an {applicationContact.name} unter{" "}
-                  <a
-                    href={applyHref}
-                    className="font-semibold text-magenta-ink underline underline-offset-4"
-                  >
-                    {company.email.jobs}
-                  </a>
-                  .
-                </p>
+          <div className="mt-12 flex flex-wrap items-center justify-between gap-8 border-t-2 border-magenta pt-8">
+            <div className="flex gap-4">
+              <div className="figure-frame aspect-[4/5] w-[68px] shrink-0">
+                <img
+                  src={`/team/${applicationContact.photo}.webp`}
+                  width={420}
+                  height={525}
+                  alt={`Porträt von ${applicationContact.name}`}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div className="text-[0.875rem] leading-relaxed">
+                <p className="font-semibold text-ink">{applicationContact.name}</p>
+                <p className="text-muted">{applicationContact.role}</p>
+                <a
+                  href={`mailto:${company.email.jobs}`}
+                  className="mt-0.5 inline-block py-2.5 text-magenta-ink underline-offset-4 hover:underline"
+                >
+                  {company.email.jobs}
+                </a>
               </div>
             </div>
-          </article>
+
+            <Button href={applyHref}>
+              Initiativbewerbung senden
+              <ArrowRight />
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -189,24 +120,22 @@ export default function KarrierePage() {
         </div>
       </section>
 
-      {/* Initiativbewerbung */}
+      {/* Zweiter, kürzerer Anstoß nach den Benefits -- bewusst andere Formulierung
+          als oben, um Initiativbewerbungen am Ende der Seite nochmal zu betonen,
+          ohne den Text von oben zu wiederholen. */}
       <section className="dark-section section-y">
         <div className="container-site">
           <div className="grid gap-x-12 gap-y-8 lg:grid-cols-12">
             <div className="lg:col-span-7">
               <SectionMark label="Initiativbewerbung" onDark className="mb-6" />
-              <h2 className="t-h2">Nichts Passendes dabei?</h2>
+              <h2 className="t-h2">Auch ohne Stellenanzeige: melden Sie sich</h2>
               <p className="mt-6 max-w-[42rem] text-night-muted">
-                Wir wachsen weiter – in Lager, Logistik und Innendienst entstehen immer wieder
-                Aufgaben, bevor eine Ausschreibung online geht. Schreiben Sie uns, was Sie
-                können und was Sie suchen. Wir melden uns zurück.
+                Wir lesen jede Initiativbewerbung persönlich und melden uns zurück –
+                unabhängig davon, ob gerade eine Stelle ausgeschrieben ist.
               </p>
             </div>
             <div className="flex flex-wrap items-start gap-4 lg:col-span-4 lg:col-start-9 lg:justify-end">
-              <Button
-                href={`mailto:${company.email.jobs}?subject=${encodeURIComponent("Initiativbewerbung")}`}
-                variant="onDark"
-              >
+              <Button href={applyHref} variant="onDark">
                 {company.email.jobs}
               </Button>
             </div>

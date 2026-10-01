@@ -15,7 +15,9 @@ export const metadata: Metadata = {
 };
 
 function mailtoFor(service: Service) {
-  const subject = encodeURIComponent(`Anfrage: ${service.title}`);
+  // ­ (weiche Trennzeichen für den Zeilenumbruch, siehe services.ts)
+  // gehören nicht in den E-Mail-Betreff.
+  const subject = encodeURIComponent(`Anfrage: ${service.title.replace(/­/g, "")}`);
   return `mailto:${company.email.training}?subject=${subject}`;
 }
 

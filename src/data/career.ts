@@ -1,9 +1,11 @@
 /**
  * Karriere.
  *
- * QUELLE: hiwomed.de/de/karriere.html — Stellenausschreibung, Aufgaben,
- * Anforderungen, Leistungen und Arbeitgebermerkmale sind wörtlich bzw.
- * sinngleich übernommen. Es wurden keine Benefits ergänzt.
+ * QUELLE: hiwomed.de/de/karriere.html — Benefits und Arbeitgebermerkmale sind
+ * wörtlich bzw. sinngleich übernommen, es wurden keine ergänzt. Die zuletzt
+ * ausgeschriebene Stelle (Sachbearbeiter Innendienst) ist besetzt, daher
+ * aktuell keine Einträge in openPositions -- Initiativbewerbungen sind der
+ * aktive Bewerbungsweg (siehe karriere/page.tsx und CareerTeaser.tsx).
  */
 
 export type Position = {
@@ -17,53 +19,7 @@ export type Position = {
   offer: string[];
 };
 
-export const openPositions: Position[] = [
-  {
-    id: "sachbearbeiter-innendienst",
-    title: "Sachbearbeiter Innendienst / Vertriebsinnendienst (m/w/d)",
-    employment: "Vollzeit, unbefristet",
-    location: "Uffing am Staffelsee",
-    intro: [
-      "Die HiWo-med Medizintechnik GmbH ist ein inhabergeführtes Familienunternehmen mit Sitz in Uffing. Seit über 37 Jahren versorgen wir Arztpraxen, ambulante OP-Zentren, Tageskliniken und Medizinische Versorgungszentren zuverlässig mit Medizinprodukten und individuellen Versorgungslösungen.",
-      "Damit unsere Kunden auch künftig persönlich und kompetent betreut werden, suchen wir zum nächstmöglichen Zeitpunkt Verstärkung für unseren Innendienst.",
-    ],
-    tasks: [
-      "Kompetente persönliche und telefonische Betreuung unserer Kunden",
-      "Bearbeitung von Kundenanfragen sowie Erstellung und Nachverfolgung von Angeboten",
-      "Begleitung von Kundenaufträgen von der Bestellung bis zur Auslieferung",
-      "Koordination und Terminüberwachung der Auftragsabwicklung",
-      "Erstellung von Auftragsbestätigungen, Lieferscheinen und Rechnungen",
-      "Bearbeitung von Reklamationen sowie lösungsorientierte Kundenbetreuung",
-      "Pflege und Aktualisierung von Kunden-, Artikel- und Preisdaten",
-      "Enge Zusammenarbeit mit dem Außendienst sowie mit Einkauf und Logistik",
-      "Unterstützung bei allgemeinen administrativen und organisatorischen Aufgaben",
-    ],
-    profile: [
-      "Erfolgreich abgeschlossene kaufmännische Ausbildung oder eine vergleichbare Qualifikation",
-      "Berufserfahrung im Vertriebsinnendienst oder Kundenservice ist von Vorteil",
-      "Kenntnisse im Gesundheitswesen oder im medizinischen Fachhandel sind von Vorteil – wir arbeiten Sie aber umfassend ein",
-      "Quereinsteigerinnen und Quereinsteiger mit kaufmännischem Hintergrund sind ebenfalls willkommen",
-      "Sicherer Umgang mit den gängigen MS-Office-Anwendungen",
-      "Strukturierte, eigenverantwortliche und sorgfältige Arbeitsweise",
-      "Ausgeprägte Service- und Kundenorientierung sowie Kommunikationsstärke",
-      "Teamgeist, Organisationstalent und ein hohes Maß an Eigeninitiative",
-    ],
-    offer: [
-      "Ein unbefristetes Arbeitsverhältnis in einem wachsenden Familienunternehmen",
-      "Eine attraktive und leistungsgerechte Vergütung",
-      "30 Tage Urlaub",
-      "Vermögenswirksame Leistungen",
-      "Firmenwagen (auch zur privaten Nutzung) nach erfolgreicher Probezeit möglich",
-      "Eine strukturierte und umfassende Einarbeitung",
-      "Eigenverantwortliches Arbeiten mit kurzen Entscheidungswegen und flachen Hierarchien",
-      "Ein modern ausgestatteter Arbeitsplatz in einem kollegialen Umfeld",
-      "Individuelle Fort- und Weiterbildungsmöglichkeiten, einschließlich der Qualifizierung zum Medizinprodukteberater (m/w/d)",
-      "Langfristige Entwicklungsperspektiven",
-      "Kostenlose Heiß- und Kaltgetränke sowie Kaffee",
-      "Elektroladestation für Elektrofahrzeuge",
-    ],
-  },
-];
+export const openPositions: Position[] = [];
 
 /** Kurzform für den Teaser auf der Startseite. */
 export const cultureHighlights = [

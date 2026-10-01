@@ -12,12 +12,10 @@ export const metadata: Metadata = {
   alternates: { canonical: "/team/" },
 };
 
-/** Dienstjahre als Einordnung – zeigt die Beständigkeit ohne Pathos. */
+/** Eintrittsjahr als Einordnung – einheitlich, ohne ausgeschriebene Jahre. */
 function tenureLabel(member: TeamMember) {
   if (member.status) return member.status;
   if (!member.since) return null;
-  const years = new Date().getFullYear() - member.since;
-  if (years >= 15) return `seit ${member.since} · ${years} Jahre dabei`;
   return `seit ${member.since}`;
 }
 
