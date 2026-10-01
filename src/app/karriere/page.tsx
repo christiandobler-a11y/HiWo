@@ -53,7 +53,11 @@ export default function KarrierePage() {
           Bewerbungsweg, deshalb bekommt diese Einladung hier denselben Platz
           und dieselbe Sichtbarkeit, die zuvor die Stellenanzeige hatte --
           inklusive echtem Ansprechpartner statt anonymer Postfachadresse. */}
-      <section className="section-y bg-paper-raised" aria-labelledby="bewerbung">
+      {/* Kein bg-paper-raised hier: das würde eine sichtbare Kante um das
+          Ansprechpartner-Foto erzeugen, dessen Hintergrund auf die normale
+          --color-paper-Fläche abgestimmt ist (wie bei allen anderen
+          Team-Fotos auf Team- und Kontaktseite auch). */}
+      <section className="section-y" aria-labelledby="bewerbung">
         <div className="container-site">
           <SectionHead
             label="Bewerbung"
